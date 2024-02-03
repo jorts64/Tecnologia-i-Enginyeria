@@ -1,6 +1,6 @@
 # Tecnologia i Enginyeria
 
-Arxius Jupyter Book del llibre [Tecnologia i Enginyeria](http://www.jorts/jupbook/te/)
+Arxius Jupyter Book del llibre [Tecnologia i Enginyeria](http://www.jorts.net/jupbook/te/)
 
 Shield: [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
