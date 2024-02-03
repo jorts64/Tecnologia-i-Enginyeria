@@ -1,0 +1,1021 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="ca" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Disseny 3D: OpenSCAD &#8212; Tecnologia i Enginyeria</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Mecanica42';</script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Índex" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
+    <link rel="next" title="Animacions de mecanismes 3D: FreeCAD" href="Mecanica43.html" />
+    <link rel="prev" title="Disseny 2D: LibreCAD" href="Mecanica41.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ca"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Salta al contingut principal</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Tecnologia i Enginyeria - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Tecnologia i Enginyeria - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Tecnologia i Enginyeria
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="Energia01.html">Energia. Treball. Potència</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Energia81.html">Xocs inelàstics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Energia82.html">Xocs elàstics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Energia83.html">Energia nuclear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Energia99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="ProdElec01.html">Producció d’energia elèctrica</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="ProdElec81.html">Cogeneració</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProdElec82.html">Reactors de fusió</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProdElec83.html">Centrals elèctriques a Catalunya</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProdElec99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Materials01.html">Materials</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Materials81.html">Densitat dels metalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials82.html">Aliatges binaris: Llei de la palanca</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials83.html">Assaig de tracció</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials84.html">Assajos mecànics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials85.html">Comparació propietats dels metalls</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="Materials98.html">OpenSCAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="CorrentContinu01.html">Corrent Continu</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu02.html">Lleis bàsiques del circuit elèctric</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu50.html">Aplicacions de les resistències</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu51.html">Les resistències comercials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu03.html">Associacions de resistències</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu04.html">Exercicis resolts 1/2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu05.html">Pràctica: Llei d’Ohm. Efecte Joule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu06.html">Pràctica: Estudi d’una pila i d’una bombeta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu07.html">Lleis de Kirchoff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu08.html">Exercicis resolts 2/2</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Mecanica01.html">Mecànica</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Mecanica02.html">Dinàmica de les rotacions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica03.html">Màquines simples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica04.html">Mecanismes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica41.html">Disseny 2D: LibreCAD</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Disseny 3D: OpenSCAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica43.html">Animacions de mecanismes 3D: FreeCAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica44.html">Disseny industrial: programari <em>onshape</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Termodinamica01.html">Termodinàmica</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Termodinamica99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="CorrentAltern01.html">Corrent Altern</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="CorrentAltern99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="MaqElec01.html">Màquines elèctriques</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec02.html">Equacions fonamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec03.html">Motor de corrent continu d’imants permanents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec04.html">Motor de corrent continu d’excitació independent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec05.html">Motor de corrent continu d’excitació paral·lela</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec06.html">Motor de corrent continu d’excitació sèrie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec07.html">Motor de corrent continu d’excitació compound</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec08.html">Generadors elèctrics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec09.html">El generador trifàsic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec10.html">Motors de corrent altern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec11.html">Transformadors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec12.html">Motors pas a pas</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Control01.html">Automàtica i Control</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Control02.html">El transistor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control03.html">Projecte: Interruptor crepuscular</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control04.html">Àlgebra de Boole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control05.html">Aplicació de l’àlgebra de Boole al disseny de circuits electrònics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control06.html">Diagrames de contactes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control07.html">Amplificadors operacionals i Comparadors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control08.html">Circuits seqüencials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control09.html">Condicionament de la sortida</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control40.html">Eletrònica de potència. Tiristors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control10.html">Temporitzador 555</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control11.html">Relès</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control12.html">Electricitat industrial. Contactors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control13.html">PLCs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control14.html">GRAFCET</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control15.html">Modelització de sistemes. Diagrama de blocs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control16.html">Funció de transferència</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control17.html">Teoria de control. Control PID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control50.html">Circuits Pneumàtics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="OficinaTecnica01.html">Oficina Tècnica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Empresa01.html">Empresa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RecursosTaller01.html">Recursos Taller</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Biblio.html">Bibliografia</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Descarregueu aquesta pàgina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Mecanica42.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Baixeu el fitxer font"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimeix a PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="clar/fosc" aria-label="clar/fosc" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Cerca" aria-label="Cerca" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Disseny 3D: OpenSCAD</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figures-geometriques-basiques">Figures geomètriques bàsiques</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cube">cube</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cylinder">cylinder</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transformacions-geometriques">Transformacions geomètriques</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#translate">translate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rotate">rotate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mirror">mirror</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operadors-booleans">Operadors booleans</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#union">union</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#difference">difference</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intersection">intersection</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iteracions">Iteracions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for">for</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intersection-for">intersection_for</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pressa-de-decisions">Pressa de decisions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if">if</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#else">else</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">?:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operacions-matematiques">Operacions matemàtiques</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">+ - * /</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">%</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cos-sin-tan">cos() sin() tan()</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acos-asin-atan">acos() asin() atan()</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abs">abs()</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ceil">ceil()</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#floor">floor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#round">round()</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exp-ln-log">exp() ln() log()</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pow-x-y">pow(x,y)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sqrt">sqrt()</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#llibreries">Llibreríes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#afegir-una-cremallera-a-una-peca">Afegir una cremallera a una peça</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#crear-biblioteques-de-figures">Crear biblioteques de figures</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#repositoris-a-la-internet-thingiverse">Repositoris a la Internet: Thingiverse</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="disseny-3d-openscad">
+<h1>Disseny 3D: OpenSCAD<a class="headerlink" href="#disseny-3d-openscad" title="Permalink to this heading">#</a></h1>
+<div class="admonition-pagina-en-desenvolupament admonition">
+<p class="admonition-title">Pàgina en desenvolupament</p>
+<p>Encara estem treballant en aquest document.<br />
+Esperem oferir-vos properament el seu contingut.<br />
+Disculpeu les molèsties.</p>
+</div>
+<p><a class="reference external" href="https://openscad.org/">OpenSCAD</a> es un programari de disseny 3D <a class="reference external" href="https://es.wikipedia.org/wiki/Geometr%C3%ADa_constructiva_de_s%C3%B3lidos">CSG</a>: els objectes es construeixen realitzant operacions booleanes sobre figures senzilles: esferes, ortoedres, cons …</p>
+<p>Trobareu molts tutorials a la Internet. Cal destacar els generats per Juan González Gómez (Obijuan):</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-left head"><p>Wiki</p></th>
+<th class="text-left head"><p>YouTube</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><a class="reference external" href="http://www.iearobotics.com/wiki/index.php?title=Dise%C3%B1o_de_piezas_con_OpenScad">Diseño de piezas con OpenScad</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.youtube.com/playlist?list=PL2CED4B0A8EA522CF">Micro-Tutorial OpenScad I</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><a class="reference external" href="http://www.iearobotics.com/wiki/index.php?title=Dise%C3%B1o_de_piezas_con_OpenScad_II">Diseño de piezas con OpenScad II</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.youtube.com/playlist?list=PLmnz0JqIMEzXipVqksIcvWfskeEiWFw66">Micro-Tutorial Openscad II</a></p></td>
+</tr>
+</tbody>
+</table>
+<section id="figures-geometriques-basiques">
+<h2>Figures geomètriques bàsiques<a class="headerlink" href="#figures-geometriques-basiques" title="Permalink to this heading">#</a></h2>
+<section id="cube">
+<h3>cube<a class="headerlink" href="#cube" title="Permalink to this heading">#</a></h3>
+<p>En realitat  genera un ortoedre, ortòedre o cuboide, es a dir, d’un paral·lelepípede on tots els angles són rectes (capsa de sabates).</p>
+<p>Per defecte la figura no està centrada.</p>
+<p>Ús:</p>
+<p><strong>Ortoedre</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cube</span><span class="p">([</span><span class="n">llargada</span><span class="p">,</span><span class="n">amplada</span><span class="p">,</span><span class="n">altura</span><span class="p">]);</span>
+</pre></div>
+</div>
+<p><strong>Cub</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cube</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Exemple:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cube</span><span class="p">([</span><span class="mi">60</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">40</span><span class="p">]);</span>
+</pre></div>
+</div>
+<p>genera un cuboide de 60 mm de llargada per 20 mm d’amplada per 40 mm d’altura</p>
+<p><img alt="" src="_images/OpenSCAD01.png" /></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cube</span><span class="p">(</span><span class="mi">30</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>genera un cub de 30 mm de costat</p>
+<p><img alt="" src="_images/OpenSCAD02.png" /></p>
+</section>
+<section id="cylinder">
+<h3>cylinder<a class="headerlink" href="#cylinder" title="Permalink to this heading">#</a></h3>
+<p>Permet generar cilindres, troncs de cons, cons, prismes de n cares, troncs de prisma de n cares i piràmides de n cares.</p>
+<p>Per defecte la figura està centrada.</p>
+<p>Ús:</p>
+<p><strong>Cilindres</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cylinder (h=altura, r=radi, $fn=ressolució); 
+</pre></div>
+</div>
+<p><strong>Troncs de con</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cylinder (h=altura, r1=radi inferior, r2=radi superior, $fn=ressolució);
+</pre></div>
+</div>
+<p><strong>Cons</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cylinder (h=altura, r1=radi inferior, r2=0, $fn=ressolució);
+</pre></div>
+</div>
+<p><strong>Prisma de n cares</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cylinder (h=altura, r=radi en que està inscrita la base, $fn= nombre de cares);
+</pre></div>
+</div>
+<p><strong>Tronc de prisma de n cares</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cylinder (h=altura, r1=radi en que està inscrita la base, r2=radi en que està inscrita la cara superior,  $fn= nombre de cares);
+</pre></div>
+</div>
+<p><strong>Piràmide de n cares</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cylinder (h=altura, r1=radi en que està inscrita la base, r2=0,  $fn= nombre de cares);
+</pre></div>
+</div>
+<p>Exemples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cylinder (h=60, r=10, $fn=48);
+</pre></div>
+</div>
+<p>genera un cilindre d’altura 60 mm amb un radi de 10 mm i aproximant amb 48 cares  el contorn circular</p>
+<p><img alt="" src="_images/OpenSCAD03.png" /></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cylinder (h=30, r1=10, r2=5, $fn=48);
+</pre></div>
+</div>
+<p>genera un tronc de con d’altura 30 mm amb un radio de 10 mm a  sota y de 5 mm a dalt i aproximant amb 48 cares  el contorn circular</p>
+<p><img alt="" src="_images/OpenSCAD04.png" /></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cylinder (h=60, r1=10, r2=0, $fn=48);
+</pre></div>
+</div>
+<p>genera un con d’altura 60 mm amb un radi de 10 mm a la base i aproximant anb  48 cares  el contorn circular</p>
+<p><img alt="" src="_images/OpenSCAD05.png" /></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cylinder (h=60, r=10, $fn=6);
+</pre></div>
+</div>
+<p>genera un prisma hexagonal d’altura 60 mm amb la base inscrita en un radi de 10 mm  i amb un vèrtex orientat segons l’eix x</p>
+<p><img alt="" src="_images/OpenSCAD06.png" /></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cylinder (h=30, r=10, $fn=6);
+</pre></div>
+</div>
+<p>genera un tronc de prisma hexagonal d’altura 30 mm amb la base inscrita en un radi de 10 mm, l’hexàgon superior inscrit en un radi de 5 mm i amb un vèrtex orientat segons l’eix x</p>
+<p><img alt="" src="_images/OpenSCAD07.png" /></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cylinder (h=60, r1=10, r2=0, $fn=6);
+</pre></div>
+</div>
+<p>genera una piràmide hexagonal d’altura 60 mm amb la base inscrita en un radi de 10 mm  i amb un vèrtex orientat segons l’eix x</p>
+<p><img alt="" src="_images/OpenSCAD08.png" /></p>
+</section>
+</section>
+<section id="transformacions-geometriques">
+<h2>Transformacions geomètriques<a class="headerlink" href="#transformacions-geometriques" title="Permalink to this heading">#</a></h2>
+<p>Totes les figures agafen com a referència un punter a l’origen que té com a coordenades <code class="docutils literal notranslate"><span class="pre">[0,0,0]</span></code>. Si volem moure la figura caldrà fer un translació, i si volem canviar la seva orientació caldrà fer una rotació.  De vegades ens interessarà una simetria especular com la que produeix un mirall.</p>
+<section id="translate">
+<h3>translate<a class="headerlink" href="#translate" title="Permalink to this heading">#</a></h3>
+<p>Realitza una translació, es a dir, un desplaçament de la figura.</p>
+<p>Ús:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">translate</span> <span class="p">([</span><span class="n">desplaçament</span> <span class="n">x</span><span class="p">,</span> <span class="n">desplaçament</span> <span class="n">y</span><span class="p">,</span> <span class="n">desplaçament</span> <span class="n">z</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>fixeu-vos que l’ordre no porta un punt i coma final. De fet, podem entendre aquesta ordre com un prefix a l’ordre qeu genera la figura (cube, cylinder …).</p>
+<p>Exemple:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">translate</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">30</span><span class="p">])</span> <span class="n">cylinder</span><span class="p">(</span><span class="n">h</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">r1</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">r2</span><span class="o">=</span><span class="mi">0</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>genera un cub desplaçat 10 mm a l’eix x, 20 a l’eix y i 30 a l’eix z.</p>
+<p><img alt="" src="_images/OpenSCAD09.png" /></p>
+</section>
+<section id="rotate">
+<h3>rotate<a class="headerlink" href="#rotate" title="Permalink to this heading">#</a></h3>
+<p>Realitza girs segons els eixos x, y i z. El sentit del gir ve determinat per la regla del cargol. L’amplitud del gir s’expressa  en graus.</p>
+<p>Ús:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rotate</span> <span class="p">([</span><span class="n">gir</span> <span class="n">perpendicular</span> <span class="n">eix</span> <span class="n">x</span><span class="p">,</span> <span class="n">gir</span> <span class="n">perpendicular</span> <span class="n">eix</span>  <span class="n">y</span><span class="p">,</span> <span class="n">gir</span> <span class="n">perpendicular</span> <span class="n">eix</span>  <span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>fixeu-vos que l’ordre no porta un punt i coma final. De fet, podem entendre aquesta ordre com un prefix a l’ordre qeu genera la figura (cube, cylinder …).</p>
+<p>Exemple:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rotate</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span> <span class="n">cylinder</span><span class="p">(</span><span class="n">h</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">r1</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">r2</span><span class="o">=</span><span class="mi">0</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>genera un cub girat 90º en el pla perpendicular a l’eix y.</p>
+<p><img alt="" src="_images/OpenSCAD10.png" /></p>
+</section>
+<section id="mirror">
+<h3>mirror<a class="headerlink" href="#mirror" title="Permalink to this heading">#</a></h3>
+<p>Realitza una simetria especular respecte a un pla, que s’expressa per un vector perpendicular.</p>
+<p>Ús:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mirror</span> <span class="p">([</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>on <code class="docutils literal notranslate"><span class="pre">[x,y,z]</span></code> és un vector perpendicular al pla de simetria.</p>
+<p>Fixeu-vos que l’ordre no porta un punt i coma final. De fet, podem entendre aquesta ordre com un prefix a l’ordre qeu genera la figura (cube, cylinder …).</p>
+<p>Exemple:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cylinder</span> <span class="p">(</span><span class="n">r1</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">r2</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">30</span><span class="p">);</span>  
+<span class="n">mirror</span> <span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span> <span class="n">cylinder</span> <span class="p">(</span><span class="n">r1</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">r2</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">30</span><span class="p">);</span>  
+</pre></div>
+</div>
+<p>Genera un cilindre i la seva imatge especular respecte al pla xy</p>
+<p><img alt="" src="_images/OpenSCAD11.png" /></p>
+</section>
+</section>
+<section id="operadors-booleans">
+<h2>Operadors booleans<a class="headerlink" href="#operadors-booleans" title="Permalink to this heading">#</a></h2>
+<section id="union">
+<h3>union<a class="headerlink" href="#union" title="Permalink to this heading">#</a></h3>
+<p>Forma una nova figura afegint diferents cossos, que poden solapar-se.</p>
+<p>Ús:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">union</span><span class="p">()</span> <span class="p">{</span>
+   <span class="n">figura1</span><span class="p">;</span>
+   <span class="n">figura2</span><span class="p">;</span>
+
+         <span class="o">.../...</span>
+
+   <span class="n">figuraN</span><span class="p">;</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Exemple:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">union</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="n">cylinder</span> <span class="p">(</span><span class="n">h</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="mi">10</span><span class="p">);</span>
+    <span class="n">translate</span> <span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">30</span><span class="p">])</span> <span class="n">cylinder</span><span class="p">(</span><span class="n">h</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">r1</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">r2</span><span class="o">=</span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Forma una nova figura composta per un cilindre i un con al damunt seu.</p>
+<p><img alt="" src="_images/OpenSCAD12.png" /></p>
+</section>
+<section id="difference">
+<h3>difference<a class="headerlink" href="#difference" title="Permalink to this heading">#</a></h3>
+<p>Resta una figura d’una altra. Molt útil per fer forats a figures.</p>
+<p>Ús:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">difference</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="n">figura1</span><span class="p">;</span>
+    <span class="n">figura2</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Exemple:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">difference</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">cylinder</span> <span class="p">(</span><span class="n">h</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="mi">10</span><span class="p">);</span>
+  <span class="n">translate</span> <span class="p">([</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span> <span class="n">cube</span> <span class="p">([</span><span class="mi">20</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">15</span><span class="p">]);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Crea un cilindre i li resta un ortoedre.</p>
+<p><img alt="" src="_images/OpenSCAD13.png" /></p>
+<p>Podem agrupar figures abans de restar-les:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">difference</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">union</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="n">cylinder</span> <span class="p">(</span><span class="n">h</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="mi">10</span><span class="p">);</span>
+    <span class="n">translate</span> <span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">30</span><span class="p">])</span> <span class="n">cylinder</span><span class="p">(</span><span class="n">h</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">r1</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">r2</span><span class="o">=</span><span class="mi">0</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="n">translate</span> <span class="p">([</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span> <span class="n">cube</span> <span class="p">([</span><span class="mi">20</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">15</span><span class="p">]);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><img alt="" src="_images/OpenSCAD14.png" /></p>
+</section>
+<section id="intersection">
+<h3>intersection<a class="headerlink" href="#intersection" title="Permalink to this heading">#</a></h3>
+<p>Genera una figura amb l’espai comú a dues figures.</p>
+<p>Ús:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">intersection</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="n">figura1</span><span class="p">;</span>
+    <span class="n">figura2</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>En aquest exemple arrodonim els costats d’una capsa amb un cercle de igual diàmetre que la llargària:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>intersection(){
+  cube([60,20,10], center=true);
+  cylinder (r=30, h=10, $fn=48);
+}
+</pre></div>
+</div>
+<p><img alt="" src="_images/OpenSCAD15.png" /></p>
+</section>
+</section>
+<section id="iteracions">
+<h2>Iteracions<a class="headerlink" href="#iteracions" title="Permalink to this heading">#</a></h2>
+<section id="for">
+<h3>for<a class="headerlink" href="#for" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="intersection-for">
+<h3>intersection_for<a class="headerlink" href="#intersection-for" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
+<section id="pressa-de-decisions">
+<h2>Pressa de decisions<a class="headerlink" href="#pressa-de-decisions" title="Permalink to this heading">#</a></h2>
+<section id="if">
+<h3>if<a class="headerlink" href="#if" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="else">
+<h3>else<a class="headerlink" href="#else" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="id1">
+<h3>?:<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
+<section id="operacions-matematiques">
+<h2>Operacions matemàtiques<a class="headerlink" href="#operacions-matematiques" title="Permalink to this heading">#</a></h2>
+<section id="id2">
+<h3>+ - * /<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="id3">
+<h3>%<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<p>–&gt;  mòdul</p>
+</section>
+<section id="cos-sin-tan">
+<h3>cos() sin() tan()<a class="headerlink" href="#cos-sin-tan" title="Permalink to this heading">#</a></h3>
+<p>–&gt; angles en graus</p>
+</section>
+<section id="acos-asin-atan">
+<h3>acos() asin() atan()<a class="headerlink" href="#acos-asin-atan" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="abs">
+<h3>abs()<a class="headerlink" href="#abs" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="ceil">
+<h3>ceil()<a class="headerlink" href="#ceil" title="Permalink to this heading">#</a></h3>
+<p>–&gt; arrodoniment per defecte</p>
+</section>
+<section id="floor">
+<h3>floor<a class="headerlink" href="#floor" title="Permalink to this heading">#</a></h3>
+<p>–&gt; nombre sencer inferior (difereix de ceil per a nombres negatius)</p>
+</section>
+<section id="round">
+<h3>round()<a class="headerlink" href="#round" title="Permalink to this heading">#</a></h3>
+<p>–&gt; arrodoniment</p>
+</section>
+<section id="exp-ln-log">
+<h3>exp() ln() log()<a class="headerlink" href="#exp-ln-log" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="pow-x-y">
+<h3>pow(x,y)<a class="headerlink" href="#pow-x-y" title="Permalink to this heading">#</a></h3>
+<p>–&gt; potencia x elevat a y</p>
+</section>
+<section id="sqrt">
+<h3>sqrt()<a class="headerlink" href="#sqrt" title="Permalink to this heading">#</a></h3>
+<p>–&gt; arrel quadrada</p>
+</section>
+</section>
+<section id="llibreries">
+<h2>Llibreríes<a class="headerlink" href="#llibreries" title="Permalink to this heading">#</a></h2>
+<p>Podem crear llibreríes amb paràmetres</p>
+<section id="afegir-una-cremallera-a-una-peca">
+<h3>Afegir una cremallera a una peça<a class="headerlink" href="#afegir-una-cremallera-a-una-peca" title="Permalink to this heading">#</a></h3>
+<p>De vegades volem afegir una cremallera que permeti moure amb un pinyó acoblat a un motor una peça (porta, cabina d’ascensor…) que hem dissenyat  per a una maqueta.</p>
+<p>Els engranatges que fem servir al taller són de mòdul 1 (p=3,14 mm) i hem preparat una llibreria que podem afegir al nostre disseny. únicament cal modificar els paràmetres a (amplada en mm) i cridar el mòdul cremallera amb el nombre de dents que volem (16 dents fan uns 50 mm de cursa).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>p=3.14;
+d=4.2;
+a=8;
+h=4.8;
+b=1;
+cremallera (32);
+
+module  cremallera(dents) {
+  intersection (){
+    cube ([dents*p,a,h]);
+    {
+      for (i=[0:1:dents]) {
+      translate ([i*p,0,0]) dentcrem ();
+      }
+    }
+  }
+}
+
+module dentcrem (){
+ cube ([p,a,b]);
+ translate ([-p/2,0,b]) rotate([-90,30,0]) cylinder(r=d,h=a,$fn=3);
+ }
+</pre></div>
+</div>
+<p><img alt="" src="_images/OpenSCAD16.png" /></p>
+</section>
+<section id="crear-biblioteques-de-figures">
+<h3>Crear biblioteques de figures<a class="headerlink" href="#crear-biblioteques-de-figures" title="Permalink to this heading">#</a></h3>
+<p>De vegades ens interessa crear les nostres figures i reutilitzarles sovint.
+Amb module() podem crear les nostres pròpies figures per inserir-les en els nostres projectes.
+Veiem un exemple</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">prisma</span> <span class="n">de</span> <span class="n">base</span> <span class="n">triangular</span> <span class="n">amb</span> <span class="n">angle</span> <span class="n">recte</span> <span class="n">a</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">module</span> <span class="n">prisma3</span><span class="p">(</span><span class="n">tb</span><span class="p">,</span><span class="n">th</span><span class="p">,</span><span class="n">lz</span><span class="p">)</span> <span class="p">{</span>
+ <span class="n">polyhedron</span><span class="p">(</span>
+   <span class="n">points</span><span class="o">=</span><span class="p">[</span> <span class="p">[</span><span class="n">tb</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>  <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="n">th</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+            <span class="p">[</span><span class="n">tb</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">lz</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">lz</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="n">th</span><span class="p">,</span><span class="n">lz</span><span class="p">]</span>  <span class="p">],</span>
+   <span class="n">faces</span><span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+            <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> 
+            <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span>
+            <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span>
+            <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>  <span class="p">]</span>
+    <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="o">//</span> <span class="n">Exemple</span> <span class="n">d</span><span class="s1">&#39;ús:</span>
+
+<span class="n">prisma3</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">40</span><span class="p">);</span>
+
+</pre></div>
+</div>
+<p><img alt="" src="_images/OpenSCAD17.png" /></p>
+</section>
+</section>
+<section id="repositoris-a-la-internet-thingiverse">
+<h2>Repositoris a la Internet: Thingiverse<a class="headerlink" href="#repositoris-a-la-internet-thingiverse" title="Permalink to this heading">#</a></h2>
+<p>A <a class="reference external" href="https://www.thingiverse.com/">Thingiverse</a> trobareu més de <a class="reference external" href="https://www.thingiverse.com/search?q=openscad&amp;page=1">10000 dissenys amb OpenSCAD</a>. Un dels motius és que en aquesta plataforma pots parametritzar els dissenys OpenSCAD i adaptar-los al teu gust:</p>
+<p><img alt="" src="_images/OpenSCAD18.png" /></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "venvpy3"
+        },
+        kernelOptions: {
+            name: "venvpy3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'venvpy3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Mecanica41.html"
+       title="pàgina anterior">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title">Disseny 2D: LibreCAD</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Mecanica43.html"
+       title="pàgina següent">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">següent</p>
+        <p class="prev-next-title">Animacions de mecanismes 3D: FreeCAD</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figures-geometriques-basiques">Figures geomètriques bàsiques</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cube">cube</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cylinder">cylinder</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transformacions-geometriques">Transformacions geomètriques</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#translate">translate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rotate">rotate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mirror">mirror</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operadors-booleans">Operadors booleans</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#union">union</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#difference">difference</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intersection">intersection</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iteracions">Iteracions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for">for</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intersection-for">intersection_for</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pressa-de-decisions">Pressa de decisions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if">if</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#else">else</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">?:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operacions-matematiques">Operacions matemàtiques</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">+ - * /</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">%</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cos-sin-tan">cos() sin() tan()</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acos-asin-atan">acos() asin() atan()</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abs">abs()</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ceil">ceil()</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#floor">floor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#round">round()</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exp-ln-log">exp() ln() log()</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pow-x-y">pow(x,y)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sqrt">sqrt()</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#llibreries">Llibreríes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#afegir-una-cremallera-a-una-peca">Afegir una cremallera a una peça</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#crear-biblioteques-de-figures">Crear biblioteques de figures</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#repositoris-a-la-internet-thingiverse">Repositoris a la Internet: Thingiverse</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Per Jordi Orts
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>Editat amb Jupyter Lab <a href='https://jupyter.org/' target='_blank'><img src='https://docs.jupyter.org/en/latest/_static/jupyter.svg' width='95' height='50'></a> i maquetat amb Jupyter-book <a href='https://zenodo.org/records/4539666' target='_blank'><img src='https://zenodo.org/badge/DOI/10.5281/zenodo.2561065.svg'></a></p><p>Aquesta obra està sota una llicència de Creative Commons Reconeixement-No comercial-Compartir igual <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca' target='_blank'><img src='w3/by-nc-sa.png' width='117' height='41'></a></p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

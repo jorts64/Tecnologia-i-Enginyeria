@@ -1,0 +1,772 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="ca" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Projecte: Interruptor crepuscular &#8212; Tecnologia i Enginyeria</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Control03';</script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Índex" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
+    <link rel="next" title="Àlgebra de Boole" href="Control04.html" />
+    <link rel="prev" title="El transistor" href="Control02.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ca"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Salta al contingut principal</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Tecnologia i Enginyeria - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Tecnologia i Enginyeria - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Tecnologia i Enginyeria
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="Energia01.html">Energia. Treball. Potència</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Energia81.html">Xocs inelàstics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Energia82.html">Xocs elàstics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Energia83.html">Energia nuclear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Energia99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="ProdElec01.html">Producció d’energia elèctrica</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="ProdElec81.html">Cogeneració</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProdElec82.html">Reactors de fusió</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProdElec83.html">Centrals elèctriques a Catalunya</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProdElec99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Materials01.html">Materials</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Materials81.html">Densitat dels metalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials82.html">Aliatges binaris: Llei de la palanca</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials83.html">Assaig de tracció</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials84.html">Assajos mecànics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials85.html">Comparació propietats dels metalls</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="Materials98.html">OpenSCAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="CorrentContinu01.html">Corrent Continu</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu02.html">Lleis bàsiques del circuit elèctric</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu50.html">Aplicacions de les resistències</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu51.html">Les resistències comercials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu03.html">Associacions de resistències</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu04.html">Exercicis resolts 1/2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu05.html">Pràctica: Llei d’Ohm. Efecte Joule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu06.html">Pràctica: Estudi d’una pila i d’una bombeta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu07.html">Lleis de Kirchoff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu08.html">Exercicis resolts 2/2</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Mecanica01.html">Mecànica</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Termodinamica01.html">Termodinàmica</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Termodinamica99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="CorrentAltern01.html">Corrent Altern</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="CorrentAltern99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="MaqElec01.html">Màquines elèctriques</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec02.html">Equacions fonamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec03.html">Motor de corrent continu d’imants permanents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec04.html">Motor de corrent continu d’excitació independent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec05.html">Motor de corrent continu d’excitació paral·lela</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec06.html">Motor de corrent continu d’excitació sèrie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec07.html">Motor de corrent continu d’excitació compound</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec08.html">Generadors elèctrics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec09.html">El generador trifàsic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec10.html">Motors de corrent altern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec11.html">Transformadors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec12.html">Motors pas a pas</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Control01.html">Automàtica i Control</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Control02.html">El transistor</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Projecte: Interruptor crepuscular</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control04.html">Àlgebra de Boole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control05.html">Aplicació de l’àlgebra de Boole al disseny de circuits electrònics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control15.html">Diagrama de blocs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="OficinaTecnica01.html">Oficina Tècnica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Empresa01.html">Empresa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Biblio.html">Bibliografia</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Descarregueu aquesta pàgina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Control03.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Baixeu el fitxer font"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimeix a PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="clar/fosc" aria-label="clar/fosc" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Cerca" aria-label="Cerca" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Projecte: Interruptor crepuscular</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requeriment">Requeriment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#disseny">Disseny</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principi-de-funcionament">Principi de funcionament</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ajust-dels-valors-de-les-resistencies">Ajust dels valors de les resistències</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-placa-de-circut-impres">La placa de circut imprès</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modificacions">Modificacions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proces">Procés</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pressupost">Pressupost</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#avaluacio">Avaluació</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comprovacio-del-circuit">Comprovació del circuit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calcul-de-l-autonomia">Càlcul de l’autonomia</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="projecte-interruptor-crepuscular">
+<h1>Projecte: Interruptor crepuscular<a class="headerlink" href="#projecte-interruptor-crepuscular" title="Permalink to this heading">#</a></h1>
+<div class="admonition-pagina-en-desenvolupament admonition">
+<p class="admonition-title">Pàgina en desenvolupament</p>
+<p>Encara estem treballant en aquest document.<br />
+Esperem oferir-vos properament el seu contingut.<br />
+Disculpeu les molèsties.</p>
+</div>
+<p>Una forma de contribuir a la sostenibilitat del nostre planeta a la vegada que guanyem comfort és l’automatització de l’enllumenat.  Moltes vegades volem que un llum s’encengui automàticament quan es fa fosc i que s’apagui si ja n’hi ha suficient llum: fanals, portals, passadissos …</p>
+<p>En aquest projecte farem un circuit electrònic que amb un sensor de llum controla la llum d’un LED. Vosaltres decidireu la seva aplicació final: un fanal de maqueta, l’enllumenat d’una casa de cartró, llum d’emergència per a una escala, indicador de posició d’un interruptor, d’un obstacle o d’una porta …</p>
+<p><img alt="" src="_images/intCrep01.jpg" /></p>
+<section id="requeriment">
+<h2>Requeriment<a class="headerlink" href="#requeriment" title="Permalink to this heading">#</a></h2>
+<p>Heu de dissenyar i construir un objecte que porti una llum (LED) i un sensor (LDR) de forma que quan es faci fosc el llum s’encengui automàticament.</p>
+<p>Donat que la llum és petita, podem pensar en maquetes: cases de cartró plegat, fanals amb canya de refresc … O en petits dispositius en capsa que marquin punts d’interès a la foscor: sortides d’emergència, portes, interruptors …</p>
+<p>També és possible (però més complicat) invertir el funcionament: que el llum s’encengui quan hi ha claror. Aquesta modificació és molt interessant per alarmes (obertura d’un calaix, presència a un despatx que hauria d’estar a les fosques, pas d’una persona que tapa el sensor …)</p>
+<p>Molt important seguir aquestes condicions:</p>
+<ul class="simple">
+<li><p>Ha de ser un objecte barat. Podeu utilitzar paper, cartró, canyes de refresc, petites quantitats de plàstic plegat, material reciclat…</p></li>
+<li><p>Cal obligatòriament utilitzar el circuit descrit en aquest document, amb les adaptacions adients.</p></li>
+<li><p>El dispositiu utilitza una pila de 9V / 500 mAh. Cal fer un estudi del temps d’autonomia, tant en estat d’espera (llum apagat) com activat (llum encès).</p></li>
+<li><p>Cal documentar tot el projecte. Això inclou els plànols del vostre objecte.</p></li>
+</ul>
+</section>
+<section id="disseny">
+<h2>Disseny<a class="headerlink" href="#disseny" title="Permalink to this heading">#</a></h2>
+<p>En aquest apartat ens centrarem en el disseny del circuit electrònic que serà el cor de vostre projecte.És possible que us calgui modificar aquest disseny per adaptar-lo al vostre objecte. Preneu nota i documenteu aquests canvis. Per altra banda heu de documentar tot el disseny propi del vostre objecte, amb fulls de planificacions, plànols … propis.</p>
+<section id="principi-de-funcionament">
+<h3>Principi de funcionament<a class="headerlink" href="#principi-de-funcionament" title="Permalink to this heading">#</a></h3>
+<p><img alt="" src="_images/intCrep03.gif" /></p>
+<p>Aquest és l’esquema del circuit electrònic que farem servir. Utilitza dos components nous per a vosaltres: la LDR i el transistor. A l’esquema veureu els seus <a class="reference external" href="http://xn--smbols-3va.La">símbols.La</a> LDR (Light Dependent Resistor)és una resistència que depèn del llum, però no de forma proporcional. És un sensor molt barat. Les seves característiques depenen del model, amb la qual cosa és possible que ens calgui modificar els valor de R1 i R2 per ajustar la sensibilitat del circuit i la llum del LED. Típicament tenen una resistència de 100Ω amb molta llum i de 1 MΩ a les fosques.</p>
+<p>El transistor és el rei de l’electrònica actual. Un llapis de memòria en porta bilions integrats en un espai més petit que una ungla. Nosaltres en farem servir un.  N’hi ha molts tipus, amb diferents formats i ordre de connexions.</p>
+<p><img alt="" src="_images/intCrep04.gif" /></p>
+<p>l nostre és diu BC337 i és de tipus NPN. Com veieu té tres connexions: col·lector (C), base (B) i emissor (E). Fixeu-vos a la figura, on veiem la part plana de l’encapsulat on hi ha gravat el seu nom. Els transistors es podem utilitzar de mil formes. El nostre circuit es coneix com a connexió amb emissor comú: tenim l’emissor (a baix) connectat a negatiu, el col·lector (a dalt) al LED i la base (a l’esquerra) connectat entre R1 i la LDR. I l’utilitzarem a l’estil digital, utilitzant les zones de tall  i de saturació.  Així el transistor funciona com a un interruptor: quan el voltatge a la base és molt baix zona de tall), el LED està apagat; quan el voltatge a la base és alt (zona de saturació), el LED s’encén. Com el voltatge a la base depèn de la relació entre R1 i la LDR i aquesta canvia amb la llum, el nostre LED s’encén a la foscor: la LDR té una resistència molt alta i com V=I·R la base té un voltatge alt comparat amb el que es queda R1, estem a la zona de saturació. Quan la LDR rep molta llum la seva resistència baixa, el voltatge a la base també i el transistor es troba a la zona de tall: el LED està apagat.</p>
+<section id="ajust-dels-valors-de-les-resistencies">
+<h4>Ajust dels valors de les resistències<a class="headerlink" href="#ajust-dels-valors-de-les-resistencies" title="Permalink to this heading">#</a></h4>
+<p>Com ja hem dit el transistor reacciona amb la relació entre les resistències de R1 i la LDR. Per tant, amb el valor de R1 (inicialment utilitzarem 10 kΩ ) podem ajustar la sensibilitat del nostre circuit:</p>
+<ul class="simple">
+<li><p>Si li costa molt apagar-se amb llum vol dir que encara la resistència de la LDR és massa alta comparada amb la de R1. En aquest cas recomano pujar R1 a un valor de 100kΩ.</p></li>
+<li><p>Si li costa molt activar el LED a la foscor, vol dir que la resistència de la LDR és massa baixa comparada amb la de R1. En aquest cas recomano baixar R1 a un valor de 1kΩ.</p></li>
+</ul>
+<p>Quan utilitzem un LED sempre posem una resistència en sèrie per limitar la intensitat. Aquest és el paper de R2, amb un valor inicial de 330Ω. Si veiem que el sistema reacciona correctament a la llum però volem que el LED s’encengui amb més força podem canviar el valor de R2 a 220Ω. Penseu que quan més intensitat passa pel LED més curta és l’autonomia. A més a més, molta intensitat pot fer malbé el LED (no acostumen a aguantar més de 20 mA). Es recomana treballar amb uns 10 mA.</p>
+<p>Com podem fer aquestes proves abans de soldar els components?</p>
+<p>Podem utilitzar una protoboard, semblant a una PCB però on cada conjunt de forats té unes pinces connectades que agafen les potes dels components. Aquí us deixo la meva proposta amb el valors inicials. Podeu canviar R1 i R2 fàcilment per buscar els valors òptims,</p>
+<p><img alt="" src="_images/intCrep05.png" /></p>
+</section>
+</section>
+<section id="la-placa-de-circut-impres">
+<h3>La placa de circut imprès<a class="headerlink" href="#la-placa-de-circut-impres" title="Permalink to this heading">#</a></h3>
+<p>El circuits electrònics es solden amb plaques de baquelita o fibra de vidre on normalment s’ha imprès amb àcid les pistes de coure que fan les connexions entre components (PCBs), i on tenim forats per passar-les potes.</p>
+<p>Nosaltres farem servir una placa de circuit imprès de prototips: tè 60x34 forats a un espaiat estàndard de 2,54 mm (0,1») amb una anella de coure al seu voltant a la cara de soldadures. Important: les soldadures es fan només per aquesta cara, l’altra cara, sense coure, es diu cara de components i és on posem els components.</p>
+<p>En realitat farem servir només un tros de placa de 8x11 forats, que tallarem amb la serra petita de metall.</p>
+<p>Com en tallar la placa ens menjarem files de forats, finalment podrem obtenir 18 plaques per als nostres projecte de cada placa estàndard (vigileu quan feu el pressupost).</p>
+<p><img alt="" src="_images/intCrep02.jpg" /></p>
+</section>
+<section id="modificacions">
+<h3>Modificacions<a class="headerlink" href="#modificacions" title="Permalink to this heading">#</a></h3>
+<p>A banda de l’ajust de R1 i R2 per al nostre projecte podem fer les següents modificacions:</p>
+<ul class="simple">
+<li><p>No integrar el LED a la placa sinó posar-lo connectat amb un cable. Soldarem el parell de cables (prims) en lloc del LED a la placa i a l’altra extrem soldarem el LED. Útil per fanals …</p></li>
+<li><p>No integrar el sensor LDR a la placa. En aquest cas com fem servir les potes de la LDR per fer les pistes del circuit imprès tenim un problema. Utilitzarem fil de connexió (un cable té molts fils que com sabeu cal caragolar a les connexions, el fil de connexió és un sol fil més gruix i per tant més rígid) en lloc de les potes de les LDR. Fora de la placa mantindrem el plàstic aïllant i a uns centímetres de la placa els podem pelar i soldar a un cables, molt més flexibles.</p></li>
+<li><p>Invertir el comportament: que el LED s’apagui a la foscor (alarmes): en aquest cas cal canviar l’ordre de R1 i la LDR. Això requereix redefinir la posició dels components a la placa. I caldrà ajustar el valor de R1.</p></li>
+</ul>
+<p><img alt="" src="_images/intCrep15.jpg" /> <img alt="" src="_images/intCrep16.jpg" /></p>
+<p>Penseu que fem servir cable i fil electrònic. No feu servir el pela-cables! Aquest és per cables d’electricista, amb molt més gruix. Utilitzeu tisores de paper per pelar els cables.</p>
+<p>Recomanem utilitzar una funda termoretràctil per protegir les soldadures externes cable-component extern. Pregunta al teu professor.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;jXQEYTP_RZo&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="400"
+            height="300"
+            src="https://www.youtube.com/embed/jXQEYTP_RZo"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
+</section>
+<section id="proces">
+<h3>Procés<a class="headerlink" href="#proces" title="Permalink to this heading">#</a></h3>
+<p>A continuació veureu pas pas el procés de muntatge d’una placa que porta integrada el sensor i el LED. No soldeu res fins veure primer tot els passos i l’apartat de modificacions: no heu de soldar el LED si va a un altre lloc amb un cable, per exemple. Penseu que els codis de colors de les resistències es corresponen amb els valors inicials; potser vosaltres heu de fer servir uns altres valors amb uns colors diferents.Aneu molt amb compte al treballar. Recordeu que és fàcil cremar-se amb el soldador si no esteu atents. I tingueu especial cura en tallar les potes dels components: son peces metàl·liques molt petites que surten disparades: compte amb els ulls! I vigileu que no tingueu cap company al costat que pugui prendre mal.</p>
+<p><img alt="" src="_images/intCrep06.jpg" /></p>
+<p>Al final de tot no connecteu la pila. Cal fer unes comprovacions i assegurar-nos de que no hi ha cap curtcircuit.</p>
+<ol class="arabic simple">
+<li><p>Dobleguem les resistències de forma que ocupin exactament 5 forats (pota + 3 forats pel cos + pota). Les col·loquem al seu lloc. Comprovem que no les hem intercanviat amb ajuda del codi de colors. La de valor més petit va col·locada horitzontalment i la de valor més gran verticalment.</p></li>
+</ol>
+<p><img alt="" src="_images/intCrep07.jpg" /></p>
+<ol class="arabic simple" start="2">
+<li><p>Girem verticalment la placa. Soldem R1: dobleguem les potes segons les imatges abans de soldar-les al forat d’entrada a la placa i no les tallem.Soldem les potes de R2 als forat d’entrada. Una pota va connectada a R1 (soldem i tallem el que sobra d’aquesta pota) i l’altra la dobleguem verticalment abans de soldar i no la tallem.</p></li>
+</ol>
+<p><img alt="" src="_images/intCrep08.jpg" /></p>
+<ol class="arabic simple" start="3">
+<li><p>Soldem la LDR als forats d’entrada amb les potes doblegades horitzontalment.</p></li>
+</ol>
+<p><img alt="" src="_images/intCrep09.jpg" /></p>
+<ol class="arabic simple" start="4">
+<li><p>Soldem el transistor. Compte amb l’orientació: la part plana amb el nom gravat va al costat esquerra. La pota del col·lector la soldem doblegada cap a la part superior de la placa i no la tallem.</p></li>
+</ol>
+<p><img alt="" src="_images/intCrep10.jpg" /></p>
+<ol class="arabic simple" start="5">
+<li><p>Soldem Les potes de la LDR al transistor. Tallem el que sobra.</p></li>
+</ol>
+<p><img alt="" src="_images/intCrep11.jpg" /></p>
+<ol class="arabic simple" start="6">
+<li><p>Soldem el LED. La pota llarga (+) a la part de dalt. Tallem les seves potes.</p></li>
+</ol>
+<p><img alt="" src="_images/intCrep12.jpg" /></p>
+<ol class="arabic simple" start="7">
+<li><p>Soldem la pota de R2 i la del col·lector del transistor a cada pota del LED.</p></li>
+</ol>
+<p><img alt="" src="_images/intCrep13.jpg" /></p>
+<ol class="arabic simple" start="8">
+<li><p>Després d’estanyar-los, soldem cada cable del clip de pila a la placa. El negre ha de connectar-se a la LDR i el vermell a R1.</p></li>
+</ol>
+<p><img alt="" src="_images/intCrep14.jpg" /></p>
+</section>
+<section id="pressupost">
+<h3>Pressupost<a class="headerlink" href="#pressupost" title="Permalink to this heading">#</a></h3>
+<p>A banda del cost dels materials del vostre objecte, us facilitem dades dels components utilitzats en el circuit electrònic i les seves modificacions:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-left head"><p>Component</p></th>
+<th class="text-right head"><p>Preu</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Placa estàndard 60x34 forats</p></td>
+<td class="text-right"><p>3,75 €</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Resistència</p></td>
+<td class="text-right"><p>0,01 €</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>BC337</p></td>
+<td class="text-right"><p>0,07 €</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>LDR</p></td>
+<td class="text-right"><p>0,22 €</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>LED</p></td>
+<td class="text-right"><p>0,05 €</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Clip pila 9V</p></td>
+<td class="text-right"><p>0,21 €</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Estany 60Sn/40Pb 1m</p></td>
+<td class="text-right"><p>0,40 €</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Cable connexió 10 m</p></td>
+<td class="text-right"><p>1,76 €</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Fil connexió 10 m</p></td>
+<td class="text-right"><p>2,09 €</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Termoretràctil 1 m</p></td>
+<td class="text-right"><p>0,94 €</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="avaluacio">
+<h2>Avaluació<a class="headerlink" href="#avaluacio" title="Permalink to this heading">#</a></h2>
+<p>En aquest projecte cal avaluar diferents aspectes:</p>
+<ul class="simple">
+<li><p>Funciona? Reacciona als canvis de llum?</p></li>
+<li><p>Compleix els requeriments inicials?</p></li>
+<li><p>Quina autonomia té el sistema?</p></li>
+<li><p>Com es podria millorar?</p></li>
+<li><p>Què ha representat per tu aquest projecte? Què has aprés?</p></li>
+</ul>
+<section id="comprovacio-del-circuit">
+<h3>Comprovació del circuit<a class="headerlink" href="#comprovacio-del-circuit" title="Permalink to this heading">#</a></h3>
+<p>Abans de connectar la pila fem unes comprovacions amb el téster  posició continuïtat :</p>
+<ul class="simple">
+<li><p>Comproveu que no hi ha un curt-circuit entre els connectors de la pila</p></li>
+<li><p>Comproveu que el connector negatiu de la pila té connexió amb la LDR i l’emissor del transistor.</p></li>
+<li><p>Comproveu que el positiu de la pila té connexió amb R1 i R2</p></li>
+</ul>
+<p>Si tot això és correcte ja podeu posar la pila i comprovar el seu funcionament:</p>
+<ul class="simple">
+<li><p>Reacciona amb la llum?</p></li>
+<li><p>El punt de canvi és encertat?</p></li>
+<li><p>S’il·lumina bé el LED?</p></li>
+</ul>
+</section>
+<section id="calcul-de-l-autonomia">
+<h3>Càlcul de l’autonomia<a class="headerlink" href="#calcul-de-l-autonomia" title="Permalink to this heading">#</a></h3>
+<p>Connecteu la pila a només un dels contactes. Amb el téster en funció amperímetre, feu connexió amb els altres contactes lliures de la pila i del connector de pila.</p>
+<p>Mesureu el corrent que es consumeix amb el LED encès (LDR a les fosques) i apagat (LDR a la llum).</p>
+<p>La vostra pila té una càrrega d’aproximadament 500 mAh. Dividiu aquesta quantitat entre el corrent  (en mA) que consumeix encès/apagat i obtindreu les hores d’autonomia actiu/en espera.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "venvpy3"
+        },
+        kernelOptions: {
+            name: "venvpy3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'venvpy3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Control02.html"
+       title="pàgina anterior">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title">El transistor</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Control04.html"
+       title="pàgina següent">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">següent</p>
+        <p class="prev-next-title">Àlgebra de Boole</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requeriment">Requeriment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#disseny">Disseny</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principi-de-funcionament">Principi de funcionament</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ajust-dels-valors-de-les-resistencies">Ajust dels valors de les resistències</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-placa-de-circut-impres">La placa de circut imprès</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modificacions">Modificacions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proces">Procés</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pressupost">Pressupost</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#avaluacio">Avaluació</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comprovacio-del-circuit">Comprovació del circuit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calcul-de-l-autonomia">Càlcul de l’autonomia</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Per Jordi Orts
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>Editat amb Jupyter Lab <a href='https://jupyter.org/' target='_blank'><img src='https://docs.jupyter.org/en/latest/_static/jupyter.svg' width='95' height='50'></a> i maquetat amb Jupyter-book <a href='https://zenodo.org/records/4539666' target='_blank'><img src='https://zenodo.org/badge/DOI/10.5281/zenodo.2561065.svg'></a></p><p>Aquesta obra està sota una llicència de Creative Commons Reconeixement-No comercial-Compartir igual <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca' target='_blank'><img src='w3/by-nc-sa.png' width='117' height='41'></a></p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

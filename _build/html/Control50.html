@@ -1,0 +1,723 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="ca" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Circuits Pneumàtics &#8212; Tecnologia i Enginyeria</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Control50';</script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Índex" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
+    <link rel="next" title="Recursos" href="Control99.html" />
+    <link rel="prev" title="Teoria de control. Control PID" href="Control17.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ca"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Salta al contingut principal</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Tecnologia i Enginyeria - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Tecnologia i Enginyeria - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Tecnologia i Enginyeria
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="Energia01.html">Energia. Treball. Potència</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Energia81.html">Xocs inelàstics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Energia82.html">Xocs elàstics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Energia83.html">Energia nuclear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Energia99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="ProdElec01.html">Producció d’energia elèctrica</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="ProdElec81.html">Cogeneració</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProdElec82.html">Reactors de fusió</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProdElec83.html">Centrals elèctriques a Catalunya</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProdElec99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Materials01.html">Materials</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Materials81.html">Densitat dels metalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials82.html">Aliatges binaris: Llei de la palanca</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials83.html">Assaig de tracció</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials84.html">Assajos mecànics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials85.html">Comparació propietats dels metalls</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="Materials98.html">OpenSCAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="CorrentContinu01.html">Corrent Continu</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu02.html">Lleis bàsiques del circuit elèctric</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu50.html">Aplicacions de les resistències</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu51.html">Les resistències comercials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu03.html">Associacions de resistències</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu04.html">Exercicis resolts 1/2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu05.html">Pràctica: Llei d’Ohm. Efecte Joule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu06.html">Pràctica: Estudi d’una pila i d’una bombeta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu07.html">Lleis de Kirchoff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu08.html">Exercicis resolts 2/2</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Mecanica01.html">Mecànica</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica02.html">Dinàmica de les rotacions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica03.html">Màquines simples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica04.html">Mecanismes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica41.html">Disseny 2D: LibreCAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica42.html">Disseny 3D: OpenSCAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica43.html">Animacions de mecanismes 3D: FreeCAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica44.html">Disseny industrial: programari <em>onshape</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Termodinamica01.html">Termodinàmica</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Termodinamica99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="CorrentAltern01.html">Corrent Altern</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="CorrentAltern99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="MaqElec01.html">Màquines elèctriques</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec02.html">Equacions fonamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec03.html">Motor de corrent continu d’imants permanents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec04.html">Motor de corrent continu d’excitació independent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec05.html">Motor de corrent continu d’excitació paral·lela</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec06.html">Motor de corrent continu d’excitació sèrie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec07.html">Motor de corrent continu d’excitació compound</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec08.html">Generadors elèctrics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec09.html">El generador trifàsic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec10.html">Motors de corrent altern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec11.html">Transformadors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec12.html">Motors pas a pas</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Control01.html">Automàtica i Control</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Control02.html">El transistor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control03.html">Projecte: Interruptor crepuscular</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control04.html">Àlgebra de Boole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control05.html">Aplicació de l’àlgebra de Boole al disseny de circuits electrònics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control06.html">Diagrames de contactes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control07.html">Amplificadors operacionals i Comparadors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control08.html">Circuits seqüencials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control09.html">Condicionament de la sortida</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control40.html">Eletrònica de potència. Tiristors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control10.html">Temporitzador 555</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control11.html">Relès</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control12.html">Electricitat industrial. Contactors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control13.html">PLCs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control14.html">GRAFCET</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control15.html">Modelització de sistemes. Diagrama de blocs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control16.html">Funció de transferència</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control17.html">Teoria de control. Control PID</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Circuits Pneumàtics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="OficinaTecnica01.html">Oficina Tècnica</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Empresa01.html">Organització i Empresa</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Empresa02.html">Planificació del projecte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Empresa03.html">Pressupost del projecte</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RecursosTaller01.html">Recursos Taller</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Biblio.html">Bibliografia</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Descarregueu aquesta pàgina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Control50.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Baixeu el fitxer font"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimeix a PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="clar/fosc" aria-label="clar/fosc" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Cerca" aria-label="Cerca" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Circuits Pneumàtics</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#caracteristiques">Característiques</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elements-d-un-circuit-pneumatic">Elements d’un circuit pneumàtic</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generacio-i-condicionament-de-l-aire-comprimit">Generació i condicionament de l’aire comprimit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribucio-de-l-aire-comprimit">Distribució de l’aire comprimit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regulacio-i-control">Regulació i control</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#actuadors-pneumatics">Actuadors pneumàtics</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#disseny-de-circuits-pneumatics">Disseny de circuits pneumàtics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#taula-de-sequencia-de-moviments">Taula de seqüència de moviments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagrama-de-moviments">Diagrama de Moviments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grafcet">GRAFCET</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esquema-pneumatic">Esquema Pneumàtic</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="circuits-pneumatics">
+<h1>Circuits Pneumàtics<a class="headerlink" href="#circuits-pneumatics" title="Permalink to this heading">#</a></h1>
+<div class="admonition-pagina-en-desenvolupament admonition">
+<p class="admonition-title">Pàgina en desenvolupament</p>
+<p>Encara estem treballant en aquest document.<br />
+Esperem oferir-vos properament el seu contingut.<br />
+Disculpeu les molèsties.</p>
+</div>
+<section id="caracteristiques">
+<h2>Característiques<a class="headerlink" href="#caracteristiques" title="Permalink to this heading">#</a></h2>
+<p>Els circuits pneumàtics utilitzen aire comprimit per a transmetre i regular l’energia.</p>
+<p>L’aire comprimit es pot acumular en un dipòsit, la seva generació pot realitzar-se de forma centralitzada i limitar-se a la mitjana de l’aire comprimit.</p>
+<p>L’aire comprimit, un cop utilitzat, pot alliberar-se a l’entorn, fent innecessari el circuit de retorn necessari en els circuits oleohidràulics, simplificant extraordinàriament la seva distribució, que presenta menys riscos que la conducció d’energia elèctrica. Per això és preferit a aquesta última en recintes on hi ha risc d’explosió o incendi, ja que l’aire comprimit és incapaç de produir espurnes.</p>
+<p>En cas de deteriorament de la canonada no hi ha el perill de curtcircuit i la reparació pot realitzar-se sense aturar la resta del sistema, situació freqüent en el cas dels sistemes oleohidràulics on una fuita sol causar una pèrdua important de pressió, a més de la pèrdua d’oli ocasionada.</p>
+<p>La velocitat de transmissió de l’aire comprimit pot arribar als 50 m/s sense pèrdues importants de pressió. Per a longituds de l’ordre de la desena de metres, aquesta velocitat implica un temps de resposta de l’ordre del segon, deu vegades més ràpid que l’equivalent sistema oleohidràulic. En aquests últims, la velocitat de transmissió del fluid no excedeix els 5 m/s, amb la finalitat d’evitar pèrdues de pressió i l’augment conseqüent de la temperatura.</p>
+<p>En els cilindres pneumàtics, el moviment rectilini es genera directament, evitant mecanismes de transmissió que podrien afectar el sistema en termes de desgast, preu i rendiment. Per això, en aquests sistemes, són innecessaris molts engranatges, lleves, excèntriques, cargols, palanques, etc., que en un sistema elèctric podrien ser imprescindibles. També es disposa de motors pneumàtics per als casos on és necessari generar un moviment circular.</p>
+<p>La força exercida pel cilindre és proporcional a la superfície del seu pistó i a la diferència de pressions entre les seves cares. El cilindre no pot exercir una força superior, de manera que s’eviten danys i avaries.</p>
+<p>La simple constitució dels cilindres els atorga una robustesa i lleugeresa molt apreciades, avantatges als quals cal afegir el seu petit tamany, en comparació amb la força i carrera desenvolupades. De fet, es poden obtenir forces de fins a 10 kN i carreres pràcticament il·limitades. D’altra banda, l’augment de temperatura causat per la seva activitat és molt petit, permetent-los treballar a temperatures elevades. Poden treballar a temperatures de 80 °C sense inconvenient, i amb certs aïllants és possible arribar als 150 °C.</p>
+<p>En els cilindres pneumàtics, la velocitat del pistó es pot ajustar de 0 a 1,5 m/s mitjançant vàlvules restrictores del cabal, que estrangulen el flux de l’aire comprimit. Malgrat això, la compressibilitat de l’aire impedeix aconseguir moviments uniformes per a càrregues variables, limitació inexistents en el cas dels cilindres oleohidràulics, on la velocitat està limitada a uns 0,6 m/s.</p>
+<p>Finalment, el seu mínim desgast, economia i simplicitat de manteniment, que generalment es limita al reemplaçament de certes juntes, justifiquen la seva gran implantació en infinitat de processos industrials: embalatge de paquets, moviment de càrregues, separació de productes en cintes transportadores, envasament de productes alimentaris, maquinària i conformació de fusta, ompliment de recipients,…</p>
+</section>
+<section id="elements-d-un-circuit-pneumatic">
+<h2>Elements d’un circuit pneumàtic<a class="headerlink" href="#elements-d-un-circuit-pneumatic" title="Permalink to this heading">#</a></h2>
+<p>Com tot circuit, el circuit pneumàtic té els seus propis generadors d’energia, les seves línies de distribució, els seus elements de comandament, regulació i control i els seus receptors d’energia o actuadors.</p>
+<section id="generacio-i-condicionament-de-l-aire-comprimit">
+<h3>Generació i condicionament de l’aire comprimit<a class="headerlink" href="#generacio-i-condicionament-de-l-aire-comprimit" title="Permalink to this heading">#</a></h3>
+<p>L’aire comprimit s’obté mitjançant un compressor. Un cop extret el calor resultant de la compressió mitjançant un refrigerador, l’aire s’emmagatzema en un dipòsit. Aquest emmagatzematge permet no sobredimensionar el compressor perquè proporcioni el cabal màxim, sinó que únicament ha de mantenir la reserva d’aire acumulada proporcionant el consum mitjà.</p>
+<p>D’altra banda, és necessari condicionar aquest aire, ja que el vapor d’aigua i les partícules en suspensió disminuirien el rendiment i danyarien a mitjà termini els elements del circuit. Tot i que ja es prenen precaucions en aquest sentit durant la compressió i l’emmagatzematge de l’aire, just abans de la seva utilització ha de ser tractat de nou per millorar les seves condicions.</p>
+<p>El vapor d’aigua podria corroir les conduccions, eliminar el lubricant dels components, perjudicar el bon funcionament de les vàlvules i fins i tot embrutar o danyar en llocs de contacte de l’aire comprimit: pintures, aliments, … S’elimina mitjançant condensació per refrigeració, o bé utilitzant assecadors d’absorció, on l’aire entra en contacte amb una substància que reté l’aigua, com és el cas del gel de la sílice.</p>
+<p>Els filtres separen les impureses sòlides i els condensats restants de l’aigua. La majoria de filtres es basen en la força centrífuga: uns deflectors produeixen un moviment turbulent de l’aire que ocasiona que les partícules més grans, incloent-hi l’aigua condensada, siguin llançades cap a les parets del filtre. L’aire passa després per una malla de bronze amb un pas de 64 μm on les partícules més petites són capturades. En els filtres de purga automàtica, que utilitzen el mateix principi, l’aigua es purga automàticament en arribar a un nivell determinat, mitjançant un flotador que allibera una vàlvula i permet la purga.</p>
+<p>Un cop depurat l’aire, se li regula la pressió mitjançant un reductor. D’aquesta manera s’obté l’aire amb una pressió regular, que millora el rendiment de la instal·lació en disminuir l’ús i reduir el consum de l’aire, alhora que ajusta la pressió a l’òptima de funcionament dels elements del circuit.</p>
+<p>Finalment, els lubricants afegeixen a l’aire comprimit oli de lubricació. Aquesta pràctica permet lubricar de manera molt efectiva tot el circuit, reduint el seu manteniment.</p>
+<p>La generació de l’aire comprimit sol centralitzar-se per a tota la instal·lació, representant-se en els esquemes amb un únic símbol. De fet, molts fabricants subministren una única unitat que integra tots aquests dispositius.</p>
+</section>
+<section id="distribucio-de-l-aire-comprimit">
+<h3>Distribució de l’aire comprimit<a class="headerlink" href="#distribucio-de-l-aire-comprimit" title="Permalink to this heading">#</a></h3>
+<p>L’aire comprimit es canalitza a través d’una xarxa de distribució. Les canonades acostumen a ser d’acer inoxidable o coure, per evitar el risc de corrossió, tot i que últimament han estat desplaçades per les construïdes a base de niló, polietilè o poliamida. També s’utilitzen altres metalls galvanitzats interiorment.</p>
+<p>D’especial interès són les línies de pilotatge. Transmeten senyals entre vàlvules. Com que només han de transportar l’energia necessària per activar una vàlvula, el seu diàmetre és reduït, disminuint el consum d’aire i accelerant la transmissió del senyal.</p>
+</section>
+<section id="regulacio-i-control">
+<h3>Regulació i control<a class="headerlink" href="#regulacio-i-control" title="Permalink to this heading">#</a></h3>
+<p>En un circuit pneumàtic, els elements de comandament, regulació i control són les vàlvules. Segons la seva funció les podem classificar en vàlvules reguladores, vàlvules de control o comandament i vàlvules emissors de senyal.</p>
+<p>Les vàlvules reguladores governen els elements de treball o actuadors. Les més utilitzades són les vàlvules reguladores de pressió i les vàlvules reguladores de flux o cabal. Amb les primeres es redueix la força realitzada pels cilindres, mentre que amb les segones es redueix la velocitat del moviment. En cas de voler accelerar la velocitat del moviment, s’utilitza una vàlvula d’escapament ràpid, que evita que l’aire hagi de tornar a la vàlvula distribuïdora.</p>
+<p>Les vàlvules de control o comandament comanden les vàlvules reguladores. Principalment es tracta de vàlvules distribuïdores, que determinen l’obertura i tancament i el sentit de flux de l’aire. Amb elles es materialitza la lògica del circuit. Quan és necessari introduir un retard en l’activació d’un actuador, sol utilitzar-se un circuit temporitzador. En aquest circuit s’intercala un dipòsit en la línia de pilotatge amb una vàlvula de regulació de cabal a la seva entrada. El dipòsit no transmet la pressió rebuda mentre l’aire l’omple, introduint el retard, que es pot ajustar mitjançant la vàlvula de regulació de cabal.</p>
+<p>Les vàlvules emissores de senyal detecten quan han d’actuar els elements de comandament. Entre elles destaquen els detectors de final de cursa, que detecten la posició de les tiges dels cilindres. Amb aquests sensors es recull la informació necessària per realimentar el sistema.</p>
+<p>Mitjançant les electrovàlvules i sensors elèctrics o electrònics és possible utilitzar de forma híbrida la tecnologia neumàtica amb la tecnologia elèctrica o electrònica, permetent la utilització d’ordinadors, sistemes digitals o autòmats programables.</p>
+</section>
+<section id="actuadors-pneumatics">
+<h3>Actuadors pneumàtics<a class="headerlink" href="#actuadors-pneumatics" title="Permalink to this heading">#</a></h3>
+<p>Els cilindres de doble efecte i d’efecte simple són els actuadors o receptors energètics més comuns. Permeten moviments lineals. La força exercida ve limitada per:</p>
+<ul class="simple">
+<li><p>Avançament en el cilindre de doble efecte:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ F = p \pi R^2 - F_r \]</div>
+<ul class="simple">
+<li><p>Retrocés en el cilindre de doble efecte:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ F = p \pi (R^2 – r^2) - F_r \]</div>
+<ul class="simple">
+<li><p>Avançament en el cilindre d’efecte simple:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ F = p \pi R^2- F_m - F_r \]</div>
+<p>On <span class="math notranslate nohighlight">\( p \)</span> és la pressió relativa (diferència entre la pressió aplicada i la pressió atmosfèrica), <span class="math notranslate nohighlight">\( R \)</span> el radi del pistó i <span class="math notranslate nohighlight">\(F_r\)</span> la força de fricció. La força de la molla <span class="math notranslate nohighlight">\(F_m\)</span> només es dona en el cas del cilindre d’efecte simple. Tot i que <span class="math notranslate nohighlight">\(F_r\)</span> i <span class="math notranslate nohighlight">\(F_m\)</span> venen proporcionades pel fabricant del cilindre en taules, es pot considerar la primera com un 10 % de la força teòrica, i la segona com un 6 %.</p>
+</section>
+</section>
+<section id="disseny-de-circuits-pneumatics">
+<h2>Disseny de circuits pneumàtics<a class="headerlink" href="#disseny-de-circuits-pneumatics" title="Permalink to this heading">#</a></h2>
+<p>En el disseny dels circuits pneumàtics, a més dels processos propis de qualsevol disseny (elaboració de plànols, redacció de la documentació, llistat de peces, pressupost, …) hi ha dos processos que el caracteritzen: el disseny de la seqüència de moviments i el càlcul dels elements.</p>
+<p>En el primer procés es determina quins actuadors intervenen i l’ordre en què actuen. Per això s’utilitzen diferents tècniques: taula de seqüència de moviments, diagrama de moviments, GRAFCET, … De les relacions entre aquests actuadors es determinen els sensors i els elements de control, permetent un primer esborrany de l’esquema del circuit.</p>
+<p>En el segon procés es calculen els requisits dels elements utilitzats, determinant les seves característiques i la necessitat d’incorporar elements reguladors: secció dels cilindres per obtenir la força necessària; incorporació de vàlvules reguladores de pressió per limitar la seva força, de vàlvules reguladores de cabal per limitar la seva velocitat, de vàlvules d’escapament ràpid per augmentar la velocitat; volum d’aire consumit en cada cicle per determinar la generació d’aire necessària per part del compressor, … Amb aquesta informació és possible corregir l’esborrany i elaborar la versió definitiva de l’esquema.</p>
+<section id="taula-de-sequencia-de-moviments">
+<h3>Taula de seqüència de moviments<a class="headerlink" href="#taula-de-sequencia-de-moviments" title="Permalink to this heading">#</a></h3>
+<p>Aquesta taula presenta les diferents etapes dels cilindres en ordre cronològic. A cada cilindre se li assigna una lletra: A, B, C, … El moviment d’avanç o sortida de la tija es representa amb el signe (+) i el d’entrada o retrocés amb el signe (-).</p>
+<p>Una aplicació corrent de la neumàtica és l’estampat de la data de caducitat d’un producte alimentari a la cadena d’envasament. En aquest mecanisme es necessiten com a mínim dos cilindres, un per col·locar l’envàs sota l’estampador, l’altre per fer baixar a aquest últim per deixar la marca sobre l’envàs.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p>cilindre</p></th>
+<th class="text-center head"><p>repòs</p></th>
+<th class="text-center head"><p>1</p></th>
+<th class="text-center head"><p>2</p></th>
+<th class="text-center head"><p>3</p></th>
+<th class="text-center head"><p>4</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>A</p></td>
+<td class="text-center"><p>-</p></td>
+<td class="text-center"><p>(+)</p></td>
+<td class="text-center"><p>+</p></td>
+<td class="text-center"><p>+</p></td>
+<td class="text-center"><p>(-)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>B</p></td>
+<td class="text-center"><p>-</p></td>
+<td class="text-center"><p>-</p></td>
+<td class="text-center"><p>(+)</p></td>
+<td class="text-center"><p>(-)</p></td>
+<td class="text-center"><p>-</p></td>
+</tr>
+</tbody>
+</table>
+<p>A la taula anterior hem indicat entre parèntesis l’estat quan n’hi ha hagut un canvi.</p>
+<p>Els dos cilindres tenen inicialment les seves tiges comprimides. El circuit ha de detectar quan la tija del cilindre A ha avançat completament (A+), per iniciar l’avanç del cilindre B. Una vegada que la tija del cilindre B ha arribat al seu avanç màxim (B+), ha d’iniciar el seu propi retrocés. Quan aquest retrocés s’ha completat (B-), s’inicia el retrocés del cilindre A, que recupera la seva posició de repòs (A-). Per tant, són necessàries microvàlvules accionades mecànicament que actuen com a detectors de final de cursa a les posicions A+, B+, B-.</p>
+<p>Per accelerar el retrocés del cilindre B, se li connecta una vàlvula d’escapament ràpid. D’altra banda, per evitar moviments bruscs en el cilindre A, es regula l’entrada d’aire en cada sentit amb una vàlvula reguladora de cabal.</p>
+</section>
+<section id="diagrama-de-moviments">
+<h3>Diagrama de Moviments<a class="headerlink" href="#diagrama-de-moviments" title="Permalink to this heading">#</a></h3>
+<p>En aquests diagrames, la posició de les tiges es representa gràficament.</p>
+<p>En els diagrames de fase a l’eix de les abscisses únicament s’indiquen les fases de treball.</p>
+<p><img alt="" src="_images/pneumatica3.png" /></p>
+<p>En els diagrames espai-temps es representa l’evolució temporal de les posicions de les tiges. Aquest diagrama facilita el disseny dels elements accessoris: vàlvules de regulació de cabal, d’escapament ràpid, …</p>
+<p><img alt="" src="_images/pneumatica4.png" /></p>
+<p>També és possible representar aquesta evolució conjuntament amb els estats de les vàlvules de control, tant en funció del temps com representant únicament les fases o estats. Són els anomenats diagrames de senyals de comandament.</p>
+<p><img alt="" src="_images/pneumatica5.png" /></p>
+</section>
+<section id="grafcet">
+<h3>GRAFCET<a class="headerlink" href="#grafcet" title="Permalink to this heading">#</a></h3>
+<p>El GRAFCET (Grafe Funcional de Comandament Etapes-Transicions) o diagrama funcional permet mostrar de forma gràfica i concisa el cicle de funcionament d’un automatisme seqüencial. Cada una de les etapes o estats representa un estat estable del procés, per exemple, l’estat de repòs d’un cilindre o la seva posició màxima. Les accions necessàries per canviar d’estat (per exemple, el dispar de d’un sensor) es denomien transicions.</p>
+<p>Els estats es representen amb quadrats numerats units per una línia, i cadascun va associat a un rectangle que mostra la característica de l’estat (A+, B-, …). L’estat de repòs va associat al número 0 i es representa amb un doble rectangle. Les transicions es representen amb línies que tallen el flux del diagrama, i van associades a les accions característiques, típicament la detecció d’un final de cursa. Els sensors de final de cursa es designen amb la mateixa lletra que el cilindre però en minúscula, i porten un subíndex 0 pel sensor que detecta que la tija ha retrocedit i un subíndex 1 quan la tija ha assolit la seva màxima extensió.</p>
+<p><img alt="" src="_images/pneumatica2.png" /></p>
+</section>
+<section id="esquema-pneumatic">
+<h3>Esquema Pneumàtic<a class="headerlink" href="#esquema-pneumatic" title="Permalink to this heading">#</a></h3>
+<p>L’esquema pneumàtic concreta gràficament el disseny. Els elements del circuit es representen segons la simbologia <a class="reference external" href="http://sitioniche.nichese.com/simbolosdin.html">ISO-CETOP</a>, en la seva posició de repòs. Les conduccions de pilotatge es dibuixen amb línies a traços, mentre que la resta es dibuixa amb traç continu, sempre amb línies rectes i evitant en el possible les interseccions.</p>
+<p><img alt="" src="_images/Hidro01.png" /></p>
+<p>Els elements del circuit es col·loquen de forma que l’aportació d’energia flueixi de baix a dalt i d’esquerra a dreta, igual que la cadena de comandament. Per això, les fonts d’energia, si es representen explícitament, es col·loquen a baix a l’esquerra. A continuació es col·loquen els components de comandament en ordre seqüencial, cap amunt i d’esquerra a dreta. A la part superior s’ubiquen els actuadors. Habitualment, es fa l’impàs de la fase de generació i condicionament de l’aire comprimit des del compressor i la seva distribució, substituint-la per un únic símbol que es repeteix allà on sigui necessari.</p>
+<p><img alt="" src="_images/pneumatica1.png" /></p>
+<p>Una forma alternativa a la descrita anteriorment per designar els diferents elements del circuit és utilitzar una numeració per grups (0 per al sistema d’alimentació d’energia, 1 per als elements del primer cilindre, 2 per al segon, …) amb una extensió decimal contínua (.0 per a òrgans de treball; .1 per a òrgans de potència; .2, .4, … per als elements que comanden la fase activa de l’element de treball, com els sensors que detecten la tija estesa; .3, .5, … per als elements que comanden la fase passiva de l’element de treball, com els sensors que detecten la tija comprimida; .01, .02, … per als elements situats entre el comandament i l’element de treball, com les vàlvules reguladores de cabal.</p>
+<p>En l’exemple del sistema d’estampació, cada cilindre va associat a una vàlvula 4/2 pilotada pneumàticament. Aquestes vàlvules recullen la informació dels sensors. Una vàlvula auxiliar recull l’accionament del polsador d’inici i del comandament general. Vàlvules d’estrangulació regulen el cabal i velocitat del cilindre A, mentre que una vàlvula d’escapament ràpid accelera el moviment de retorn del cilindre B.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "venvpy3"
+        },
+        kernelOptions: {
+            name: "venvpy3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'venvpy3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Control17.html"
+       title="pàgina anterior">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title">Teoria de control. Control PID</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Control99.html"
+       title="pàgina següent">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">següent</p>
+        <p class="prev-next-title">Recursos</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#caracteristiques">Característiques</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elements-d-un-circuit-pneumatic">Elements d’un circuit pneumàtic</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generacio-i-condicionament-de-l-aire-comprimit">Generació i condicionament de l’aire comprimit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribucio-de-l-aire-comprimit">Distribució de l’aire comprimit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regulacio-i-control">Regulació i control</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#actuadors-pneumatics">Actuadors pneumàtics</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#disseny-de-circuits-pneumatics">Disseny de circuits pneumàtics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#taula-de-sequencia-de-moviments">Taula de seqüència de moviments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagrama-de-moviments">Diagrama de Moviments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grafcet">GRAFCET</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esquema-pneumatic">Esquema Pneumàtic</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Per Jordi Orts
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>Editat amb Jupyter Lab <a href='https://jupyter.org/' target='_blank'><img src='https://docs.jupyter.org/en/latest/_static/jupyter.svg' width='95' height='50'></a> i maquetat amb Jupyter-book <a href='https://zenodo.org/records/4539666' target='_blank'><img src='https://zenodo.org/badge/DOI/10.5281/zenodo.2561065.svg'></a></p><p>Aquesta obra està sota una llicència de Creative Commons Reconeixement-No comercial-Compartir igual <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca' target='_blank'><img src='w3/by-nc-sa.png' width='117' height='41'></a></p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,211 @@
+<html>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="John Adams">
+   <META NAME="KeyWords" CONTENT="primer, faq, basics, basic, electronics, basic electronics, advanced electronics, electronics information, basic electronics information, resistor color codes, calculator">
+   <META NAME="Description" CONTENT="A javascript calculator that determines color codes. Mucho Cool graphics or resistor to help visually!">
+   <TITLE>RESISTOR COLOR CODES CALCULATOR</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#FF0000" VLINK="#FF6600" ALINK="#FF0000" onload="calcOhms()">
+
+<body bgcolor="#FFFFFF" onload="calcOhms()">
+<!-- 
+    -------------------------------------------------------------------------
+                GRAPHICAL RESISTANCE CALCULATOR in JAVASCRIPT
+                                Version 2.0
+                    by Danny Goodman (dannyg@dannyg.com)
+                    Analyzed and described at length in 
+                            "JavaScript Bible"
+                      (IDG Books ISBN 0-7645-3022-4)
+    
+    This program is Copyright 1996 by Danny Goodman.  You may adapt
+    this calculator for your Web pages, provided these opening credit
+    lines (down to the lower dividing line) are in your outliner HTML document.
+    You may not reprint or redistribute this code without permission from 
+    the author.
+    -------------------------------------------------------------------------
+--><script language="JavaScript1.1">
+<!-- hide script from nonscriptable browsers
+
+// create array listing all the multiplier values
+var multiplier = new Array()
+multiplier[0] = 0
+multiplier[1] = 1
+multiplier[2] = 2
+multiplier[3] = 3
+multiplier[4] = 4
+multiplier[5] = 5
+multiplier[6] = 6
+multiplier[7] = 7
+multiplier[8] = 8
+multiplier[9] = 9
+multiplier[10] = -1
+multiplier[11] = -2
+
+// create array listing all tolerance values
+var tolerance = new Array()
+tolerance[0] = "+/-5%"
+tolerance[1] = "+/-10%"
+tolerance[2] = "+/-20%"
+
+// format large values into kilo and meg
+function format(ohmage) {
+	if (ohmage >= 10e6) {
+		ohmage /= 10e5
+		return "" + ohmage + " Mohms"
+	} else {
+		if (ohmage >= 10e3) {
+			ohmage /= 10e2
+			return "" + ohmage + " Kohms"
+		} else {
+			return "" + ohmage + " ohms"
+		}
+	}
+}
+
+// calculate resistance and tolerance values
+function calcOhms() {
+	var form = document.forms[0]
+	var d1 = form.tensSelect.selectedIndex
+	var d2 = form.onesSelect.selectedIndex
+	var m = form.multiplierSelect.selectedIndex
+	var t = form.toleranceSelect.selectedIndex
+	var ohmage = (d1 * 10) + d2
+	ohmage = eval("" + ohmage + "e" + multiplier[m])
+	ohmage = format(ohmage)
+	var tol = tolerance[t]
+	document.forms[1].result.value = ohmage + ", " + tol
+}
+
+// pre-load all color images into image cache
+var colorList = "Black,Blue,Brown,Gold,Gray,Green,None,Orange,Red,Silver,Violet,White,Yellow"
+var colorArray = colorList.split(",")
+var imageDB = new Array()
+for (i = 0; i < colorArray.length; i++) {
+	imageDB[colorArray[i]] = new Image(21,182)
+	imageDB[colorArray[i]].src = "r" + colorArray[i] + ".gif"
+}
+
+function setTens(choice) {
+	var tensColor = choice.options[choice.selectedIndex].text
+	document.tens.src = imageDB[tensColor].src
+	calcOhms()
+}
+function setOnes(choice) {
+	var onesColor = choice.options[choice.selectedIndex].text
+	document.ones.src = imageDB[onesColor].src
+	calcOhms()
+}
+function setMult(choice) {
+	var multColor = choice.options[choice.selectedIndex].text
+	document.mult.src = imageDB[multColor].src
+	calcOhms()
+}
+function setTol(choice) {
+	var tolColor = choice.options[choice.selectedIndex].text
+	document.tol.src = imageDB[tolColor].src
+	calcOhms()
+}
+function showIntro() {
+	window.open("resintro.htm","","WIDTH=400,HEIGHT=260")
+}
+// end script hiding -->
+</script>
+<CENTER><B><U><FONT SIZE=+2>RESISTOR COLOR</FONT></U></B></CENTER>
+
+<CENTER><B><U><FONT SIZE=+2>CODE CALCULATOR</FONT></U></B></CENTER>
+
+<form>
+    <center><select name="tensSelect" size="1"
+    onchange="setTens(this)">
+        <option selected> Black </option>
+        <option> Brown </option>
+        <option> Red </option>
+        <option> Orange </option>
+        <option> Yellow </option>
+        <option> Green </option>
+        <option> Blue </option>
+        <option> Violet </option>
+        <option> Gray </option>
+        <option> White </option>
+    </select> <select name="onesSelect" size="1"
+    onchange="setOnes(this)">
+        <option selected> Black </option>
+        <option> Brown </option>
+        <option> Red </option>
+        <option> Orange </option>
+        <option> Yellow </option>
+        <option> Green </option>
+        <option> Blue </option>
+        <option> Violet </option>
+        <option> Gray </option>
+        <option> White </option>
+    </select> <select name="multiplierSelect" size="1"
+    onchange="setMult(this)">
+        <option selected> Black </option>
+        <option> Brown </option>
+        <option> Red </option>
+        <option> Orange </option>
+        <option> Yellow </option>
+        <option> Green </option>
+        <option> Blue </option>
+        <option> Violet </option>
+        <option> Gray </option>
+        <option> White </option>
+        <option> Gold </option>
+        <option> Silver </option>
+    </select>&nbsp;&nbsp;&nbsp;&nbsp; <select
+    name="toleranceSelect" size="1" onchange="setTol(this)">
+        <option selected> Gold </option>
+        <option> Silver </option>
+        <option> None </option>
+    </select>
+</form>
+
+<hr>
+<script language="JavaScript1.1">
+	var form = document.forms[0]
+	var tensDigit = form.tensSelect.selectedIndex
+	var tensColor = form.tensSelect.options[tensDigit].text
+	var onesDigit = form.onesSelect.selectedIndex
+	var onesColor = form.onesSelect.options[onesDigit].text
+	var multDigit = form.multiplierSelect.selectedIndex
+	var multColor = form.multiplierSelect.options[multDigit].text
+	var tolDigit = form.toleranceSelect.selectedIndex
+	var tolColor = form.toleranceSelect.options[tolDigit].text
+
+var table ="<TABLE BORDER=2> "
+table += "<TR><TH ALIGN=middle>Resistance Value:</TH><TD ALIGN='middle'><FORM><INPUT TYPE='text' NAME='result' SIZE=20></FORM>"
+table +="</TD></TR><TR><TD COLSPAN=2>"
+table +="<IMG SRC='resleft.gif' WIDTH=127 HEIGHT=182>" +
+			"<IMG SRC='r" + tensColor + ".gif' NAME='tens' WIDTH=21 HEIGHT=182>"+
+			"<IMG SRC='r" + onesColor + ".gif' NAME='ones' WIDTH=21 HEIGHT=182>"+
+			"<IMG SRC='r" + multColor + ".gif' NAME='mult' WIDTH=21 HEIGHT=182>"+
+			"<IMG SRC='spacer.gif' WIDTH=17 HEIGHT=182>"+
+			"<IMG SRC='r" + tolColor + ".gif' NAME='tol' WIDTH=21 HEIGHT=182>"+
+			"<IMG SRC='resright.gif' WIDTH=127 HEIGHT=182>"
+table += "</TD></TR></TABLE>"
+document.write(table)
+</script>
+</center>
+<HR>
+
+<CENTER><B>GRAPHICAL RESISTANCE CALCULATOR in JAVASCRIPT</B></CENTER>
+
+<CENTER><B>Version 2.0</B></CENTER>
+
+<CENTER><FONT SIZE=-1>by Danny Goodman (dannyg@dannyg.com)</FONT></CENTER>
+
+<CENTER><FONT SIZE=-1>Analyzed and described at length in&nbsp;</FONT></CENTER>
+
+<CENTER><FONT SIZE=-1>"JavaScript Bible"</FONT></CENTER>
+
+<CENTER><FONT SIZE=-1><a href="http://www.idgbooks.com">(IDG Books</a> ISBN 0-7645-3022-4)</FONT></CENTER>
+
+<CENTER><FONT SIZE=-1>This program is Copyright 1996 by Danny Goodman.</FONT>&nbsp;&nbsp;</CENTER>
+
+<CENTER>
+<HR WIDTH="100%"></CENTER>
+
+</body>
+</html>

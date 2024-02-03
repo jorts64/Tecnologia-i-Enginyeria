@@ -1,0 +1,790 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="ca" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Funció de transferència &#8212; Tecnologia i Enginyeria</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Control16';</script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Índex" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
+    <link rel="next" title="Circuits Pneumàtics" href="Control50.html" />
+    <link rel="prev" title="Modelització de sistemes. Diagrama de blocs" href="Control15.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ca"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Salta al contingut principal</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Tecnologia i Enginyeria - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Tecnologia i Enginyeria - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Tecnologia i Enginyeria
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="Energia01.html">Energia. Treball. Potència</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Energia81.html">Xocs inelàstics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Energia82.html">Xocs elàstics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Energia83.html">Energia nuclear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Energia99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="ProdElec01.html">Producció d’energia elèctrica</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="ProdElec81.html">Cogeneració</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProdElec82.html">Reactors de fusió</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProdElec83.html">Centrals elèctriques a Catalunya</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProdElec99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Materials01.html">Materials</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Materials81.html">Densitat dels metalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials82.html">Aliatges binaris: Llei de la palanca</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials83.html">Assaig de tracció</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials84.html">Assajos mecànics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials85.html">Comparació propietats dels metalls</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="Materials98.html">OpenSCAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="CorrentContinu01.html">Corrent Continu</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu02.html">Lleis bàsiques del circuit elèctric</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu50.html">Aplicacions de les resistències</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu51.html">Les resistències comercials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu03.html">Associacions de resistències</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu04.html">Exercicis resolts 1/2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu05.html">Pràctica: Llei d’Ohm. Efecte Joule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu06.html">Pràctica: Estudi d’una pila i d’una bombeta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu07.html">Lleis de Kirchoff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu08.html">Exercicis resolts 2/2</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Mecanica01.html">Mecànica</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Termodinamica01.html">Termodinàmica</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Termodinamica99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="CorrentAltern01.html">Corrent Altern</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="CorrentAltern99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="MaqElec01.html">Màquines elèctriques</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec02.html">Equacions fonamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec03.html">Motor de corrent continu d’imants permanents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec04.html">Motor de corrent continu d’excitació independent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec05.html">Motor de corrent continu d’excitació paral·lela</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec06.html">Motor de corrent continu d’excitació sèrie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec07.html">Motor de corrent continu d’excitació compound</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec08.html">Generadors elèctrics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec09.html">El generador trifàsic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec10.html">Motors de corrent altern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec11.html">Transformadors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec12.html">Motors pas a pas</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Control01.html">Automàtica i Control</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Control02.html">El transistor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control03.html">Projecte: Interruptor crepuscular</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control04.html">Àlgebra de Boole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control05.html">Aplicació de l’àlgebra de Boole al disseny de circuits electrònics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control06.html">Diagrames de contactes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control07.html">Amplificadors operacionals i Comparadors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control08.html">Circuits seqüencials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control09.html">Condicionament de la sortida</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control40.html">Eletrònica de potència. Tiristors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control10.html">Temporitzador 555</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control11.html">Relès</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control12.html">Electricitat industrial. Contactors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control13.html">PLCs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control14.html">GRAFCET</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control15.html">Modelització de sistemes. Diagrama de blocs</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Funció de transferència</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control50.html">Circuits Pneumàtics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="OficinaTecnica01.html">Oficina Tècnica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Empresa01.html">Empresa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RecursosTaller01.html">Recursos Taller</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Biblio.html">Bibliografia</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Descarregueu aquesta pàgina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Control16.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Baixeu el fitxer font"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimeix a PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="clar/fosc" aria-label="clar/fosc" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Cerca" aria-label="Cerca" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Funció de transferència</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-transformada-de-laplace">La transformada de Laplace</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transformada-de-fourier">Transformada de Fourier</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diagrames-de-bode">Diagrames de Bode</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estabilitat-del-sistema">Estabilitat del sistema</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisi-del-diagrama-de-bode">Anàlisi del diagrama de Bode</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="funcio-de-transferencia">
+<h1>Funció de transferència<a class="headerlink" href="#funcio-de-transferencia" title="Permalink to this heading">#</a></h1>
+<div class="admonition-pagina-en-desenvolupament admonition">
+<p class="admonition-title">Pàgina en desenvolupament</p>
+<p>Encara estem treballant en aquest document.<br />
+Esperem oferir-vos properament el seu contingut.<br />
+Disculpeu les molèsties.</p>
+</div>
+<p>A Enginyeria, una funció de transferència és una funció matemàtica que modela la sortida del sistema per a qualsevol entrada <span id="id1">[<a class="reference internal" href="Biblio.html#id3" title="Wikipedia contributors. Transfer function. Wikipedia, The Free Encyclopedia, 2023. URL: https://en.wikipedia.org/w/index.php?title=Transfer_function&amp;oldid=1191435655.">con23b</a>]</span>.</p>
+<p>És una definició curta, però molt potent. Si coneixem la funció de transferència coneixem la resposta del sistema per a qualsevol entrada. On està la trampa? Es necessitem matemàtiques molt avançades per fer aquests càlculs.</p>
+<section id="la-transformada-de-laplace">
+<h2>La transformada de Laplace<a class="headerlink" href="#la-transformada-de-laplace" title="Permalink to this heading">#</a></h2>
+<p>La <a class="reference external" href="https://ca.wikipedia.org/wiki/Transformada_de_Laplace">transformada de Laplace</a> es una transformada integral que converteix una función de variable real f(t) (típicament el temps) a una funció de variable complexa F(s):</p>
+<p><span class="math notranslate nohighlight">\(\huge F(s)=\int_{-\infty}^{\infty} e^{-st} f(t)\,dt\)</span></p>
+<p>Aquesta transformada integral té una sèrie de propietats que la fan molt útil en l’anàlisi de sistemes lineals. Un dels avantatges més significatius és el fet que la integració i derivació es converteixen en multiplicació i divisió. Això transforma les equacions diferencials i integrables en equacions polinòmiques, molt més fàcils de resoldre. També és important el fet que aquesta transformada converteix la convolució de funcions en una multiplicació.</p>
+<p>Justament el senyal de sortida d’un sistema Y(s) és la convolució de la resposta impulsiva del sistema o funció de transferència H(s) amb el senyal d’entrada X(s). Així, la nostra funció de transferència val:</p>
+<p><span class="math notranslate nohighlight">\(\Huge H(s) = \frac{Y(s)}{X(s)}\)</span></p>
+<p><img alt="" src="_images/db27.png" /></p>
+<section id="transformada-de-fourier">
+<h3>Transformada de Fourier<a class="headerlink" href="#transformada-de-fourier" title="Permalink to this heading">#</a></h3>
+<p>Recordem que la nostra variable s és complexa: <span class="math notranslate nohighlight">\(s = \sigma + j\omega\)</span></p>
+<p>En el cas <span class="math notranslate nohighlight">\(\sigma=0\)</span> la transformada de Laplace coincideix amb la <a class="reference external" href="https://ca.wikipedia.org/wiki/Transformada_de_Fourier">transformada de Fourier</a>, de variable real f:</p>
+<p><span class="math notranslate nohighlight">\(\huge F(f) = \int_{-\infty}^{\infty} f(x)\ e^{- 2\pi j f x}\,dx\)</span></p>
+<p>Aquesta transformada integral, molt utilitzada a Física, té un sentit més intuitiu: ens dona el guany per a cada freqüencia. Serveix per conèixer la resposta del sistema a l’estat estacionari. Però la resposta transitòria d’encendre i apagar el sistema o l’estudi de la seva estabilitat ens el dona la transformada de Laplace <span id="id2">[<a class="reference internal" href="Biblio.html#id3" title="Wikipedia contributors. Transfer function. Wikipedia, The Free Encyclopedia, 2023. URL: https://en.wikipedia.org/w/index.php?title=Transfer_function&amp;oldid=1191435655.">con23b</a>]</span>.</p>
+<p>Veiem alguns exemples d’aplicació:</p>
+<ul class="simple">
+<li><p>Començarem per un exemple conegut, el programari <em>Audacity</em>. Tan l’eina Equalitzador gràfic com a filtre fan el mateix, el primer amb bandes de freqüència, el segon amb una corba contínua: modificar la resposta a cada freqüènci del sistema (en aquest cas modifica l’arxiu d’audio):</p></li>
+</ul>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p>Equalitzador gràfic</p></th>
+<th class="text-center head"><p>Filtre</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p><img alt="" src="_images/audacityEqGraf.png" /></p></td>
+<td class="text-center"><p><img alt="" src="_images/audacityFiltre.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Quan un tècnic de so arriba a un escenari (posem el Palau Sant Jordi) per a un concert, necessita conèixer la resposta del recinte.Això ho pot fer de dues formes: generar diferents freqüències i mesurar com es reben, o be generar un pols curt i mesurar la resposta. En els dos casos tindrà suficient informació per ajustar el seu equalizador gràfic per reforçar les freqüències amb una absorció més gran i rebaixar les que ressonen en el recinte. Ara l’equip estarà preparat per donar en temps real el senyal del concert amb la màxima qualitat pels assistents.</p></li>
+</ul>
+<p><img alt="" src="_images/eqGrafPro.jpg" /></p>
+<ul class="simple">
+<li><p>Estudiant la funció de transferència del terra (amb l’ajut d’una mica de dinamita i transductors a diferents llocs) s’ha pogut localitzar amb una precissió de cm l’ubicació de diferents runes soterrades a jaciment arqueològics.</p></li>
+<li><p>Quan et fan una audiometria l’objectiu és aconseguir una aproximació a la funció de transferència del teu oïde, especialment útil per ajustar els audífons si és el cas.</p></li>
+</ul>
+</section>
+</section>
+<section id="diagrames-de-bode">
+<h2>Diagrames de Bode<a class="headerlink" href="#diagrames-de-bode" title="Permalink to this heading">#</a></h2>
+<p>Un diagrama de Bode és una gràfica on s’utilitzen escales logarítmiques en la representació de les corbes de resposta freqüencial d’un sistema. consta de dues gràfiques separades, una que correspon al guany i una altra que correspon amb la fase.</p>
+<p>El guany es mesura en dB (<a class="reference external" href="https://ca.wikipedia.org/wiki/Decibel">decibels</a>) i la fase en °.</p>
+<p>Un avantatge de treballar amb l’entorn Jupyter és deixar que Python faci la feina. Veiem un exemple.</p>
+<p>El circuit següent és un filtre RC passa-baixos de 1r ordre:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">lcapy</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">Circuit</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">P1 1 0; down=1.5, v_=v_i(t)</span>
+<span class="s2">R 1 2 2; right=1.5</span>
+<span class="s2">C 2 0_2 {1/4}; down</span>
+<span class="s2">W 0 0_2; right</span>
+<span class="s2">W 2 3; right</span>
+<span class="s2">W 0_2 0_3; right</span>
+<span class="s2">P2 3 0_3; down, v^=v_o(t)&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;european&quot;</span><span class="p">,</span><span class="n">scale</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/928e9e24ae57f9ffeb47eb819ed34abcc08aec5853c5e93432c9479a24d28e38.png" src="_images/928e9e24ae57f9ffeb47eb819ed34abcc08aec5853c5e93432c9479a24d28e38.png" />
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(v_i(t)\)</span> és el voltatge d’entrada i <span class="math notranslate nohighlight">\(v_o(t)\)</span> el de sortida. La funció de transferència en el domini de Laplace es pot calcular especificant els nodes:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">H</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">transfer</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">H</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\frac{1}{\frac{s}{2} + 1}\]</div>
+</div>
+</div>
+<p>Ja tenim la funció de transferència <span class="math notranslate nohighlight">\(H(s)\)</span>. Anem a veure els seus diagrames de Bode:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">H</span><span class="p">(</span><span class="n">jw</span><span class="p">)</span><span class="o">.</span><span class="n">dB</span><span class="o">.</span><span class="n">plot</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000000</span><span class="p">),</span> <span class="n">log_frequency</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">show</span>
+<span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/14920d319f07836f7698013e948c1db6866dc8f73a26c9cc213ad2d35bbe90a7.png" src="_images/14920d319f07836f7698013e948c1db6866dc8f73a26c9cc213ad2d35bbe90a7.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">H</span><span class="p">(</span><span class="n">jw</span><span class="p">)</span><span class="o">.</span><span class="n">phase_degrees</span><span class="o">.</span><span class="n">plot</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000000</span><span class="p">),</span> <span class="n">log_frequency</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/29d4ba7ff7684b309e276270408a5ecb70f26cd249a6c4a933a31e9d6a232207.png" src="_images/29d4ba7ff7684b309e276270408a5ecb70f26cd249a6c4a933a31e9d6a232207.png" />
+</div>
+</div>
+<p>Recordeu que deiem que si coneixem la funció de transferència coneixem la resposta a qualsevol entrada?</p>
+<p>Anem a veure un exemple. Considerem una entrada sinosoidal de freqüència 3 rad/s que comença a t=0:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v_i</span> <span class="o">=</span> <span class="n">voltage</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span> <span class="o">*</span> <span class="n">u</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Calculem la seva transformada de Laplace:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">V_i</span> <span class="o">=</span> <span class="n">v_i</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="n">V_i</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\frac{3}{s^{2} + 9}\]</div>
+</div>
+</div>
+<p>Multiplicant per la funció de transferència trobem el senyal de sortida:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">V_o</span> <span class="o">=</span> <span class="n">V_i</span> <span class="o">*</span> <span class="n">H</span>
+<span class="n">V_o</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\frac{3}{\left(\frac{s}{2} + 1\right) \left(s^{2} + 9\right)}\]</div>
+</div>
+</div>
+<p>Fem la transformada inversa de Laplace per obtenir el senyal en el domini del temps:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v_o</span> <span class="o">=</span> <span class="n">V_o</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">v_o</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[3 \cdot \left(\frac{4 \sin{\left(3 t \right)}}{39} - \frac{2 \cos{\left(3 t \right)}}{13} + \frac{2 \left(-2 - 3 \mathrm{j}\right) \left(-2 + 3 \mathrm{j}\right) e^{- 2 t}}{169}\right) u\left(t\right)\]</div>
+</div>
+</div>
+<p>Simplifiquem una mica l’expressió:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v_o</span><span class="o">.</span><span class="n">simplify_terms</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\frac{2 \cdot \left(2 e^{2 t} \sin{\left(3 t \right)} - 3 e^{2 t} \cos{\left(3 t \right)} + 3\right) e^{- 2 t} u\left(t\right)}{13}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v_o</span><span class="o">.</span><span class="n">simplify_sin_cos</span><span class="p">(</span><span class="n">as_sin</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\frac{2 \sqrt{13} \sin{\left(3 t - \frac{\pi}{2} + \operatorname{atan}{\left(\frac{2}{3} \right)} \right)} u\left(t\right)}{13} + \frac{6 e^{- 2 t} u\left(t\right)}{13}\]</div>
+</div>
+</div>
+<p>El primer terme és la resposta a l’estat estacionari, el segon terme la resposta transitòria al connectar l’entrada sinosoidal a t=0.</p>
+<p>Fixeu-vos que la resposta estacionària té la mateixa freqüència que el senyal d’entrada, però està desfasat.</p>
+<p>Anem a representar els senyals:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">v_i</span><span class="o">.</span><span class="n">plot</span><span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;input&#39;</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">v_o</span><span class="o">.</span><span class="n">plot</span><span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">axes</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;output&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/9cbe43f13ffb8b1eb48c1fb410e7d027f55b104ff5b826dd4af9706adc3203fe.png" src="_images/9cbe43f13ffb8b1eb48c1fb410e7d027f55b104ff5b826dd4af9706adc3203fe.png" />
+</div>
+</div>
+<p>Fixeu-vos en l’efecte del transitori al principi, fins que la resposta tendeix cap a la resposta estacionària</p>
+</section>
+<section id="estabilitat-del-sistema">
+<h2>Estabilitat del sistema<a class="headerlink" href="#estabilitat-del-sistema" title="Permalink to this heading">#</a></h2>
+<p>Un sistema és estable si la seva resposta a un imils tendeix a zero per un temps infinit.</p>
+<p>S’utilitzen diversos mètodes per determinar l’estabilitat d’un sistema: mètode de Ruth, diagrama de Bode, criteri de Lyapunov.</p>
+<p>La transformada de Laplace ens permet escriure la funció de transferència com a:</p>
+<p><span class="math notranslate nohighlight">\(\huge H(s)=\prod_{i=1}^N \frac{1}{s-s_{P_i}}\)</span></p>
+<p>on <span class="math notranslate nohighlight">\(s_{P_i}\)</span> són les arrels del polinomi característic i seran els pols de la funció de transferència. Perquè un sistema sigui estable, la seva funció de transferència no pot tenir pols amb parts reals positives. Si la funció de transferència és estrictament estable, les parts reals de tots els pols seran negatives i el comportament transitori tendirà a zero en el límit del temps infinit.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">H</span><span class="o">.</span><span class="n">poles</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/5d867c932d9349ec3c58c3ef25be6fa3a1f4cc1f10dba023a6ea1471d87c69e8.png" src="_images/5d867c932d9349ec3c58c3ef25be6fa3a1f4cc1f10dba023a6ea1471d87c69e8.png" />
+</div>
+</div>
+<p>Cal interpretar el resultat. Ens diu que hi ha un pol a <span class="math notranslate nohighlight">\(s=-2\)</span> amb multiplicitat 1 (es a dir, que no es repeteix).</p>
+<p>Al nostre circuit tenim un pol per <span class="math notranslate nohighlight">\(s = -2 &lt; 0\)</span>. Serà un sistema estable.</p>
+<section id="analisi-del-diagrama-de-bode">
+<h3>Anàlisi del diagrama de Bode<a class="headerlink" href="#analisi-del-diagrama-de-bode" title="Permalink to this heading">#</a></h3>
+<p>Cada pol de la funció de transferència  produeix una caiguda de 20db/dècada en el guany, i de 45°/dècada en la fase. Amb aquesta i altres regles d’or podem garantir l’estabilitat del sistema. <span id="id3">[<a class="reference internal" href="Biblio.html#id2" title="Bonnie Baker. Cómo utilizar el poder del diagrama de bode para garantizar la estabilidad del circuito. DigiKey, 2021. URL: https://www.digikey.es/es/blog/how-to-wield-the-power-of-the-bode-plot.">Bak21</a>]</span>.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "venvpy3"
+        },
+        kernelOptions: {
+            name: "venvpy3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'venvpy3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Control15.html"
+       title="pàgina anterior">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title">Modelització de sistemes. Diagrama de blocs</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Control50.html"
+       title="pàgina següent">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">següent</p>
+        <p class="prev-next-title">Circuits Pneumàtics</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-transformada-de-laplace">La transformada de Laplace</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transformada-de-fourier">Transformada de Fourier</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diagrames-de-bode">Diagrames de Bode</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estabilitat-del-sistema">Estabilitat del sistema</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisi-del-diagrama-de-bode">Anàlisi del diagrama de Bode</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Per Jordi Orts
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>Editat amb Jupyter Lab <a href='https://jupyter.org/' target='_blank'><img src='https://docs.jupyter.org/en/latest/_static/jupyter.svg' width='95' height='50'></a> i maquetat amb Jupyter-book <a href='https://zenodo.org/records/4539666' target='_blank'><img src='https://zenodo.org/badge/DOI/10.5281/zenodo.2561065.svg'></a></p><p>Aquesta obra està sota una llicència de Creative Commons Reconeixement-No comercial-Compartir igual <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca' target='_blank'><img src='w3/by-nc-sa.png' width='117' height='41'></a></p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

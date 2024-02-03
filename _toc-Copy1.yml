@@ -1,0 +1,69 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: Energia01
+  sections:
+  - file: Energia81
+  - file: Energia82
+  - file: Energia83
+  - file: Energia99
+- file: ProdElec01
+  sections:
+  - file: ProdElec81
+  - file: ProdElec82
+  - file: ProdElec83
+  - file: ProdElec99
+- file: Materials01
+  sections:
+  - file: Materials81
+  - file: Materials82
+  - file: Materials83
+  - file: Materials84
+  - file: Materials85
+  - file: Materials99
+- file: CorrentContinu01
+  sections:
+  - file: CorrentContinu02
+  - file: CorrentContinu50
+  - file: CorrentContinu51
+  - file: CorrentContinu03
+  - file: CorrentContinu04
+  - file: CorrentContinu05
+  - file: CorrentContinu06
+  - file: CorrentContinu07
+  - file: CorrentContinu08
+- file: Mecanica01
+  sections:
+  - file: Mecanica99
+  - file: Termodinamica01
+  sections:
+  - file: Termodinamica99
+- file: CorrentAltern01
+  sections:
+  - file: CorrentAltern99
+- file: MaqElec01
+  sections:
+  - file: MaqElec02
+  - file: MaqElec03
+  - file: MaqElec04
+  - file: MaqElec05
+  - file: MaqElec06
+  - file: MaqElec07
+  - file: MaqElec08
+  - file: MaqElec09
+  - file: MaqElec10
+  - file: MaqElec11
+  - file: MaqElec12
+- file: Control01
+  sections:
+  - file: Control03
+  - file: Control15
+- file: OficinaTecnica01
+- file: Empresa01
+- file: Biblio
+
+
+

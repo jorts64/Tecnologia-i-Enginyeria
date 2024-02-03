@@ -1,0 +1,1409 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="ca" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Àlgebra de Boole &#8212; Tecnologia i Enginyeria</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Control04';</script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Índex" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
+    <link rel="next" title="Aplicació de l’àlgebra de Boole al disseny de circuits electrònics" href="Control05.html" />
+    <link rel="prev" title="Projecte: Interruptor crepuscular" href="Control03.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ca"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Salta al contingut principal</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Tecnologia i Enginyeria - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Tecnologia i Enginyeria - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Tecnologia i Enginyeria
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="Energia01.html">Energia. Treball. Potència</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Energia81.html">Xocs inelàstics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Energia82.html">Xocs elàstics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Energia83.html">Energia nuclear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Energia99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="ProdElec01.html">Producció d’energia elèctrica</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="ProdElec81.html">Cogeneració</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProdElec82.html">Reactors de fusió</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProdElec83.html">Centrals elèctriques a Catalunya</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProdElec99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Materials01.html">Materials</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Materials81.html">Densitat dels metalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials82.html">Aliatges binaris: Llei de la palanca</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials83.html">Assaig de tracció</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials84.html">Assajos mecànics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials85.html">Comparació propietats dels metalls</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="Materials98.html">OpenSCAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="CorrentContinu01.html">Corrent Continu</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu02.html">Lleis bàsiques del circuit elèctric</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu50.html">Aplicacions de les resistències</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu51.html">Les resistències comercials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu03.html">Associacions de resistències</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu04.html">Exercicis resolts 1/2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu05.html">Pràctica: Llei d’Ohm. Efecte Joule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu06.html">Pràctica: Estudi d’una pila i d’una bombeta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu07.html">Lleis de Kirchoff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu08.html">Exercicis resolts 2/2</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Mecanica01.html">Mecànica</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Termodinamica01.html">Termodinàmica</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Termodinamica99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="CorrentAltern01.html">Corrent Altern</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="CorrentAltern99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="MaqElec01.html">Màquines elèctriques</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec02.html">Equacions fonamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec03.html">Motor de corrent continu d’imants permanents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec04.html">Motor de corrent continu d’excitació independent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec05.html">Motor de corrent continu d’excitació paral·lela</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec06.html">Motor de corrent continu d’excitació sèrie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec07.html">Motor de corrent continu d’excitació compound</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec08.html">Generadors elèctrics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec09.html">El generador trifàsic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec10.html">Motors de corrent altern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec11.html">Transformadors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec12.html">Motors pas a pas</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Control01.html">Automàtica i Control</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Control02.html">El transistor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control03.html">Projecte: Interruptor crepuscular</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Àlgebra de Boole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control05.html">Aplicació de l’àlgebra de Boole al disseny de circuits electrònics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control06.html">Diagrames de contactes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control07.html">Amplificadors operacionals i Comparadors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control08.html">Circuits seqüencials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control09.html">Condicionament de la sortida</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control40.html">Eletrònica de potència. Tiristors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control10.html">Temporitzador 555</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control11.html">Relès</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control12.html">Electricitat industrial. Contactors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control13.html">PLCs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control14.html">GRAFCET</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control15.html">Diagrama de blocs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control50.html">Circuits Pneumàtics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="OficinaTecnica01.html">Oficina Tècnica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Empresa01.html">Empresa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RecursosTaller01.html">Recursos Taller</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Biblio.html">Bibliografia</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Descarregueu aquesta pàgina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Control04.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Baixeu el fitxer font"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimeix a PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="clar/fosc" aria-label="clar/fosc" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Cerca" aria-label="Cerca" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Àlgebra de Boole</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#una-mica-d-historia">Una mica d’Història</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definicio">Definició</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#postulats-de-huntington">Postulats de Huntington</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#altres-propietats">Altres propietats</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simbologia-a-altres-disciplines">Simbologia a altres disciplines</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simbologia-grafica">Simbología gràfica</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#portes-logiques-iso">Portes lògiques ISO</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#portes-logiques-ansi">Portes lògiques ANSI</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taules-de-veritat">Taules de veritat</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#porta-or">Porta OR</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#porta-and">Porta AND</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#porta-not">Porta NOT</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funcions-logiques-combinacionals">Funcions lògiques combinacionals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minterms">minterms</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maxterm">Maxterm</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simplificacio-de-funcions-logiques">Simplificació de funcions lògiques</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simplificacio-algebraica">Simplificació algebraica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagrames-de-veitch">Diagrames de Veitch</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagrames-de-veitch-com-a-guia-per-a-una-simplificacio-algebraica-rigurosa">Diagrames de Veitch com a guia per a una simplificació algebraica rigurosa</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#programari-de-simplificacio">Programari de simplificació</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#esquema-de-portes-logiques">Esquema de portes lògiques</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simulacio-amb-programari">Simulació amb programari</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reduccio-de-funcions-iteratives">Reducció de funcions iteratives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reduccio-a-portes-nand">Reducció a portes NAND</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#families-logiques">Famílies lògiques</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#productes-comercials">Productes comercials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dispositius-programables-pal-fpga">Dispositius programables: PAL, FPGA.</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="algebra-de-boole">
+<h1>Àlgebra de Boole<a class="headerlink" href="#algebra-de-boole" title="Permalink to this heading">#</a></h1>
+<div class="admonition-pagina-en-desenvolupament admonition">
+<p class="admonition-title">Pàgina en desenvolupament</p>
+<p>Encara estem treballant en aquest document.<br />
+Esperem oferir-vos properament el seu contingut.<br />
+Disculpeu les molèsties.</p>
+</div>
+<section id="una-mica-d-historia">
+<h2>Una mica d’Història<a class="headerlink" href="#una-mica-d-historia" title="Permalink to this heading">#</a></h2>
+<p>Tots coneixeu el sistemes digitals; només poden agafar dos valor: <strong>0</strong> o <strong>1</strong>. El que potser no conegueu és que aquests sistemes es  poden analitzar i dissenyar amb una estructura matemàtica publicada per George Boole al 1847, coneguda com a <strong>àlgebra de Boole</strong>. No només l’electrònica digital se n’aprofita. La lògica proposicional, els diagrames de Venn, l’enginyeria pneumàtica, la programació informàtica, el disseny 3D, l’electricitat industrial i moltes més disciplines també l’utilitzen <span id="id1">[<a class="reference internal" href="Biblio.html#id8" title="Wikipedia contributors. Boolean algebra. Wikipedia, The Free Encyclopedia, 2023. URL: https://en.wikipedia.org/w/index.php?title=Boolean_algebra.">con23</a>]</span>. De fet, Claude Shannon (si, el mateix que va introduir el concepte d’entropia de la informació) va ser dels primers en utilitzar-la; la va fer servir per analitzar els circuits amb relés i conmutadors, tema de la seva tesis doctoral del 1937 <span id="id2">[<a class="reference internal" href="Biblio.html#id7" title="Wikipedia contributors. Claude shannon. Wikipedia, The Free Encyclopedia, 2024. URL: https://en.wikipedia.org/w/index.php?title=Claude_Shannon.">con24</a>]</span>.</p>
+<p>Com té aplicació a moltes disciplines cadascuna ha adaptat la simbologia al seu camp. Per ara utilitzarem la simbologia de l’electrònica digital. Al final del tema trobareu l’equivalència amb altres disiplines.</p>
+</section>
+<section id="definicio">
+<h2>Definició<a class="headerlink" href="#definicio" title="Permalink to this heading">#</a></h2>
+<p><span class="math notranslate nohighlight">\(\mathcal{B}=\left\{0.1\right\}\)</span><br />
+<span class="math notranslate nohighlight">\((+ \ , \ \cdot) \ \)</span> operacions</p>
+<p>L’estructura <span class="math notranslate nohighlight">\((\mathfrak{B}, +, \cdot)\)</span> és un àlgebra de Boole quan es cumpleixen els 5 postulats de Huntington</p>
+</section>
+<section id="postulats-de-huntington">
+<h2>Postulats de Huntington<a class="headerlink" href="#postulats-de-huntington" title="Permalink to this heading">#</a></h2>
+<p><span class="math notranslate nohighlight">\(\forall \ a,b,c\in \mathcal{B}\)</span></p>
+<p>Primer postulat: <strong>les operacions són internes:</strong></p>
+<p><span class="math notranslate nohighlight">\(a+b\in \mathcal{B}\qquad a\cdot b\in \mathcal{B} \qquad\)</span></p>
+<p>Segon postulat: <strong>existeix un element neutre per a cada operació:</strong></p>
+<p><span class="math notranslate nohighlight">\(a+0 = a\qquad a\cdot 1 = a \qquad\)</span></p>
+<p>Tercer postulat: <strong>existeix l’element invers:</strong></p>
+<p><span class="math notranslate nohighlight">\(a\cdot \overline{a} = 0\qquad a+\overline{a} = 1 \qquad\)</span></p>
+<p>Quart postulat: <strong>existeix la propietat commutativa:</strong></p>
+<p><span class="math notranslate nohighlight">\(a+b = b+a\qquad a\cdot b = b\cdot a \qquad\)</span></p>
+<p>Cinquè postulat: <strong>existeix la propietat distributiva:</strong></p>
+<p><span class="math notranslate nohighlight">\(a\cdot (b+c) = (a\cdot b)+(a\cdot c)\qquad a+(b\cdot c) = (a+b)\cdot (a+c) \qquad\)</span></p>
+</section>
+<section id="altres-propietats">
+<h2>Altres propietats<a class="headerlink" href="#altres-propietats" title="Permalink to this heading">#</a></h2>
+<p><strong>Lleis d’absorció:</strong></p>
+<p><span class="math notranslate nohighlight">\(a+(a\cdot b) = a\qquad a\cdot (a+b) = a\qquad\)</span></p>
+<p><span class="math notranslate nohighlight">\(a+(\overline{a}\cdot b) = a+b\qquad a\cdot (\overline{a}+b) = a\cdot b\qquad\)</span></p>
+<p><strong>Llei d’idempotència:</strong></p>
+<p><span class="math notranslate nohighlight">\(a+a=a\quad a\cdot a= a\qquad\)</span></p>
+<p><strong>Llei d’involució:</strong></p>
+<p><span class="math notranslate nohighlight">\(\overline{(\overline{a})} = a\qquad\)</span></p>
+<p><strong>Llei de De Morgan:</strong></p>
+<p><span class="math notranslate nohighlight">\(\overline{a+b} = \overline{a}\cdot\overline{b}\qquad \overline{a\cdot b} = \overline{a}+\overline{b}\qquad\)</span></p>
+<p><strong>Propietat associativa:</strong></p>
+<p><span class="math notranslate nohighlight">\(a+(b+c)=(a+b)+c\qquad a\cdot(b\cdot c)=(a\cdot b)\cdot c\qquad\)</span></p>
+</section>
+<section id="simbologia-a-altres-disciplines">
+<h2>Simbologia a altres disciplines<a class="headerlink" href="#simbologia-a-altres-disciplines" title="Permalink to this heading">#</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p>Disciplina</p></th>
+<th class="text-center head"><p>Operació 1</p></th>
+<th class="text-center head"><p>Operació 2</p></th>
+<th class="text-center head"><p>Element neutre operació 1</p></th>
+<th class="text-center head"><p>Element neutre operació 2</p></th>
+<th class="text-center head"><p>Element</p></th>
+<th class="text-center head"><p>Invers</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>Electrònica digital</p></td>
+<td class="text-center"><p>+</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\cdot\)</span></p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>a</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\overline{a}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Lógica proposicional</p></td>
+<td class="text-center"><p>o</p></td>
+<td class="text-center"><p>i</p></td>
+<td class="text-center"><p>F</p></td>
+<td class="text-center"><p>V</p></td>
+<td class="text-center"><p>p</p></td>
+<td class="text-center"><p>¬p</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Àlgebra de Venn</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\cup\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\cap\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\emptyset\)</span></p></td>
+<td class="text-center"><p>U</p></td>
+<td class="text-center"><p>A</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(A^\complement\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Portes lógiques</p></td>
+<td class="text-center"><p>OR</p></td>
+<td class="text-center"><p>AND</p></td>
+<td class="text-center"><p>L</p></td>
+<td class="text-center"><p>H</p></td>
+<td class="text-center"><p>A</p></td>
+<td class="text-center"><p>NOT A</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Llenguatge C</p></td>
+<td class="text-center"><p>||</p></td>
+<td class="text-center"><p>&amp;&amp;</p></td>
+<td class="text-center"><p>false</p></td>
+<td class="text-center"><p>true</p></td>
+<td class="text-center"><p>nomVariable</p></td>
+<td class="text-center"><p>!nomVariable</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Llenguatge Python</p></td>
+<td class="text-center"><p>or</p></td>
+<td class="text-center"><p>and</p></td>
+<td class="text-center"><p>False</p></td>
+<td class="text-center"><p>True</p></td>
+<td class="text-center"><p>nomVariable</p></td>
+<td class="text-center"><p>not nomVariable</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="simbologia-grafica">
+<h2>Simbología gràfica<a class="headerlink" href="#simbologia-grafica" title="Permalink to this heading">#</a></h2>
+<section id="portes-logiques-iso">
+<h3>Portes lògiques ISO<a class="headerlink" href="#portes-logiques-iso" title="Permalink to this heading">#</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p>OR</p></th>
+<th class="text-center head"><p>AND</p></th>
+<th class="text-center head"><p>NOT</p></th>
+<th class="text-center head"><p>NOR</p></th>
+<th class="text-center head"><p>NAND</p></th>
+<th class="text-center head"><p>XOR</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/3/39/OR_BS.svg" /></p></td>
+<td class="text-center"><p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/7/73/AND_BS.svg" /></p></td>
+<td class="text-center"><p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/6/65/NOT_BS.svg" /></p></td>
+<td class="text-center"><p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/9/9f/NOR_BS.svg" /></p></td>
+<td class="text-center"><p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/f/fc/NAND_BS.svg" /></p></td>
+<td class="text-center"><p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/9/94/XOR_BS.svg" /></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="portes-logiques-ansi">
+<h3>Portes lògiques ANSI<a class="headerlink" href="#portes-logiques-ansi" title="Permalink to this heading">#</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p>OR</p></th>
+<th class="text-center head"><p>AND</p></th>
+<th class="text-center head"><p>NOT</p></th>
+<th class="text-center head"><p>NOR</p></th>
+<th class="text-center head"><p>NAND</p></th>
+<th class="text-center head"><p>XOR</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/b/b5/OR_ANSI.svg" /></p></td>
+<td class="text-center"><p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/6/64/AND_ANSI.svg" /></p></td>
+<td class="text-center"><p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/b/bc/NOT_ANSI.svg" /></p></td>
+<td class="text-center"><p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/6/6c/NOR_ANSI.svg" /></p></td>
+<td class="text-center"><p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/f/f2/NAND_ANSI.svg" /></p></td>
+<td class="text-center"><p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/0/01/XOR_ANSI.svg" /></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="taules-de-veritat">
+<h2>Taules de veritat<a class="headerlink" href="#taules-de-veritat" title="Permalink to this heading">#</a></h2>
+<section id="porta-or">
+<h3>Porta OR<a class="headerlink" href="#porta-or" title="Permalink to this heading">#</a></h3>
+<table class="colwidths-auto table table-left" style="width: 150px">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p>a</p></th>
+<th class="text-center head"><p>b</p></th>
+<th class="text-center head"><p>a + b</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p><strong>0</strong></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p><strong>1</strong></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p><strong>1</strong></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p><strong>1</strong></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="porta-and">
+<h3>Porta AND<a class="headerlink" href="#porta-and" title="Permalink to this heading">#</a></h3>
+<table class="colwidths-auto table table-left" style="width: 150px">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p>a</p></th>
+<th class="text-center head"><p>b</p></th>
+<th class="text-center head"><p>a <span class="math notranslate nohighlight">\(\cdot\)</span> b</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p><strong>0</strong></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p><strong>0</strong></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p><strong>0</strong></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p><strong>1</strong></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="porta-not">
+<h3>Porta NOT<a class="headerlink" href="#porta-not" title="Permalink to this heading">#</a></h3>
+<table class="colwidths-auto table table-left" style="width: 130px">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p>a</p></th>
+<th class="text-center head"><p><span class="math notranslate nohighlight">\(\overline{a}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>0</p></td>
+<td class="text-center"><p><strong>1</strong></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>1</p></td>
+<td class="text-center"><p><strong>0</strong></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="funcions-logiques-combinacionals">
+<h2>Funcions lògiques combinacionals<a class="headerlink" href="#funcions-logiques-combinacionals" title="Permalink to this heading">#</a></h2>
+<p>Qualsevol expressió en l’algebra de Boole és una funció lògica. La lògica <strong>combinacional</strong> es limita a expressions que només depenen de l’entrada actual. A la lògica <strong>seqüencial</strong> la sortida no només depèn de l’entrada actual, sinó també de la història de l’entrada.</p>
+<div class="admonition tip">
+<p class="admonition-title">Truc</p>
+<p>Equivalència de funcions lògiques: dues funcions lògiques són equivalents si comparteixen la mateixa taula de veritat</p>
+</div>
+<p>Podem comprovar la validesa de les lleis de De Morgan comparant les seves taules de veritat</p>
+<table class="colwidths-auto table table-left" style="width: 200px">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p>a</p></th>
+<th class="text-center head"><p>b</p></th>
+<th class="text-center head"><p>NOT (a OR b)</p></th>
+<th class="text-center head"><p>NOT a</p></th>
+<th class="text-center head"><p>NOT b</p></th>
+<th class="text-center head"><p>(NOT a) AND (NOT b)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p><strong>1</strong></p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p><strong>1</strong></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p><strong>0</strong></p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p><strong>0</strong></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p><strong>0</strong></p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p><strong>0</strong></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p><strong>0</strong></p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p><strong>0</strong></p></td>
+</tr>
+</tbody>
+</table>
+<p>Al llarg d’aquest capítol faré servir el següent exemple de funció lògica, del qual, per ara, desconeixem la seva expressió algebraica:</p>
+<table class="colwidths-auto table table-left" style="width: 300px">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p></p></th>
+<th class="text-center head"><p>a</p></th>
+<th class="text-center head"><p>b</p></th>
+<th class="text-center head"><p>c</p></th>
+<th class="text-center head"><p>d</p></th>
+<th class="text-center head"><p>s</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>2</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>3</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>4</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>5</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>6</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>7</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>8</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>9</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>10</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>11</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>12</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>13</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>14</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>15</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+</tr>
+</tbody>
+</table>
+<section id="minterms">
+<h3>minterms<a class="headerlink" href="#minterms" title="Permalink to this heading">#</a></h3>
+<p>Podem expresar la nostra funció lògica com a una suma amb productes de minterms. Cada minterm és un producte de les variables d’entrada , negades si el seu valor es 0; o dit d’una altra manera, el producte de la representació binària del seu índex. Només els minterms on la sortida és 1 apareixen a l’expressió.</p>
+<p>Veiem l’expressió amb mintems de la nostra funció exemple:</p>
+<p><span class="math notranslate nohighlight">\(s = m_0 + m_1 + m_2 + m_8 + m_9 + m_{10} + m_{12} + m_{14}\)</span></p>
+<p><span class="math notranslate nohighlight">\(s = \overline{a} \cdot \overline{b} \cdot \overline{c} \cdot \overline{d} + \overline{a} \cdot \overline{b} \cdot \overline{c} \cdot d + \overline{a} \cdot \overline{b} \cdot c \cdot \overline{d} + a \cdot \overline{b} \cdot \overline{c} \cdot \overline{d}+ a \cdot \overline{b} \cdot \overline{c} \cdot d + a \cdot \overline{b} \cdot c \cdot \overline{d} + a \cdot b \cdot \overline{c} \cdot \overline{d} + a \cdot b \cdot c \cdot \overline{d}\)</span></p>
+</section>
+<section id="maxterm">
+<h3>Maxterm<a class="headerlink" href="#maxterm" title="Permalink to this heading">#</a></h3>
+<p>Podem expresar la nostra funció lògica com a un producte de sumes amb maxterms. Cada maxterm és una suma de les variables d’entrada , negades si el seu valor es 1; o dit d’una altra manera, la suma producte dels complementaris de la seva representació binària del seu índex. Només els maxterms on la sortida és 0 apareixen a l’expressió.</p>
+<p><span class="math notranslate nohighlight">\(s = M_3 \cdot M_4 \cdot M_5 \cdot M_6 \cdot M_7 \cdot M_{11} \cdot M_{13} \cdot M_{15}\)</span>
+<span class="math notranslate nohighlight">\(s = (a+b+\overline{c}+\overline{d})
+(a+\overline{b}+c+d)
+(a+\overline{b}+c+\overline{d})
+(a+\overline{b}+\overline{c}+\overline{d})
+(a+\overline{b}+\overline{c}+\overline{d})
+(\overline{a}+b+\overline{c}+\overline{d})
+(\overline{a}+\overline{b}+c+\overline{d})
+(\overline{a}+\overline{b}+\overline{c}+\overline{d})\)</span></p>
+</section>
+</section>
+<section id="simplificacio-de-funcions-logiques">
+<h2>Simplificació de funcions lògiques<a class="headerlink" href="#simplificacio-de-funcions-logiques" title="Permalink to this heading">#</a></h2>
+<section id="simplificacio-algebraica">
+<h3>Simplificació algebraica<a class="headerlink" href="#simplificacio-algebraica" title="Permalink to this heading">#</a></h3>
+<p>Es tracta de manipular algebraicament l’expressió de la funció per a obtenir la versió més senzilla possible. Moltes vegades no és gens fàcil. Però existeixen metòdes gràfics, com ara els mapes de Karnaugh o els diagrames de Veitch que ens poden guiar.</p>
+</section>
+<section id="diagrames-de-veitch">
+<h3>Diagrames de Veitch<a class="headerlink" href="#diagrames-de-veitch" title="Permalink to this heading">#</a></h3>
+<p>Es tracta d’un mètode gràfic on representem totes les combinacions possibles de la taula de veritat. És molt semblant a un altre mètode anomenat <strong>mapa de Karnaugh</strong>, però el diagrama de Veitch és molt més fàcil interpretar el resultat.</p>
+<p><strong>Per a 3 variables:</strong></p>
+<p><img alt="" src="_images/Veitch3v.png" /></p>
+<p><strong>Per a 4 variables:</strong></p>
+<p><img alt="" src="_images/Veitch4v.png" /></p>
+<p>Cal tenir en compte que el costat de l’esquerra enllaça amb el costat de la dreta i que el costat superior enllaça amb el costat inferior, com passa a molts videojocs. En realitat estem treballant sobre una superfície toroidal:</p>
+<p><img alt="" src="_images/Torus_from_rectangle.gif" /></p>
+<p>Podeu baixar aquesta <a class="reference external" href="http://www.jorts.net/jupbook/pdf/Veitch.pdf">plantilla</a> amd diagrames de Veitch per a 2, 3, 4, 5 i 6 variables.</p>
+<p>El diagrama s’utilitza així:</p>
+<ul class="simple">
+<li><p>Col·loquem els minterms de la nostra funció al diagrama</p></li>
+<li><p>Busquem grups rectangulars (quadrats inclosos) amb un nombre de termes potència de 2: 1, 2, 4, 8, 16 … Agafem el mínim nombre de grups, els grups més grans possibles, encara que solapin, i que cubreixin tots els nostres minterms.</p></li>
+<li><p>Interpretem els grups: si la variable té només un valor, és un factor del producte; si presenta els dos valors 0 i 1 no apareix al producte.</p></li>
+</ul>
+<p>Veiem un exemple amb la nostra funció:</p>
+<p><img alt="" src="_images/veitchEjemplo1.png" /></p>
+<p>Per tant:</p>
+<p><span class="math notranslate nohighlight">\(s = a \ \overline{d} + \overline{b} \ (\ \overline{c} + \overline{d} \ )\)</span></p>
+<p>En el nostre càs he pogut treure manualment un factor comú <span class="math notranslate nohighlight">\(\overline{b}\)</span> a dos dels termes</p>
+</section>
+<section id="diagrames-de-veitch-com-a-guia-per-a-una-simplificacio-algebraica-rigurosa">
+<h3>Diagrames de Veitch com a guia per a una simplificació algebraica rigurosa<a class="headerlink" href="#diagrames-de-veitch-com-a-guia-per-a-una-simplificacio-algebraica-rigurosa" title="Permalink to this heading">#</a></h3>
+<p>Podem agafar els grups que hem detectat al diagrama de Veitch. Si a un minterm solapen diversos grups podem repetir el minterm tante vegades com solapi el minterm, gràcies a la propietat d’idempotència:</p>
+<p><span class="math notranslate nohighlight">\(s = \overline{a} \cdot \overline{b} \cdot \overline{c} \cdot \overline{d} + \overline{a} \cdot \overline{b} \cdot \overline{c} \cdot d + \overline{a} \cdot \overline{b} \cdot c \cdot \overline{d} + a \cdot \overline{b} \cdot \overline{c} \cdot \overline{d}+ a \cdot \overline{b} \cdot \overline{c} \cdot d + a \cdot \overline{b} \cdot c \cdot \overline{d} + a \cdot \overline{b} \cdot \overline{c} \cdot d + a \cdot b \cdot c \cdot \overline{d}\)</span></p>
+<p><span class="math notranslate nohighlight">\(s = \overline{a} \cdot \overline{b} \cdot \overline{c} \cdot \overline{d} + \overline{a} \cdot \overline{b} \cdot \overline{c} \cdot \overline{d} + \overline{a} \cdot \overline{b} \cdot \overline{c} \cdot d + \overline{a} \cdot \overline{b} \cdot c \cdot \overline{d} + a \cdot \overline{b} \cdot \overline{c} \cdot \overline{d}+  a \cdot \overline{b} \cdot \overline{c} \cdot \overline{d} + a \cdot \overline{b} \cdot \overline{c} \cdot \overline{d} \ +\)</span></p>
+<p><span class="math notranslate nohighlight">\(\ \ \ \ \ + \  a \cdot \overline{b} \cdot \overline{c} \cdot d +  a \cdot \overline{b} \cdot c \cdot \overline{d} + a \cdot \overline{b} \cdot c \cdot \overline{d} + a \cdot b \cdot \overline{c} \cdot \overline{d} + a \cdot b \cdot c \cdot \overline{d}\)</span></p>
+<p>Ara amb les propietats conmutativa i associativa agrupem els termes com als grups que hem obtingut al diagrama de Veitch:</p>
+<p><span class="math notranslate nohighlight">\(s = \left\lfloor \overline{a} \cdot \overline{b} \cdot \overline{c} \cdot \overline{d} + \overline{a} \cdot \overline{b} \cdot c \cdot \overline{d} +  a \cdot \overline{b} \cdot \overline{c} \cdot \overline{d} +a \cdot \overline{b} \cdot c \cdot \overline{d} \right\rfloor \ +\)</span></p>
+<p><span class="math notranslate nohighlight">\(\ \ \ \ \ + \  \left\lfloor \overline{a} \cdot \overline{b} \cdot \overline{c} \cdot \overline{d} +   \overline{a} \cdot \overline{b} \cdot \overline{c} \cdot d + a \cdot \overline{b} \cdot \overline{c} \cdot \overline{d} + a \cdot \overline{b} \cdot \overline{c} \cdot d \right\rfloor \ +\)</span></p>
+<p><span class="math notranslate nohighlight">\(\ \ \ \ \ + \  \left\lfloor a \cdot \overline{b} \cdot \overline{c} \cdot \overline{d} + a \cdot \overline{b} \cdot c \cdot \overline{d} +  a \cdot b \cdot \overline{c} \cdot \overline{d} + a \cdot b \cdot c \cdot \overline{d} \right\rfloor\)</span></p>
+<p>Ara amb la propieta associativa treiem factors comuns dintre de cada grup:</p>
+<p><span class="math notranslate nohighlight">\(s = \left\lfloor \overline{a} \cdot \overline{b} \cdot (\overline{c} + c) \cdot \overline{d} +  a \cdot \overline{b} \cdot (\overline{c} + c) \cdot \overline{d}  \right\rfloor \ +\)</span></p>
+<p><span class="math notranslate nohighlight">\(\ \ \ \ \ + \  \left\lfloor \overline{a} \cdot \overline{b} \cdot \overline{c} \cdot (\overline{d} + d)  + a \cdot \overline{b} \cdot \overline{c} \cdot (\overline{d} + d) \right\rfloor \ +\)</span></p>
+<p><span class="math notranslate nohighlight">\(\ \ \ \ \ + \  \left\lfloor a \cdot \overline{b} \cdot (\overline{c}+c) \cdot \overline{d} +  a \cdot b \cdot ( \overline{c}+c) \cdot \overline{d} \right\rfloor\)</span></p>
+<p>Apliquem que la suma d’inversors és 1 i que 1 és l’element neutre del producte:</p>
+<p><span class="math notranslate nohighlight">\(s = \left\lfloor \overline{a} \cdot \overline{b} \cdot \overline{d} +  a \cdot \overline{b} \cdot \overline{d}  \right\rfloor \ +\)</span></p>
+<p><span class="math notranslate nohighlight">\(\ \ \ \ \ + \  \left\lfloor \overline{a} \cdot \overline{b} \cdot \overline{c}  + a \cdot \overline{b} \cdot \overline{c}  \right\rfloor \ +\)</span></p>
+<p><span class="math notranslate nohighlight">\(\ \ \ \ \ + \  \left\lfloor a \cdot \overline{b} \cdot \overline{d} +  a \cdot b  \cdot \overline{d} \right\rfloor\)</span></p>
+<p>Tornem a treure factors comuns:</p>
+<p><span class="math notranslate nohighlight">\(s = \left\lfloor (\overline{a} + a) \cdot \overline{b} \cdot \overline{d}   \right\rfloor \ +\)</span></p>
+<p><span class="math notranslate nohighlight">\(\ \ \ \ \ + \  \left\lfloor (\overline{a}  + a) \cdot \overline{b} \cdot \overline{c}    \right\rfloor \ +\)</span></p>
+<p><span class="math notranslate nohighlight">\(\ \ \ \ \ + \  \left\lfloor a \cdot (\overline{b}+b) \cdot \overline{d} \right\rfloor\)</span></p>
+<p>I tornem a aplicar que la suma d’inversors és 1 i que 1 és l’element neutre del producte:</p>
+<p><span class="math notranslate nohighlight">\(s = \left\lfloor \overline{b} \cdot \overline{d}   \right\rfloor \ +\)</span></p>
+<p><span class="math notranslate nohighlight">\(\ \ \ \ \ + \  \left\lfloor  \overline{b} \cdot \overline{c}    \right\rfloor \ +\)</span></p>
+<p><span class="math notranslate nohighlight">\(\ \ \ \ \ + \  \left\lfloor a  \cdot \overline{d} \right\rfloor\)</span></p>
+</section>
+<section id="programari-de-simplificacio">
+<h3>Programari de simplificació<a class="headerlink" href="#programari-de-simplificacio" title="Permalink to this heading">#</a></h3>
+<p>Utilitzar programari és molt còmode. En aquest que us mostro heu d’escollir l’opció SOP (suma de productes) per obtenir el minterm</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%html</span>
+<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;http://www.32x8.com/index.html&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;800&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;800&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"><iframe src="http://www.32x8.com/index.html" width="800" height="800"></iframe>
+</div></div>
+</div>
+<p><a class="reference external" href="http://www.32x8.com/index.html">Obrir el programari a una altra finestra del navegador</a></p>
+<p>Utilitzem aquest programari amb la nostra funció exemple:</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%html</span>
+<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;http://www.32x8.com/sop4_____A-B-C-D_____m_0-1-2-8-9-10-12-14___________option-8_____898788975272827595797&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;800&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;800&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"><iframe src="http://www.32x8.com/sop4_____A-B-C-D_____m_0-1-2-8-9-10-12-14___________option-8_____898788975272827595797" width="800" height="800"></iframe>
+</div></div>
+</div>
+<p>Si us fixeu bé, la diferent ordenació de les variables al mapa en aquest programari ha situat el grup <span class="math notranslate nohighlight">\(\overline{b} \cdot \overline{d}\)</span> a les quatre posicions de les cantonades, que també formen un quadrat a l’espai toroidal</p>
+</section>
+</section>
+<section id="esquema-de-portes-logiques">
+<h2>Esquema de portes lògiques<a class="headerlink" href="#esquema-de-portes-logiques" title="Permalink to this heading">#</a></h2>
+<section id="simulacio-amb-programari">
+<h3>Simulació amb programari<a class="headerlink" href="#simulacio-amb-programari" title="Permalink to this heading">#</a></h3>
+<p>Per visualitzar els símbols en format ISO cal anar a <strong>Options -&gt; IEC Gates</strong></p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%html</span>
+<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgoqoQFMBaMMAKABlwwVxCqAWPDyrCQAMwCGAGwDOdapHaduaQQJAqomiTLlIFHZsoSEQalMc1Vts+SwCSSoeGLcwvS9CQJ7jjWBfq+B5ePobqFv5GJsKeFCxglOp4glyC2Hh84CiCVNy08YnZghrpmRq51N4JuclJaRl1mtwhAO7Oru4oKJluwixtXT2d3e1Q-eojkY1TCm1TfgGDY3OLI0UTmbMbo0uYeeO7GMq1e8s7EQG4mwcWV413W+tgfGURL2fmJs+vJg-jU3dPiA-gluHxsMoggguIEcsDKuNSllVBDkWdwa4Ahi0VtsUs8bUtkj1gScoiGho8UEFABZCgwjQIDAmcrqTwsAAeIEI5GIgjwEDAkAgZUy4k53PIz35rmhpnUmQARhLCEh-MQQBhipAwQqQABjFWizIYDXdciikAAEwlCD4auItCZzmw8pG0kUTxhajCImsujGQA&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;800&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;800&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"><iframe src="https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgoqoQFMBaMMAKABlwwVxCqAWPDyrCQAMwCGAGwDOdapHaduaQQJAqomiTLlIFHZsoSEQalMc1Vts+SwCSSoeGLcwvS9CQJ7jjWBfq+B5ePobqFv5GJsKeFCxglOp4glyC2Hh84CiCVNy08YnZghrpmRq51N4JuclJaRl1mtwhAO7Oru4oKJluwixtXT2d3e1Q-eojkY1TCm1TfgGDY3OLI0UTmbMbo0uYeeO7GMq1e8s7EQG4mwcWV413W+tgfGURL2fmJs+vJg-jU3dPiA-gluHxsMoggguIEcsDKuNSllVBDkWdwa4Ahi0VtsUs8bUtkj1gScoiGho8UEFABZCgwjQIDAmcrqTwsAAeIEI5GIgjwEDAkAgZUy4k53PIz35rmhpnUmQARhLCEh-MQQBhipAwQqQABjFWizIYDXdciikAAEwlCD4auItCZzmw8pG0kUTxhajCImsujGQA" width="800" height="800"></iframe>
+</div></div>
+</div>
+</section>
+</section>
+<section id="reduccio-de-funcions-iteratives">
+<h2>Reducció de funcions iteratives<a class="headerlink" href="#reduccio-de-funcions-iteratives" title="Permalink to this heading">#</a></h2>
+<p>Moltes vegades podem trobar una solució més eficaç a un problema analitzant un problema més senzill.</p>
+<p>És el cas dels <a class="reference external" href="https://es.wikipedia.org/wiki/Sumador">sumadors</a>. Si volem sumar dos nombres de 8 bits fent la taula de veritat tindríem <span class="math notranslate nohighlight">\(2^{16} = 65536\)</span> combinacions a la taula de veritat. Massa feina!</p>
+<p>El que podem fer és analitzar com sumem els bits. Sumem els bits de la mateixa posició, tenint en compte si ens enportem un 1 de la suma de la posició anterior ( a la dreta) i anotem el resultat i, si és el cas, ens enportem un 1 a la suma següent (posició esquerra). Per tant, el nostre problema es simplifica a sumar dos bits amb un possible bit extra (CARRY) de la suma anterior i obtenir el resultat i el nou CARRY.</p>
+<table class="colwidths-auto table table-left" style="width: 250px">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p><span class="math notranslate nohighlight">\(a_i\)</span></p></th>
+<th class="text-center head"><p><span class="math notranslate nohighlight">\(b_i\)</span></p></th>
+<th class="text-center head"><p><span class="math notranslate nohighlight">\(c_{i-1}\)</span></p></th>
+<th class="text-center head"><p><span class="math notranslate nohighlight">\(c_i\)</span></p></th>
+<th class="text-center head"><p><span class="math notranslate nohighlight">\( s_i\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p><strong>0</strong></p></td>
+<td class="text-center"><p><strong>0</strong></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p><strong>0</strong></p></td>
+<td class="text-center"><p><strong>1</strong></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p><strong>0</strong></p></td>
+<td class="text-center"><p><strong>1</strong></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p><strong>1</strong></p></td>
+<td class="text-center"><p><strong>0</strong></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p><strong>0</strong></p></td>
+<td class="text-center"><p><strong>1</strong></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p><strong>1</strong></p></td>
+<td class="text-center"><p><strong>0</strong></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p><strong>1</strong></p></td>
+<td class="text-center"><p><strong>0</strong></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p><strong>1</strong></p></td>
+<td class="text-center"><p><strong>1</strong></p></td>
+</tr>
+</tbody>
+</table>
+<p>Ara aplicariem el que hem après i tindríem l’esquema de oportes lògiques per a les dues sortides.</p>
+<p>Al simulador veurem una altra solució que utilitza portes XOR:</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%html</span>
+<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWc0FwCwCY0HYEA4cEMElURTJyBTAWjDACgwE1w1WNsMRPveoeAhExYgAzGIBsPBNLSSOsgd0rCA7jy6buYyBy2QGG3fp1TtUI+PNhJlfrcqHj5rPa1vLG-p59YvFhj+YOw8-s4WjoHhVhh4eOBxIPKsYEmGALLkAJzcUZLBdoIYKFb0fPFsHJURIalpIHiU5QFN4A1txNIRnUp1Mt0MADKN9kpoCV2ClABmAIYANgDOVOSWIy1xCRM8lSog88urSIYboUGsOxfTB4sra7Wh-S39tQ3PDVsBKYnbClUBCTSMC5cR6cCgiImCE6cH8CI-KYIbDSKYRZGopQYniQBKZcgonEJAocXHFUrMZpPJJfNJ4m7CSnWYGEn5gQn2IQibhsooIUFRTmqBhAA&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;800&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;800&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"><iframe src="https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWc0FwCwCY0HYEA4cEMElURTJyBTAWjDACgwE1w1WNsMRPveoeAhExYgAzGIBsPBNLSSOsgd0rCA7jy6buYyBy2QGG3fp1TtUI+PNhJlfrcqHj5rPa1vLG-p59YvFhj+YOw8-s4WjoHhVhh4eOBxIPKsYEmGALLkAJzcUZLBdoIYKFb0fPFsHJURIalpIHiU5QFN4A1txNIRnUp1Mt0MADKN9kpoCV2ClABmAIYANgDOVOSWIy1xCRM8lSog88urSIYboUGsOxfTB4sra7Wh-S39tQ3PDVsBKYnbClUBCTSMC5cR6cCgiImCE6cH8CI-KYIbDSKYRZGopQYniQBKZcgonEJAocXHFUrMZpPJJfNJ4m7CSnWYGEn5gQn2IQibhsooIUFRTmqBhAA" width="800" height="800"></iframe>
+</div></div>
+</div>
+<p>Repetint aquest bloc 8 vegades i encadenant-los podem ara resoldre el nostre problema original.</p>
+<p>Nosaltres ens conformarem amb repetir-lo 4 vegades i tenir un sumador de dos nombres de 4 bits:</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%html</span>
+<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgoqoQFMBaMMAKDGMJDTxABYxOKBJ36DwbDl3xc8PIYNldx7QdIFV54QhuWTuIbCi7CDRo6wAyUnofAobRqlQBmAQwA2AZzrVILK5KEvCCStlQQbl4+SH4A7iGcQdYgSXEJ4MRmaplQ-unsRpLqUCWR3r55+sVg9lpO4CBl0blW+vY8NXKK9U0VAZyGVHrdDb0xLPGhaMmDuZMivHLSvIst6Ss8kqIlER7l463LAnY82+GNe81puMHbNwZ4wdeQwdiPM+9p+m-B3wiOEwMLxkNmBmmevxMbRMX2kmjaKCegPuxRRtQhJ2SnTmWNq+kkfgAskDXkZsIQHCUUNAECxifdQhT0hoaXSSVxEQYmShOSzafTgdh-lybMK+Wz7osqOTTnh6tTaQAPEDvPDEcDCnK-YIAI2wAB1PK5sCxlXhyDzzAgkDykNqQDqUIbXChTSqyQh1WBKFyjPadWBnawzdg+IpvRBeMRI1xdZBnX5lbxIBByXxath1fbPLw3ZnNlmhMg-bGQJ4TcrM+qeeReEQuLg+KXPK7K8RRbWi+SqNngwZ22G-UXFnbm35+Fm5WGKLVVrRAVLp5KeBjVvcwsjgaFgVOMVPF7vN79OSichiCqZwmfkdML7NmAD4veamHwi+MUKyYLph-ptg07M1wAX+aZgCsOL-pwYG3FO0EQcCi6SnOR58Ksi4bDii5gBgIj7shE4gAwRScAwqzHGAkCcrm8TfFkK44vo0qOBBzG2McsIdNoWLgRx4DgbBPE3tO+4roCIkquEgk0XCihtBgj7JJgRhJEpLESSkwSHvESRTip8lqQ+06GWkZEvmhcAMUcqinBZvHJj2NlOCwBFEQMTKkTYTIUVRgL6BhfmpL5yxJLYvCBdJDgaNIkGWTYaYhWm1x+rYSS8Bu2m3ClryJUFPAqdIWmmCKRXYklmIXqVgIVbUF6FbVUU8IVVQ5G00i8VUOHJGV9lFT8al9dhAyfFVnUDZ1jEsEAA&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;800&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;800&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"><iframe src="https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgoqoQFMBaMMAKDGMJDTxABYxOKBJ36DwbDl3xc8PIYNldx7QdIFV54QhuWTuIbCi7CDRo6wAyUnofAobRqlQBmAQwA2AZzrVILK5KEvCCStlQQbl4+SH4A7iGcQdYgSXEJ4MRmaplQ-unsRpLqUCWR3r55+sVg9lpO4CBl0blW+vY8NXKK9U0VAZyGVHrdDb0xLPGhaMmDuZMivHLSvIst6Ss8kqIlER7l463LAnY82+GNe81puMHbNwZ4wdeQwdiPM+9p+m-B3wiOEwMLxkNmBmmevxMbRMX2kmjaKCegPuxRRtQhJ2SnTmWNq+kkfgAskDXkZsIQHCUUNAECxifdQhT0hoaXSSVxEQYmShOSzafTgdh-lybMK+Wz7osqOTTnh6tTaQAPEDvPDEcDCnK-YIAI2wAB1PK5sCxlXhyDzzAgkDykNqQDqUIbXChTSqyQh1WBKFyjPadWBnawzdg+IpvRBeMRI1xdZBnX5lbxIBByXxath1fbPLw3ZnNlmhMg-bGQJ4TcrM+qeeReEQuLg+KXPK7K8RRbWi+SqNngwZ22G-UXFnbm35+Fm5WGKLVVrRAVLp5KeBjVvcwsjgaFgVOMVPF7vN79OSichiCqZwmfkdML7NmAD4veamHwi+MUKyYLph-ptg07M1wAX+aZgCsOL-pwYG3FO0EQcCi6SnOR58Ksi4bDii5gBgIj7shE4gAwRScAwqzHGAkCcrm8TfFkK44vo0qOBBzG2McsIdNoWLgRx4DgbBPE3tO+4roCIkquEgk0XCihtBgj7JJgRhJEpLESSkwSHvESRTip8lqQ+06GWkZEvmhcAMUcqinBZvHJj2NlOCwBFEQMTKkTYTIUVRgL6BhfmpL5yxJLYvCBdJDgaNIkGWTYaYhWm1x+rYSS8Bu2m3ClryJUFPAqdIWmmCKRXYklmIXqVgIVbUF6FbVUU8IVVQ5G00i8VUOHJGV9lFT8al9dhAyfFVnUDZ1jEsEAA" width="800" height="800"></iframe>
+</div></div>
+</div>
+<p>Aquet dispositiu es pot trobar comercialitzat com a <a class="reference external" href="http://www.jorts.net/jupbook/pdf/sn74ls83.pdf">74LS83</a>. El seu pin-out és aquest:</p>
+<p><img alt="" src="_images/74LS83.gif" /></p>
+</section>
+<section id="reduccio-a-portes-nand">
+<h2>Reducció a portes NAND<a class="headerlink" href="#reduccio-a-portes-nand" title="Permalink to this heading">#</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p>OR</p></th>
+<th class="text-center head"><p>AND</p></th>
+<th class="text-center head"><p>NOT</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/b/b5/OR_ANSI.svg" /></p></td>
+<td class="text-center"><p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/6/64/AND_ANSI.svg" /></p></td>
+<td class="text-center"><p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/b/bc/NOT_ANSI.svg" /></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/9/90/OR_from_NAND.svg" /></p></td>
+<td class="text-center"><p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/1/16/AND_from_NAND.svg" /></p></td>
+<td class="text-center"><p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/NOT_from_NAND.svg" /></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="families-logiques">
+<h2>Famílies lògiques<a class="headerlink" href="#families-logiques" title="Permalink to this heading">#</a></h2>
+<p>Una família lògica és una implementació de les portes lògiques amb transistors (algunes també fan servir diodes) amb una tensió d’alimentació i uns nivells lògics compatibles. Veiem uns exemples molt típics:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-left head"><p>Tecnologia</p></th>
+<th class="text-center head"><p>L</p></th>
+<th class="text-center head"><p>H</p></th>
+<th class="text-center head"><p>Tensió d’alimentació</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><a class="reference external" href="https://archive.org/details/bitsavers_tiTexasInsSeriesMorrisDesigningWithTTLIntegratedCi_11927910/mode/2up">TTL</a></p></td>
+<td class="text-center"><p>0 V a 0,8 V</p></td>
+<td class="text-center"><p>2 V a V <sub>CC</sub></p></td>
+<td class="text-center"><p>V <sub>CC</sub> = 5 V</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><a class="reference external" href="https://archive.org/details/1983-rca-cmos-ic-databook/mode/2up">CMOS</a></p></td>
+<td class="text-center"><p>0 V a 30% V <sub>DD</sub></p></td>
+<td class="text-center"><p>70% V <sub>DD</sub> a V <sub>DD</sub></p></td>
+<td class="text-center"><p><a class="reference external" href="https://en.wikipedia.org/wiki/IC_power-supply_pin#CMOS">V <sub>DD</sub></a></p></td>
+</tr>
+</tbody>
+</table>
+<p>Si bé podríem implementar una porta NAND amb només 2 transistors (com efectivament es fa a la família lògica NMOS), aquesta compatibilitat necèssaria de nivells lògics i tensions d’alimentació obliguen a adaptar els dissenys a cada família. Al simulador podeu veure diverses implementacions a <em>Circuiits -&gt; Logic families</em></p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%html</span>
+<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAQBYKLIKBTAWjDACgAzETFLla7bIV7VqYaEhiQUrAO4gBQsJX6DwGIZFnzVYddqFo8UVgFl9aoZTgWoXcRy4YeKPEYVdXIUeKixpc9z46QKdjAHNzXBUhdzpNOSCQPGDVZOMA1JTFMB5NACUuKyS6XSE0uK86CVsYBC1SjyNuRuMAGUdnPnAc4VsIdgBDABsAZ3oaTXaGlyMWZ08SkEHR8YlWACdzOa3lWwR4ViA&quot;</span>  <span class="na">width</span><span class="o">=</span><span class="s">&quot;800&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;800&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"><iframe src="https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAQBYKLIKBTAWjDACgAzETFLla7bIV7VqYaEhiQUrAO4gBQsJX6DwGIZFnzVYddqFo8UVgFl9aoZTgWoXcRy4YeKPEYVdXIUeKixpc9z46QKdjAHNzXBUhdzpNOSCQPGDVZOMA1JTFMB5NACUuKyS6XSE0uK86CVsYBC1SjyNuRuMAGUdnPnAc4VsIdgBDABsAZ3oaTXaGlyMWZ08SkEHR8YlWACdzOa3lWwR4ViA"  width="800" height="800"></iframe>
+</div></div>
+</div>
+<p>A un circuit integrat CMOS una porta NAND té la següent estructura a l’oblea de silici:</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/8/8f/CMOS_NAND_Layout.svg" /></p>
+</section>
+<section id="productes-comercials">
+<h2>Productes comercials<a class="headerlink" href="#productes-comercials" title="Permalink to this heading">#</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p>Porta lògica</p></th>
+<th class="text-center head"><p>C.I. TTL</p></th>
+<th class="text-center head"><p>pin-out</p></th>
+<th class="text-center head"><p>C.I. CMOS</p></th>
+<th class="text-center head"><p>pin-out</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>NOT</p></td>
+<td class="text-center"><p><a class="reference external" href="http://www.jorts.net/jupbook/pdf/sn74ls04.pdf">74LS04</a></p></td>
+<td class="text-center"><p><img alt="" src="_images/74LS04.jpg" /></p></td>
+<td class="text-center"><p><a class="reference external" href="http://www.jorts.net/jupbook/pdf/cd4050b.pdf">CD4049</a></p></td>
+<td class="text-center"><p><img alt="" src="_images/cd4049.jpg" /></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>AND</p></td>
+<td class="text-center"><p><a class="reference external" href="http://www.jorts.net/jupbook/pdf/sn74ls08.pdf">74LS08</a></p></td>
+<td class="text-center"><p><img alt="" src="_images/74LS08.jpg" /></p></td>
+<td class="text-center"><p><a class="reference external" href="http://www.jorts.net/jupbook/pdf/cd4081b.pdf">CD4081</a></p></td>
+<td class="text-center"><p><img alt="" src="_images/cd4081.jpg" /></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>OR</p></td>
+<td class="text-center"><p><a class="reference external" href="http://www.jorts.net/jupbook/pdf/sn74ls32.pdf">74LS32</a></p></td>
+<td class="text-center"><p><img alt="" src="_images/74LS32.jpg" /></p></td>
+<td class="text-center"><p><a class="reference external" href="http://www.jorts.net/jupbook/pdf/cd4071.pdf">CD4071</a></p></td>
+<td class="text-center"><p><img alt="" src="_images/cd4071.jpg" /></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>NOR</p></td>
+<td class="text-center"><p><a class="reference external" href="http://www.jorts.net/jupbook/pdf/sn74ls02.pdf">74LS02</a></p></td>
+<td class="text-center"><p><img alt="" src="_images/74LS02.jpg" /></p></td>
+<td class="text-center"><p><a class="reference external" href="http://www.jorts.net/jupbook/pdf/cd4001.pdf">CD4001</a></p></td>
+<td class="text-center"><p><img alt="" src="_images/cd4001.jpg" /></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>NAND</p></td>
+<td class="text-center"><p><a class="reference external" href="http://www.jorts.net/jupbook/pdf/sn74ls00.pdf">74LS00</a></p></td>
+<td class="text-center"><p><img alt="" src="_images/74LS00.jpg" /></p></td>
+<td class="text-center"><p><a class="reference external" href="http://www.jorts.net/jupbook/pdf/cd4011b.pdf">CD4011</a></p></td>
+<td class="text-center"><p><img alt="" src="_images/cd4011.jpg" /></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>XOR</p></td>
+<td class="text-center"><p><a class="reference external" href="http://www.jorts.net/jupbook/pdf/sn74ls86.pdf">74LS86</a></p></td>
+<td class="text-center"><p><img alt="" src="_images/74LS86.jpg" /></p></td>
+<td class="text-center"><p><a class="reference external" href="http://www.jorts.net/jupbook/pdf/cd4070b.pdf">CD4070</a></p></td>
+<td class="text-center"><p><img alt="" src="_images/cd4070.jpg" /></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="dispositius-programables-pal-fpga">
+<h2>Dispositius programables: PAL, FPGA.<a class="headerlink" href="#dispositius-programables-pal-fpga" title="Permalink to this heading">#</a></h2>
+<p>També podem treballar amb dispositius programables que permeten introduir la nostra funció lògica.</p>
+<p>Els mé simples són les <a class="reference external" href="https://en.wikipedia.org/wiki/Programmable_Array_Logic">PAL</a> (Programmable Array Logic) on tens un minterm amb tots els termes possibles i aplicant un voltatge superior al d’alimentació cremes uns fussibles que eliminen els termes no dessitjats de la funció:</p>
+<p><img alt="" src="_images/Programmable_Logic_Device.svg" /></p>
+<p>Els més sofisticats són les <a class="reference external" href="https://en.wikipedia.org/wiki/Field-programmable_gate_array">FPGA</a> (field-programmable gate array), que es poden reprogramar. Avui en dia podem trobar FPGAs amb 50 milions de portes lògiques integrats.</p>
+<p>Un exemple utilitzat a la docència i al món maker és el xip <a class="reference external" href="https://www.mouser.es/ProductDetail/Lattice/iCE40HX4K-TQ144?qs=F9A14TELRMvGNTZXkNDuOw%3D%3D">iCE40HX4K-TQ144</a>, que porta 3520 elements lògics integrats i que és el cor de la placa <a class="reference external" href="https://github.com/FPGAwars/Alhambra-II-FPGA">Alhambra II</a>, que es pot programar amb l’entorn lliure <a class="reference external" href="https://icestudio.io/">icestudio</a> i té un factor de forma Arduino UNO. Amb aquest entorn és possible reproduir un microprocessador <a class="reference external" href="https://github.com/Obijuan/Z80-FPGA">Z80</a> o una <a class="reference external" href="https://github.com/Obijuan/ACC/wiki">rèplica</a> de la CPU de l’ordinador de navegació que va aterrar l’Apolo XI a la lluna.</p>
+<p><img alt="" src="_images/Alhambra-II.jpg" /></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "venvpy3"
+        },
+        kernelOptions: {
+            name: "venvpy3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'venvpy3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Control03.html"
+       title="pàgina anterior">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title">Projecte: Interruptor crepuscular</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Control05.html"
+       title="pàgina següent">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">següent</p>
+        <p class="prev-next-title">Aplicació de l’àlgebra de Boole al disseny de circuits electrònics</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#una-mica-d-historia">Una mica d’Història</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definicio">Definició</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#postulats-de-huntington">Postulats de Huntington</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#altres-propietats">Altres propietats</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simbologia-a-altres-disciplines">Simbologia a altres disciplines</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simbologia-grafica">Simbología gràfica</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#portes-logiques-iso">Portes lògiques ISO</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#portes-logiques-ansi">Portes lògiques ANSI</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taules-de-veritat">Taules de veritat</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#porta-or">Porta OR</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#porta-and">Porta AND</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#porta-not">Porta NOT</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funcions-logiques-combinacionals">Funcions lògiques combinacionals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minterms">minterms</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maxterm">Maxterm</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simplificacio-de-funcions-logiques">Simplificació de funcions lògiques</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simplificacio-algebraica">Simplificació algebraica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagrames-de-veitch">Diagrames de Veitch</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagrames-de-veitch-com-a-guia-per-a-una-simplificacio-algebraica-rigurosa">Diagrames de Veitch com a guia per a una simplificació algebraica rigurosa</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#programari-de-simplificacio">Programari de simplificació</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#esquema-de-portes-logiques">Esquema de portes lògiques</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simulacio-amb-programari">Simulació amb programari</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reduccio-de-funcions-iteratives">Reducció de funcions iteratives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reduccio-a-portes-nand">Reducció a portes NAND</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#families-logiques">Famílies lògiques</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#productes-comercials">Productes comercials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dispositius-programables-pal-fpga">Dispositius programables: PAL, FPGA.</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Per Jordi Orts
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>Editat amb Jupyter Lab <a href='https://jupyter.org/' target='_blank'><img src='https://docs.jupyter.org/en/latest/_static/jupyter.svg' width='95' height='50'></a> i maquetat amb Jupyter-book <a href='https://zenodo.org/records/4539666' target='_blank'><img src='https://zenodo.org/badge/DOI/10.5281/zenodo.2561065.svg'></a></p><p>Aquesta obra està sota una llicència de Creative Commons Reconeixement-No comercial-Compartir igual <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca' target='_blank'><img src='w3/by-nc-sa.png' width='117' height='41'></a></p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
