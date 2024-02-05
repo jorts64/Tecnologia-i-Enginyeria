@@ -18,6 +18,7 @@ chapters:
   - file: ProdElec99
 - file: Materials01
   sections:
+  - file: Materials60
   - file: Materials81
   - file: Materials82
   - file: Materials83

@@ -196,6 +196,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="Materials01.html">Materials</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Materials60.html">Plàstics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials81.html">Densitat dels metalls</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials82.html">Aliatges binaris: Llei de la palanca</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials83.html">Assaig de tracció</a></li>
@@ -222,6 +223,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Mecanica02.html">Dinàmica de les rotacions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mecanica03.html">Màquines simples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mecanica04.html">Mecanismes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica41.html">Disseny 2D: LibreCAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica42.html">Disseny 3D: OpenSCAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica43.html">Animacions de mecanismes 3D: FreeCAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica44.html">Disseny industrial: programari <em>onshape</em></a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mecanica99.html">Recursos</a></li>
 </ul>
 </li>
@@ -230,6 +235,11 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="CorrentAltern01.html">Corrent Altern</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="CorrentAltern02.html">Tractament matemàtic del corrent altern. Nombres complexos. Fasors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentAltern03.html">Llei d’Ohm. Impedància</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentAltern04.html">Condensadors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentAltern05.html">La potència a AC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentAltern06.html">Circuits sèrie AC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CorrentAltern99.html">Recursos</a></li>
 </ul>
 </li>
@@ -270,7 +280,11 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="OficinaTecnica01.html">Oficina Tècnica</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Empresa01.html">Empresa</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Empresa01.html">Organització i Empresa</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Empresa02.html">Planificació del projecte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Empresa03.html">Pressupost del projecte</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="RecursosTaller01.html">Recursos Taller</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Biblio.html">Bibliografia</a></li>
 </ul>
@@ -495,7 +509,7 @@ Disculpeu les molèsties.</p>
 <p>Cada un dels elements del controlador PID té un paràmetre que hem d’ajustar:</p>
 <p><img alt="" src="_images/PID02.png" /></p>
 <p>Com ajutem els valors de <span class="math notranslate nohighlight">\(K_P\)</span>, <span class="math notranslate nohighlight">\(K_I\)</span> i <span class="math notranslate nohighlight">\(K_D\)</span>?</p>
-<p>Existeixen diferents tècniques: Ziegler i Nichols, cancelació de pols, assignación de pols <span id="id1">[<a class="reference internal" href="Biblio.html#id4" title="Sergio Andrés Castaño Giraldo. Control pid de temperatura con arduino sin librería. Control Automático Educación, 2024. URL: https://controlautomaticoeducacion.com/arduino/control-pid-de-temperatura-con-arduino/#Control_PID_de_Temperatura_con_Arduino_sin_Libreria.">Gir24</a>]</span>, CDHW, John Shaw <span id="id2">[<a class="reference internal" href="Biblio.html#id2" title="Charles D. H. Williams. Tuning a pid temperature controller. Feedback and Temperature Control, 2024. URL: https://newton.ex.ac.uk/teaching/CDHW/Feedback/Setup-PID.html.">Wil24</a>]</span>, auto tuning i fins-i-tot ajust manual <span id="id3">[<a class="reference internal" href="Biblio.html#id3" title="Luís Llamas. Cómo ajustar un controlador pid en arduino. Curso de Arduino Avanzado, 2019. URL: https://www.luisllamas.es/como-ajustar-un-controlador-pid-en-arduino/.">Lla19</a>]</span>.</p>
+<p>Existeixen diferents tècniques: Ziegler i Nichols, cancelació de pols, assignación de pols <span id="id1">[<a class="reference internal" href="Biblio.html#id6" title="Sergio Andrés Castaño Giraldo. Control pid de temperatura con arduino sin librería. Control Automático Educación, 2024. URL: https://controlautomaticoeducacion.com/arduino/control-pid-de-temperatura-con-arduino/#Control_PID_de_Temperatura_con_Arduino_sin_Libreria.">Gir24</a>]</span>, CDHW, John Shaw <span id="id2">[<a class="reference internal" href="Biblio.html#id4" title="Charles D. H. Williams. Tuning a pid temperature controller. Feedback and Temperature Control, 2024. URL: https://newton.ex.ac.uk/teaching/CDHW/Feedback/Setup-PID.html.">Wil24</a>]</span>, auto tuning i fins-i-tot ajust manual <span id="id3">[<a class="reference internal" href="Biblio.html#id5" title="Luís Llamas. Cómo ajustar un controlador pid en arduino. Curso de Arduino Avanzado, 2019. URL: https://www.luisllamas.es/como-ajustar-un-controlador-pid-en-arduino/.">Lla19</a>]</span>.</p>
 <p>Manual? Sí. Aquí teniu el resultat d’un ajust manual per al nostre forn:</p>
 <p><img alt="" src="_images/PIDsim1.png" /></p>
 </section>
