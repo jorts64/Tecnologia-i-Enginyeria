@@ -19,6 +19,11 @@ chapters:
 - file: Materials01
   sections:
   - file: Materials60
+  - file: Materials61
+  - file: Materials62
+  - file: Materials63
+  - file: Materials64
+  - file: Materials65
   - file: Materials81
   - file: Materials82
   - file: Materials83

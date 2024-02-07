@@ -435,20 +435,19 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motor-sincron-trifasic">Motor síncron trifàsic</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#engegada">Engegada</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inversio-de-gir">Inversió de gir</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motor-sincron-trifasic">Motor síncron trifàsic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inversio-de-gir">Inversió de gir</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motor-asincron-trifasic">Motor asíncron trifàsic</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motor-monofasic-a-induccio">Motor monofàsic a inducció</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equacions-dels-motors-trifasics">Equacions dels motors trifàsics</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connexions-dels-motors-trifasics">Connexions dels motors trifàsics</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connexio-en-estrella">Connexió en estrella</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connexio-en-triangle">Connexió en triangle</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#velocitat-de-sincronisme">Velocitat de sincronisme</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lliscament">Lliscament</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#velocitat-de-sincronisme">Velocitat de sincronisme</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lliscament">Lliscament</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#engegada-estrella-triangle">Engegada estrella-triangle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#placa-de-caracteristiques">Placa de característiques</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples">Exemples</a></li>
 </ul>
             </nav>
@@ -491,14 +490,10 @@ document.write(`
         ></iframe>
         </div></div>
 </div>
-<section id="engegada">
-<h3>Engegada<a class="headerlink" href="#engegada" title="Permalink to this heading">#</a></h3>
-<p>Es fa una engegada estrella-triangle, d’aquesta manera la intensitat inicial és més baixa.</p>
 </section>
 <section id="inversio-de-gir">
-<h3>Inversió de gir<a class="headerlink" href="#inversio-de-gir" title="Permalink to this heading">#</a></h3>
+<h2>Inversió de gir<a class="headerlink" href="#inversio-de-gir" title="Permalink to this heading">#</a></h2>
 <p>Intercanviant qualsevols 2 fases, el motor gira en sentit contrari</p>
-</section>
 </section>
 <section id="motor-asincron-trifasic">
 <h2>Motor asíncron trifàsic<a class="headerlink" href="#motor-asincron-trifasic" title="Permalink to this heading">#</a></h2>
@@ -558,8 +553,8 @@ document.write(`
         </div></div>
 </div>
 </section>
-<section id="equacions-dels-motors-trifasics">
-<h2>Equacions dels motors trifàsics<a class="headerlink" href="#equacions-dels-motors-trifasics" title="Permalink to this heading">#</a></h2>
+<section id="connexions-dels-motors-trifasics">
+<h2>Connexions dels motors trifàsics<a class="headerlink" href="#connexions-dels-motors-trifasics" title="Permalink to this heading">#</a></h2>
 <p>Ja hem vist que els alternadors poden funcionar com a motors. Per això és convenient recordar alguns dels conceptes del tema anterior:</p>
 <section id="connexio-en-estrella">
 <h3>Connexió en estrella<a class="headerlink" href="#connexio-en-estrella" title="Permalink to this heading">#</a></h3>
@@ -577,8 +572,9 @@ document.write(`
 <span class="math notranslate nohighlight">\(\Large S = \sqrt{3} \cdot U_L \cdot I_L\)</span><br />
 <span class="math notranslate nohighlight">\(\Large P = \sqrt{3} \cdot U_L \cdot I_L \cdot cos\varphi\)</span></p>
 </section>
+</section>
 <section id="velocitat-de-sincronisme">
-<h3>Velocitat de sincronisme<a class="headerlink" href="#velocitat-de-sincronisme" title="Permalink to this heading">#</a></h3>
+<h2>Velocitat de sincronisme<a class="headerlink" href="#velocitat-de-sincronisme" title="Permalink to this heading">#</a></h2>
 <p><span class="math notranslate nohighlight">\(\Large n_s = \frac{60 \cdot f}{p} min^{-1}\)</span></p>
 <table class="colwidths-auto table">
 <thead>
@@ -616,9 +612,28 @@ document.write(`
 </table>
 </section>
 <section id="lliscament">
-<h3>Lliscament<a class="headerlink" href="#lliscament" title="Permalink to this heading">#</a></h3>
+<h2>Lliscament<a class="headerlink" href="#lliscament" title="Permalink to this heading">#</a></h2>
+<p>Els motors asíncrons giren a una velocitat inferior a la de sincronisme. Es defineix el lliscament <span class="math notranslate nohighlight">\(s\)</span> com:</p>
 <p><span class="math notranslate nohighlight">\(\Large s = \frac{n_s - n_r}{n_s}\)</span></p>
 </section>
+<section id="engegada-estrella-triangle">
+<h2>Engegada estrella-triangle<a class="headerlink" href="#engegada-estrella-triangle" title="Permalink to this heading">#</a></h2>
+<p>Si fem servir en condicions nominals la connexió en triangle, es fa una engegada amb estrella <strong>amb el mateix voltatge de linia</strong>, d’aquesta manera la intensitat inicial és més baixa.</p>
+</section>
+<section id="placa-de-caracteristiques">
+<h2>Placa de característiques<a class="headerlink" href="#placa-de-caracteristiques" title="Permalink to this heading">#</a></h2>
+<p>A la imatge podeu veure un models de placa de característiques d’un motor d’inducció trifàsic. S’indiquen els diferents paràmetres i com s’ha de realitzar la connexió en estrella i en triangle.</p>
+<p><img alt="" src="_images/placaCaracteristiquesMotor3F.png" /></p>
+<p>Fixem-nos en algunes de les indicacions:</p>
+<ul class="simple">
+<li><p>12: observem un lliscament. Es tracta d’un motor d’inducció. El lliscament disminueix lleugerament amb la tensió d’alimentació.</p></li>
+<li><p>3: 400V (380V) connectat en triangle, 690V (660V) en estrella, a 50Hz</p></li>
+<li><p>13: 14,1A (14,4A) connectat en triangle, 8,17A (8,29A) en estrella, a 50Hz</p></li>
+<li><p>11: 7,5 kW de potència</p></li>
+<li><p>14: Factor de potència. Disminueix lleugerament amb la tensió d’alimnetació.</p></li>
+<li><p>22: connexió a la xarxa en triangle i en estrella.</p></li>
+</ul>
+<p>Per cert, aquesta empresa té una fantàstica <a class="reference external" href="http://www.jorts.net/jupbook/pdf/WEG-WMO-motores-electricos-guia-de-especificacion-50039910-brochure-spanish-web.pdf">guia</a> en castellà i un <a class="reference external" href="http://www.jorts.net/jupbook/pdf/WEG-w22-three-phase-induction-motors-european-market-50025712-brochure-english-web.pdf">catàleg tècnic</a> en anglés que recomano feu una ullada.</p>
 </section>
 <section id="exemples">
 <h2>Exemples<a class="headerlink" href="#exemples" title="Permalink to this heading">#</a></h2>
@@ -816,20 +831,19 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motor-sincron-trifasic">Motor síncron trifàsic</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#engegada">Engegada</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inversio-de-gir">Inversió de gir</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motor-sincron-trifasic">Motor síncron trifàsic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inversio-de-gir">Inversió de gir</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motor-asincron-trifasic">Motor asíncron trifàsic</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motor-monofasic-a-induccio">Motor monofàsic a inducció</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equacions-dels-motors-trifasics">Equacions dels motors trifàsics</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connexions-dels-motors-trifasics">Connexions dels motors trifàsics</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connexio-en-estrella">Connexió en estrella</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connexio-en-triangle">Connexió en triangle</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#velocitat-de-sincronisme">Velocitat de sincronisme</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lliscament">Lliscament</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#velocitat-de-sincronisme">Velocitat de sincronisme</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lliscament">Lliscament</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#engegada-estrella-triangle">Engegada estrella-triangle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#placa-de-caracteristiques">Placa de característiques</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples">Exemples</a></li>
 </ul>
   </nav></div>
