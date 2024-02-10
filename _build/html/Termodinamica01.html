@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Termodinàmica &#8212; Tecnologia i Enginyeria</title>
+    <title>Termodinàmica. &#8212; Tecnologia i Enginyeria</title>
   
   
   
@@ -63,11 +63,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Termodinamica01';</script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Recursos" href="Termodinamica99.html" />
+    <link rel="next" title="Primer principi. Transformacions termodinàmiques." href="Termodinamica02.html" />
     <link rel="prev" title="Recursos" href="Mecanica99.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ca"/>
@@ -195,6 +197,12 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="Materials01.html">Materials</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="Materials60.html">Plàstics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials61.html">Termoplàstics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials62.html">Termoestables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials63.html">Elastòmers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials64.html">Conformació dels termoplàstics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials65.html">Reciclatge dels termoplàstics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials69.html">Compòsits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials81.html">Densitat dels metalls</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials82.html">Aliatges binaris: Llei de la palanca</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials83.html">Assaig de tracció</a></li>
@@ -228,7 +236,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Mecanica99.html">Recursos</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Termodinàmica</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Termodinàmica.</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Termodinamica02.html">Primer principi. Transformacions termodinàmiques.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Termodinamica03.html">Màquines tèrmiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Termodinamica04.html">L’entropia.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Termodinamica99.html">Recursos</a></li>
 </ul>
 </li>
@@ -410,7 +421,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -421,11 +434,24 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Termodinàmica</h1>
+    <h1>Termodinàmica.</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fisica-estadistica">Física estadística</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calor-i-temperatura">Calor i temperatura</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#els-principis-o-lleis-de-la-termodinamica">Els principis o lleis de la termodinàmica</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#els-altres-principis-de-la-termodinamica">Els altres principis de la termodinàmica</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -436,13 +462,74 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="termodinamica">
-<h1>Termodinàmica<a class="headerlink" href="#termodinamica" title="Permalink to this heading">#</a></h1>
+<h1>Termodinàmica.<a class="headerlink" href="#termodinamica" title="Permalink to this heading">#</a></h1>
 <div class="admonition-pagina-en-desenvolupament admonition">
 <p class="admonition-title">Pàgina en desenvolupament</p>
 <p>Encara estem treballant en aquest document.<br />
 Esperem oferir-vos properament el seu contingut.<br />
 Disculpeu les molèsties.</p>
 </div>
+<p>La termodinàmica estudia els sistemes físics a nivell macroscòpic. Les seves lleis es van desenvolupar al segle XIX per Mayer i Carnot, la seva relació amb la mecànica estadística per Boltzmann a inicis del segle XX. Aquests científics van haver de lluitar contra la comunitat científica, d’una forma tan tràgica que Mayer va intentar suicidar-se <span id="id1">[<a class="reference internal" href="Biblio.html#id6" title="M. Guillen. Cinco ecuaciones que cambiaron el mundo: El poder y la oculta belleza de las matemáticas. Debolsillo, 2023. ISBN 9786073836326. URL: https://archive.org/details/cincoecuacionesq0000guil.">Gui23</a>]</span> i Boltzmann ho va aconseguir <span id="id2">[<a class="reference internal" href="Biblio.html#id5" title="M. Kaku and J.G. Sanz. Física de lo imposible: ¿Podremos ser invisibles, viajar en el tiempo y teletransportarnos? DEBATE. DEBATE, 2010. ISBN 9788483069431. URL: https://archive.org/details/fisicadeloimposi0000kaku.">KS10</a>]</span>. Paga la pena llegir els dos llibres citats per entendre aqueta evolució.</p>
+<section id="fisica-estadistica">
+<h2>Física estadística<a class="headerlink" href="#fisica-estadistica" title="Permalink to this heading">#</a></h2>
+<p>La matèria està constituïda per àtoms i molècul·les, ja ho vam veure anteriorment. Però amb un nombre tan gran, recordem el <a class="reference external" href="https://ca.wikipedia.org/wiki/Nombre_d%27Avogadro">nombre d’Avogadro</a> <span class="math notranslate nohighlight">\(N_{\rm A} = 6,022 \, 140 \, 76 \, \times10^{23} \quad mol^{-1}\)</span>, que és impossible aplicar les lleis de la mecànica clàssica a cap objecte macroscòpic.</p>
+<p>Per això treballem amb variables macroscòpiques que es poden deduir, com va fer Boltzmann <span id="id3">[<a class="reference internal" href="Biblio.html#id3" title="T.S. Kuhn and M.P. Larrucea. La teoría del cuerpo negro y la discontinuidad cuántica, 1894-1912. Alianza Universidad. Alianza, 1987. ISBN 9788420622620. URL: https://archive.org/details/blackbodytheoryq0000kuhn.">KL87</a>]</span>, d’un estudi estadístic del sistema microscòpic.</p>
+<p>Per exemple, si tenim un gas en un recipient, podem utilitzar les variables macroscòpiques pressió <strong>p</strong>, volum <strong>V</strong> i temperatura <strong>T</strong>.</p>
+<p>Un model senzill de xocs elàstics de pàrticules puntuals porta a l”<a class="reference external" href="https://ca.wikipedia.org/wiki/Llei_dels_gasos_ideals">eqüació d’estat dels gasos ideals</a></p>
+<p><span class="math notranslate nohighlight">\(pV= nRT =Nk_BT\)</span></p>
+<p>on <span class="math notranslate nohighlight">\(n\)</span> és el nombre de mols, <span class="math notranslate nohighlight">\(R\)</span> la constant dels gasos, <span class="math notranslate nohighlight">\(N\)</span> el nombre de partícules i <span class="math notranslate nohighlight">\(k_B\)</span> la constant de Boltzmann.</p>
+<p>En aquest simulador podeu veure com, encara que podem començar amb la mateixa velocitat per a cada mol·lècula, finalment tindrem una distribució estadística. Fixeu-vos en com el model s’ajusta a l’equació de gasos ideals, especialment si escollim l’opció <em>gas, Small</em> on podem considerar les partícul·les puntuals.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%html</span>
+ <span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.falstad.com/gas/gas.html&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">800</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;650&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span> 
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"> <iframe src="https://www.falstad.com/gas/gas.html" width=800 height="650"></iframe> 
+</div></div>
+</div>
+</section>
+<section id="calor-i-temperatura">
+<h2>Calor i temperatura<a class="headerlink" href="#calor-i-temperatura" title="Permalink to this heading">#</a></h2>
+<p>Els conceptes de calor i temperatura han evolucionat al llarg de la història <span id="id4">[<a class="reference internal" href="Biblio.html#id6" title="M. Guillen. Cinco ecuaciones que cambiaron el mundo: El poder y la oculta belleza de las matemáticas. Debolsillo, 2023. ISBN 9786073836326. URL: https://archive.org/details/cincoecuacionesq0000guil.">Gui23</a>]</span>. Avui en dia són dos conceptes ben diferenciats, encara que al llenguatge comú es confonguin quan diem «fa molta calor» quan volem dir «la temperatura és elevada».</p>
+<ul class="simple">
+<li><p>La <a class="reference external" href="https://ca.wikipedia.org/wiki/Calor">calor</a> és una forma d’energia, energia tèrmica. Es pot transmetre per conducció, convecció o radiació.</p></li>
+<li><p>La <a class="reference external" href="https://en.wikipedia.org/wiki/Thermodynamic_temperature">temperatura</a> està relacionada amb la energia cinètica desordenada de les particul·les, com podem veure al simulador. De fet, la darrera definició de kelvin va ser al <a class="reference external" href="http://www.jorts.net/jupbook/pdf/SIunitats2019.pdf">2019</a>:</p></li>
+</ul>
+<blockquote>
+<div><p>A partir d’aquesta definició, un kelvin és igual al canvi de temperatura termodinàmica que resulta d’un canvi de l’energia tèrmica kT d’<span class="math notranslate nohighlight">\(1,380 649 \times 10^{−23} J\)</span>.</p>
+</div></blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Avís</p>
+<p>A termodinàmica la temperatura sempre s’expressa en K. Compte quan posem el valor a les fòrmules.</p>
+</div>
+</section>
+<section id="els-principis-o-lleis-de-la-termodinamica">
+<h2>Els principis o lleis de la termodinàmica<a class="headerlink" href="#els-principis-o-lleis-de-la-termodinamica" title="Permalink to this heading">#</a></h2>
+<p>Actualment tenim 4 principis de la termodinàmica. El primer i segon principis són els que històricament es van aconseguir per Mayer i Carnot i són els que més aplicarem.</p>
+<p>Boltzman <span id="id5">[<a class="reference internal" href="Biblio.html#id4" title="L. Boltzmann. Escritos de mecanica y termodinamica / Writings of Mechanics and Thermodynamics. Ciencia y técnica. Alianza Ed., 1986. ISBN 9788420601731. URL: https://openlibrary.org/books/OL51010561M/Escritos_de_mec%C3%A1nica_y_termodin%C3%A1mica.">Bol86</a>]</span> fa un resum molt aclaridor de les dues lleis:</p>
+<blockquote>
+<div><p>Així es podrien deduir tots els fenòmens d’un principi general. Es pot produir calor, energia cinètica visible i treball mitjançant la transformació de qualsevol de les formes d’energia en una altra mentre es mantingui constant la quantitat total.</p>
+<p>La teoria mecànica de la calor ha posat al costat d’aquest principi general un segon, limitant el primer d’una forma poc satisfactòria; ens referim a la anomenada segona llei de la teoria mecànica de la calor que s’enuncia de la manera següent: el treball i l’energia cinètica visible poden transformar-se mútuament sense limitació de la mateixa manera que tots dos poden convertir-se en calor en cap condició, però, pel contrari, la transformació inversa de calor en treball, o bé no pot realitzar-se, o només és possible fer-la en part. Tot i que el principi expressat d’aquesta manera apareix com un apèndix incòmode del primer, esdevé molt més inconvenient en les seves conseqüències. La forma d’energia que necessitem per als nostres objectius és sempre la del treball o l’energia cinètica visible. Les vibracions tèrmiques pures s’escapen entre les nostres mans, se’ns escapen als nostres sentits, i són per a nosaltres sinònims del silenci; per això es descriu habitualment l’energia calorífica com energia dissipada o degradada, de manera que la segona llei anuncia un progrés continu de la degradació de l’energia, fins que s’esgotin totes les energies potencials que poguessin produir treball i tots els moviments visibles del món.</p>
+</div></blockquote>
+<p>El primer paràgraf resumeix la primera llei. En el fons, es tracta de la conservació de l’energia.</p>
+<p><span class="math notranslate nohighlight">\(\Delta E = 0\)</span></p>
+<p>El segon paràgraf fa referència a un concepte nou: l’entropia <span class="math notranslate nohighlight">\(S\)</span>. Aquesta només pot augmentar. Estudiarem més endevant aquest concepte i les seves conseqüències.</p>
+<p><span class="math notranslate nohighlight">\(\Delta S \ge 0\)</span></p>
+<section id="els-altres-principis-de-la-termodinamica">
+<h3>Els altres principis de la termodinàmica<a class="headerlink" href="#els-altres-principis-de-la-termodinamica" title="Permalink to this heading">#</a></h3>
+<p>El tercer principi de la termodinàmica es pot enunciar com la inaccessibilitat del zero absolut <span id="id6">[<a class="reference internal" href="Biblio.html#id2" title="David Jou. El tercer principi de la termodinàmica: 1906–2006. Revista de Física), 2006. URL: https://publicacions.iec.cat/repository/pdf/00000045%5C00000095.pdf.">Jou06</a>]</span></p>
+<p>Finalment tenim el <a class="reference external" href="https://ca.wikipedia.org/wiki/Principi_zero_de_la_termodin%C3%A0mica">principi zero de la termodinàmica</a>, que va ser el darrer en ser enunciat però és més bàsic. Aquest principi estableix que si dos sistemes termodinàmics estan cadascun en equilibri tèrmic amb un tercer sistema, aleshores estan en equilibri tèrmic entre ells</p>
+</section>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -487,11 +574,11 @@ Disculpeu les molèsties.</p>
       </div>
     </a>
     <a class="right-next"
-       href="Termodinamica99.html"
+       href="Termodinamica02.html"
        title="pàgina següent">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">següent</p>
-        <p class="prev-next-title">Recursos</p>
+        <p class="prev-next-title">Primer principi. Transformacions termodinàmiques.</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -502,7 +589,25 @@ Disculpeu les molèsties.</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fisica-estadistica">Física estadística</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calor-i-temperatura">Calor i temperatura</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#els-principis-o-lleis-de-la-termodinamica">Els principis o lleis de la termodinàmica</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#els-altres-principis-de-la-termodinamica">Els altres principis de la termodinàmica</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

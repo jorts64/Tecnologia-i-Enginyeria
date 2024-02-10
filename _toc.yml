@@ -55,6 +55,9 @@ chapters:
   - file: Mecanica99
 - file: Termodinamica01
   sections:
+  - file: Termodinamica02
+  - file: Termodinamica03
+  - file: Termodinamica04
   - file: Termodinamica99
 - file: CorrentAltern01
   sections:
