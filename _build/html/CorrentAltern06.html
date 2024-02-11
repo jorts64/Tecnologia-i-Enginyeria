@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Circuits sèrie AC &#8212; Tecnologia i Enginyeria</title>
+    <title>Circuits AC &#8212; Tecnologia i Enginyeria</title>
   
   
   
@@ -63,6 +63,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'CorrentAltern06';</script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Índex" href="genindex.html" />
@@ -195,6 +197,12 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="Materials01.html">Materials</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="Materials60.html">Plàstics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials61.html">Termoplàstics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials62.html">Termoestables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials63.html">Elastòmers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials64.html">Conformació dels termoplàstics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials65.html">Reciclatge dels termoplàstics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials69.html">Compòsits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials81.html">Densitat dels metalls</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials82.html">Aliatges binaris: Llei de la palanca</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials83.html">Assaig de tracció</a></li>
@@ -212,6 +220,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="CorrentContinu03.html">Associacions de resistències</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CorrentContinu04.html">Exercicis resolts 1/2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CorrentContinu05.html">Pràctica: Llei d’Ohm. Efecte Joule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu52.html">Teoremes de Thevenin i Norton</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CorrentContinu06.html">Pràctica: Estudi d’una pila i d’una bombeta</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CorrentContinu07.html">Lleis de Kirchoff</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CorrentContinu08.html">Exercicis resolts 2/2</a></li>
@@ -228,7 +237,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Mecanica99.html">Recursos</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Termodinamica01.html">Termodinàmica</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Termodinamica01.html">Termodinàmica.</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Termodinamica02.html">Primer principi. Transformacions termodinàmiques.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Termodinamica03.html">Màquines tèrmiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Termodinamica04.html">L’entropia.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Termodinamica99.html">Recursos</a></li>
 </ul>
 </li>
@@ -237,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="CorrentAltern03.html">Llei d’Ohm. Impedància</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CorrentAltern04.html">Condensadors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CorrentAltern05.html">La potència a AC</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Circuits sèrie AC</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Circuits AC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CorrentAltern99.html">Recursos</a></li>
 </ul>
 </li>
@@ -410,7 +422,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -421,11 +435,41 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Circuits sèrie AC</h1>
+    <h1>Circuits AC</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estudi-d-un-circuit-rc-serie">Estudi d’un circuit RC sèrie</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dades">Dades</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calcul-de-les-impedancies">Càlcul de les impedàncies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#factor-de-potencia">Factor de potència</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intensitat">Intensitat</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tensions">Tensions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#potencies">Potències</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#circuit-rl-serie">Circuit RL sèrie</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pau-electrotecnia-2015-s2-3a-1-2">PAU ELECTROTÈCNIA 2015 S2 3A (1/2)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#circuit-rlc-serie">Circuit RLC sèrie</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ressonancia">Ressonància</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pau-electrotecnia-2017-s1-p3b">PAU ELECTROTÈCNIA 2017 S1 P3B</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#circuits-ac-parallel">Circuits AC paral·lel</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pau-electrotecnia-2015-s2-3a-2-2">PAU ELECTROTÈCNIA 2015 S2 3A (2/2)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pau-electrotecnia-2019-s4-p3a">PAU ELECTROTÈCNIA 2019 S4 P3A</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -435,14 +479,764 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="circuits-serie-ac">
-<h1>Circuits sèrie AC<a class="headerlink" href="#circuits-serie-ac" title="Permalink to this heading">#</a></h1>
-<div class="admonition-pagina-en-desenvolupament admonition">
-<p class="admonition-title">Pàgina en desenvolupament</p>
-<p>Encara estem treballant en aquest document.<br />
-Esperem oferir-vos properament el seu contingut.<br />
-Disculpeu les molèsties.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="circuits-ac">
+<h1>Circuits AC<a class="headerlink" href="#circuits-ac" title="Permalink to this heading">#</a></h1>
+<section id="estudi-d-un-circuit-rc-serie">
+<h2>Estudi d’un circuit RC sèrie<a class="headerlink" href="#estudi-d-un-circuit-rc-serie" title="Permalink to this heading">#</a></h2>
+<p>Tornem al nostre circuit d’exemple. Ara trobarem tots els resultats disponibles de forma sistemàtica.</p>
+<blockquote>
+<div><p>Un circuit sèrie amb una resistència <span class="math notranslate nohighlight">\(R = 10 \ \Omega\)</span> i un condensador <span class="math notranslate nohighlight">\(C = 162,48 \ \mu F\)</span> està connectat a una xarxa monofàsica <span class="math notranslate nohighlight">\(U = 200 V\)</span> i <span class="math notranslate nohighlight">\(f = 50 Hz\)</span></p>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{matrix}
+X_{C} = \frac{-j}{C \omega} &amp;
+\omega = 2 \pi f &amp;
+Z = R + X_{C}
+\\
+\end{matrix}
+\end{split}\]</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
 </div>
+</div>
+</details>
+</div>
+<section id="dades">
+<h3>Dades<a class="headerlink" href="#dades" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">R</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">C</span> <span class="o">=</span> <span class="mf">162.48</span> <span class="o">*</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">U</span> <span class="o">=</span> <span class="mi">220</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">w</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">f</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="calcul-de-les-impedancies">
+<h3>Càlcul de les impedàncies<a class="headerlink" href="#calcul-de-les-impedancies" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Xc</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span><span class="n">j</span><span class="o">/</span><span class="p">(</span><span class="n">C</span><span class="o">*</span><span class="n">w</span><span class="p">)</span>
+<span class="n">Xc</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-19.590711852769j
+</pre></div>
+</div>
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(X_{C} = 19.59_{-90^{\circ}} \ \Omega\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z</span> <span class="o">=</span> <span class="n">R</span> <span class="o">+</span> <span class="n">Xc</span>
+<span class="n">Z</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(10-19.590711852769j)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">modZ</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">Z</span><span class="p">)</span>
+<span class="n">modZ</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>21.995362940816044
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">angZ</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">angle</span><span class="p">(</span><span class="n">Z</span><span class="p">))</span>
+<span class="n">angZ</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-62.958143957668284
+</pre></div>
+</div>
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(Z = 22_{-62,96^{\circ}} \ \Omega\)</span></p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">Z</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">Z</span><span class="p">)),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+             <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">),</span>
+             <span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">Z</span><span class="p">),</span> <span class="mi">0</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+             <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">),</span>
+             <span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">Z</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">Z</span><span class="p">)),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">Z</span><span class="p">),</span> <span class="mi">0</span><span class="p">),</span>
+             <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">),</span>
+             <span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;$Z = 22 \ \Omega$&quot;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mf">1.5</span><span class="p">,</span> <span class="o">-</span><span class="mi">12</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;$R = 10 \ \Omega$&quot;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;$X_</span><span class="si">{C}</span><span class="s2"> = 19,59 \ \Omega$&quot;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="o">-</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;$62,96^{\circ}$&quot;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">25</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="_images/fe2bb2bb1d60ebb4bdce1c5605b37c23dc8f8b08b4844c76c9d28ae24785a4da.png" src="_images/fe2bb2bb1d60ebb4bdce1c5605b37c23dc8f8b08b4844c76c9d28ae24785a4da.png" />
+</div>
+</div>
+</section>
+<section id="factor-de-potencia">
+<h3>Factor de potència<a class="headerlink" href="#factor-de-potencia" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fdp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angZ</span><span class="p">)</span>
+<span class="n">fdp</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9920358997298501
+</pre></div>
+</div>
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(cos(\varphi) = 0,9920\)</span></p>
+</section>
+<section id="intensitat">
+<h3>Intensitat<a class="headerlink" href="#intensitat" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">I</span> <span class="o">=</span> <span class="n">U</span><span class="o">/</span><span class="n">Z</span>
+<span class="n">I</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(4.547371291596367+8.908624066121842j)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">modI</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">I</span><span class="p">)</span>
+<span class="n">modI</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10.00210819853095
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">angI</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">angle</span><span class="p">(</span><span class="n">I</span><span class="p">))</span>
+<span class="n">angI</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>62.958143957668284
+</pre></div>
+</div>
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(I = 10_{62,96^{\circ}} \ A\)</span></p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">I</span><span class="p">),</span> <span class="mi">10</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">I</span><span class="p">)),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+             <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">),</span>
+             <span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">U</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+             <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">),</span>
+             <span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;$I = 10 \ A$&quot;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;$U = 220 \  V$&quot;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;$62,96^{\circ}$&quot;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">250</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">250</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="_images/9119f4df00ee75a60337a8c8e3c11ecc428acbd4f9ab19542715d2dc1a03737b.png" src="_images/9119f4df00ee75a60337a8c8e3c11ecc428acbd4f9ab19542715d2dc1a03737b.png" />
+</div>
+</div>
+</section>
+<section id="tensions">
+<h3>Tensions<a class="headerlink" href="#tensions" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Ur</span> <span class="o">=</span> <span class="n">R</span> <span class="o">*</span> <span class="n">I</span>
+<span class="n">Ur</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(45.47371291596367+89.08624066121843j)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">modUr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">Ur</span><span class="p">)</span>
+<span class="n">modUr</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100.02108198530951
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">angUr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">angle</span><span class="p">(</span><span class="n">Ur</span><span class="p">))</span>
+<span class="n">angUr</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>62.958143957668284
+</pre></div>
+</div>
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(U_{R} = 100_{62,96^{\circ}} \ V\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Uc</span> <span class="o">=</span> <span class="n">Xc</span> <span class="o">*</span> <span class="n">I</span>
+<span class="n">Uc</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(174.52628708403634-89.08624066121843j)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">modUc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">Uc</span><span class="p">)</span>
+<span class="n">modUc</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>195.9484196376383
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">angUc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">angle</span><span class="p">(</span><span class="n">Uc</span><span class="p">))</span>
+<span class="n">angUc</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-27.04185604233172
+</pre></div>
+</div>
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(U_{C} = 196_{-27,04^{\circ}} \ V\)</span></p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">Ur</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">Ur</span><span class="p">)),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+             <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">),</span>
+             <span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">U</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+             <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">),</span>
+             <span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">U</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">Ur</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">Ur</span><span class="p">)),</span>
+             <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">),</span>
+             <span class="p">)</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;$U_</span><span class="si">{R}</span><span class="s2"> = 45,47 \ V$&quot;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;$U_</span><span class="si">{C}</span><span class="s2"> = 174,5 \ V$&quot;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">125</span><span class="p">,</span> <span class="mi">75</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;$U = 220 \  V$&quot;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;$62,96^{\circ}$&quot;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">250</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">250</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="_images/e5318cc05d25b3cb0aeeaceeaa81e58c22490b47d84327adaabad04ae3099fa5.png" src="_images/e5318cc05d25b3cb0aeeaceeaa81e58c22490b47d84327adaabad04ae3099fa5.png" />
+</div>
+</div>
+</section>
+<section id="potencies">
+<h3>Potències<a class="headerlink" href="#potencies" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S</span> <span class="o">=</span> <span class="n">U</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">conj</span><span class="p">(</span><span class="n">I</span><span class="p">)</span>
+<span class="n">S</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1000.4216841512007-1959.8972945468051j)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">modS</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>
+<span class="n">modS</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2200.463803676809
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">angS</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">angle</span><span class="p">(</span><span class="n">S</span><span class="p">))</span>
+<span class="n">angS</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-62.958143957668284
+</pre></div>
+</div>
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(S = 2200_{-62,96^{\circ}} \ VA\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>
+<span class="n">P</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1000.4216841512007
+</pre></div>
+</div>
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(P = 1000 \ W\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Q</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>
+<span class="n">Q</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-1959.8972945468051
+</pre></div>
+</div>
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(Q = -1960 \ var\)</span></p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">S</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">S</span><span class="p">)),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+             <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">),</span>
+             <span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">S</span><span class="p">),</span> <span class="mi">0</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+             <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">),</span>
+             <span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">S</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">S</span><span class="p">)),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">S</span><span class="p">),</span> <span class="mi">0</span><span class="p">),</span>
+             <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">),</span>
+             <span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;$S = 2200 \ VA$&quot;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="o">-</span><span class="mi">1200</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;$P = 1000 \ W$&quot;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="o">-</span><span class="mi">300</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;$Q = -1960 \ var$&quot;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">1100</span><span class="p">,</span><span class="o">-</span><span class="mi">1000</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;$62,96^{\circ}$&quot;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">125</span><span class="p">,</span><span class="o">-</span><span class="mi">175</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2500</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">2500</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="_images/525f5c60c9c36bb2604bf05e127681bf562a31433c6ebc82c38cd60fded8b4b4.png" src="_images/525f5c60c9c36bb2604bf05e127681bf562a31433c6ebc82c38cd60fded8b4b4.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="circuit-rl-serie">
+<h2>Circuit RL sèrie<a class="headerlink" href="#circuit-rl-serie" title="Permalink to this heading">#</a></h2>
+<p>Els circuits RL són semblants als RC, però amb un canvi de signe de la impedància i la potència reactiva, ja que <span class="math notranslate nohighlight">\(X_L = jL\omega\)</span></p>
+<section id="pau-electrotecnia-2015-s2-3a-1-2">
+<h3>PAU ELECTROTÈCNIA 2015 S2 3A (1/2)<a class="headerlink" href="#pau-electrotecnia-2015-s2-3a-1-2" title="Permalink to this heading">#</a></h3>
+<p><img alt="" src="_images/PAUELEC2015S2P3A.png" /></p>
+<p>Anem a calcular els apartats <strong>a</strong> i <strong>b</strong>, que són d’un circuit RL sèrie. L’apartat <strong>c</strong> el comentarem més endavant.</p>
+<p><strong>a)</strong></p>
+<p><span class="math notranslate nohighlight">\(P={A_1}^2 \ R \Rightarrow A_1 =\Large \sqrt{\frac{P}{R}}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">U</span><span class="o">=</span><span class="mi">230</span>
+<span class="n">P</span><span class="o">=</span><span class="mi">365</span>
+<span class="n">f</span><span class="o">=</span><span class="mi">50</span>
+<span class="n">R</span><span class="o">=</span><span class="mi">100</span>
+<span class="n">cosphi</span><span class="o">=</span><span class="mf">0.83</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">pi</span><span class="p">,</span> <span class="n">sqrt</span> 
+<span class="n">w</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">f</span>
+<span class="n">A1</span><span class="o">=</span><span class="n">sqrt</span><span class="p">(</span><span class="n">P</span><span class="o">/</span><span class="n">R</span><span class="p">)</span>
+<span class="n">A1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.91049731745428
+</pre></div>
+</div>
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(A_1=1,915 A\)</span></p>
+<p><strong>b)</strong></p>
+<p><span class="math notranslate nohighlight">\(P = S cos\varphi \Rightarrow S= \Large \frac{P}{cos\varphi}\)</span></p>
+<p><span class="math notranslate nohighlight">\(Q=S sin\varphi = S \sqrt{1-sin^2\varphi}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S</span><span class="o">=</span><span class="n">P</span><span class="o">/</span><span class="n">cosphi</span>
+<span class="n">Q</span><span class="o">=</span><span class="n">S</span><span class="o">*</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">cosphi</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">Q</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>245.28149108892936
+</pre></div>
+</div>
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(Q = 245 \ var\)</span>, potència reactiva inductiva, hem agafat el signe <strong>+</strong> de l’arrel</p>
+<p><span class="math notranslate nohighlight">\(Q=A_1V_1 \Rightarrow V_1=\Large \frac{Q}{A_1}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">V1</span><span class="o">=</span><span class="n">Q</span><span class="o">/</span><span class="n">A1</span>
+<span class="n">V1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>128.38620020454394
+</pre></div>
+</div>
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(V_1 = 128,4 V\)</span></p>
+</section>
+</section>
+<section id="circuit-rlc-serie">
+<h2>Circuit RLC sèrie<a class="headerlink" href="#circuit-rlc-serie" title="Permalink to this heading">#</a></h2>
+<p>En aquest cas el que hem de fer es primer sumar les impedàncies de l’eix imaginari <span class="math notranslate nohighlight">\(X_C\)</span> i <span class="math notranslate nohighlight">\(X_L\)</span>. El resultat serà una impedància reactiva equivalent,capacitiva o inductiva, segons qui guanyi. Ara ja podem treballar el circuit com un RC o RL sèrie.</p>
+<section id="ressonancia">
+<h3>Ressonància<a class="headerlink" href="#ressonancia" title="Permalink to this heading">#</a></h3>
+<p>Que pasa si <span class="math notranslate nohighlight">\(X_L = X_C\)</span>?</p>
+<p>Apareix un fenòmen anomenat <strong>ressonància</strong>. La condició de ressonància és</p>
+<p><span class="math notranslate nohighlight">\(X_L=X_C \Rightarrow L\omega=\Large \frac{1}{C\omega} \normalsize \Rightarrow \omega ^2 = \Large \frac{1}{LC} \normalsize \Rightarrow \omega_R= \Large \frac{1}{\sqrt{LC}}\)</span></p>
+<p>Per a aquesta freqüencia el circuit es comporta com una resistència <strong>R</strong>, amb un factor de potència 1</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%html</span>
+ <span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcAWaAOZYDMYEE4xIAmBAdgDZyJk0QkFI6BTAWjDACgA3ENR9or0ZZB-EFnpQpMBNyEgiRZPLDJlYzLDx1pUaLJ59xWcvJKmNkxtf0cATvJEhkTp-0gcAxs9eCXggWlYeFxwUnQ8LDRSZDxIPDwiNBN1YM4AGxUwPydAsRYYYkhY+CICUkSsYgt7FTUfAPr3LwaUZX8FJSD4SFDs6EVyMoYEZHIsHAhC3o5Mo0V2pwWpKegxvFJsjaJ2NHZNqFr5hFMO8xWPbzOT1omLPR7QlgQBxKHkMnZKGNppjMcTLdAWIYIQiFhSBDyJtIWgqBtDgB7ZwgcjqZzxbTIGxTBQorAcZGkVHo7EJcDkGy0CCCYkE5GEElSMlYmyCdngYQcAAW4B0yA4QA&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;800&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;600&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"> <iframe src="https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcAWaAOZYDMYEE4xIAmBAdgDZyJk0QkFI6BTAWjDACgA3ENR9or0ZZB-EFnpQpMBNyEgiRZPLDJlYzLDx1pUaLJ59xWcvJKmNkxtf0cATvJEhkTp-0gcAxs9eCXggWlYeFxwUnQ8LDRSZDxIPDwiNBN1YM4AGxUwPydAsRYYYkhY+CICUkSsYgt7FTUfAPr3LwaUZX8FJSD4SFDs6EVyMoYEZHIsHAhC3o5Mo0V2pwWpKegxvFJsjaJ2NHZNqFr5hFMO8xWPbzOT1omLPR7QlgQBxKHkMnZKGNppjMcTLdAWIYIQiFhSBDyJtIWgqBtDgB7ZwgcjqZzxbTIGxTBQorAcZGkVHo7EJcDkGy0CCCYkE5GEElSMlYmyCdngYQcAAW4B0yA4QA" width="800" height="600"></iframe>
+</div></div>
+</div>
+</section>
+<section id="pau-electrotecnia-2017-s1-p3b">
+<h3>PAU ELECTROTÈCNIA 2017 S1 P3B<a class="headerlink" href="#pau-electrotecnia-2017-s1-p3b" title="Permalink to this heading">#</a></h3>
+<p><img alt="" src="_images/PAUELEC2017S1P3B.png" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">W1</span><span class="o">=</span><span class="mi">500</span>
+<span class="n">R</span><span class="o">=</span><span class="mi">10</span>
+<span class="n">XL</span><span class="o">=</span><span class="mi">10</span>
+<span class="n">XC</span><span class="o">=</span><span class="mi">20</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>a)</strong></p>
+<p><span class="math notranslate nohighlight">\(W_1=R {A_1}^2 \Rightarrow A_1=\Large \sqrt{\frac{W}{R}}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A1</span><span class="o">=</span><span class="n">sqrt</span><span class="p">(</span><span class="n">W1</span><span class="o">/</span><span class="n">R</span><span class="p">)</span>
+<span class="n">A1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.0710678118654755
+</pre></div>
+</div>
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(A_1=7,071 A\)</span></p>
+<p><strong>b)</strong></p>
+<p><span class="math notranslate nohighlight">\(U=ZI=\sqrt{R^2+(X_L-X_C)^2} \cdot A_1\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z</span><span class="o">=</span><span class="n">sqrt</span><span class="p">(</span><span class="n">R</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="p">(</span><span class="n">XL</span><span class="o">-</span><span class="n">XC</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">U</span><span class="o">=</span><span class="n">A1</span><span class="o">*</span><span class="n">Z</span>
+<span class="n">U</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100.00000000000001
+</pre></div>
+</div>
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(U=100,0 V\)</span></p>
+<p><strong>c)</strong></p>
+<p><span class="math notranslate nohighlight">\(Q=XI^2=(X_L-X_C){A_1}^2\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Q</span><span class="o">=</span><span class="p">(</span><span class="n">XL</span><span class="o">-</span><span class="n">XC</span><span class="p">)</span><span class="o">*</span><span class="n">A1</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">Q</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-500.00000000000006
+</pre></div>
+</div>
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(Q = -500,0 var\)</span></p>
+<p><strong>d)</strong></p>
+<p>Ressonància <span class="math notranslate nohighlight">\(\Rightarrow X_L=X_C\)</span></p>
+<p><span class="math notranslate nohighlight">\(W_1=R{A_1}^2=R\Large (\frac{U}{Z})^2 = \frac{U^2}{R}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">W1</span><span class="o">=</span><span class="n">U</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">R</span>
+<span class="n">W1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1000.0000000000003
+</pre></div>
+</div>
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(W1 = 1000W\)</span></p>
+<p><strong>e)</strong></p>
+<p><span class="math notranslate nohighlight">\(X_C=\Large \frac{1}{C\omega} \normalsize \Rightarrow C=\Large \frac{1}{\omega X_C}\)</span></p>
+<p><span class="math notranslate nohighlight">\(X_L = L\omega \Rightarrow L=\Large \frac{X_L}{\omega}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">=</span><span class="mi">50</span>
+<span class="n">w</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">f</span>
+<span class="n">C</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">w</span><span class="o">*</span><span class="n">XC</span><span class="p">)</span>
+<span class="n">C</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.00015915494309189532
+</pre></div>
+</div>
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(C=159,2 \mu F\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span><span class="o">=</span><span class="n">XL</span><span class="o">/</span><span class="n">w</span>
+<span class="n">L</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.03183098861837907
+</pre></div>
+</div>
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(L=31,83 mH\)</span></p>
+<p><span class="math notranslate nohighlight">\(f_r=\Large \frac{1}{2\pi \sqrt {LC}}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fr</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">sqrt</span><span class="p">(</span><span class="n">L</span><span class="o">*</span><span class="n">C</span><span class="p">))</span>
+<span class="n">fr</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>70.71067811865476
+</pre></div>
+</div>
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(fr=70,71 Hz\)</span></p>
+<p>Ara que tenim el valor dels component podem simular el circuit i comprovar la ressonància:</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%html</span>
+ <span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcAWaAOZYDMYEE4xIAmBAdgDZyJMQkFJaBTAWjDACgA3ENBtongywC+tBkgaToCdgCdBIYSGRKlfSOwDGy1QJUD+UKLDi48A5gljJkRIllIIwJYslLHT7ADYLD+8M5GMJA4aFggzDBEbmFgyOTmRLhOEuwA9iAC5MhGmJDuRFJoRgICWOmZINm5kHjuhMbFEKWK7FjFDABiEOGFCqwgnbKMAI4ArowAdpoAnuxAA&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;800&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;600&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"> <iframe src="https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcAWaAOZYDMYEE4xIAmBAdgDZyJMQkFJaBTAWjDACgA3ENBtongywC+tBkgaToCdgCdBIYSGRKlfSOwDGy1QJUD+UKLDi48A5gljJkRIllIIwJYslLHT7ADYLD+8M5GMJA4aFggzDBEbmFgyOTmRLhOEuwA9iAC5MhGmJDuRFJoRgICWOmZINm5kHjuhMbFEKWK7FjFDABiEOGFCqwgnbKMAI4ArowAdpoAnuxAA" width="800" height="600"></iframe>
+</div></div>
+</div>
+</section>
+</section>
+<section id="circuits-ac-parallel">
+<h2>Circuits AC paral·lel<a class="headerlink" href="#circuits-ac-parallel" title="Permalink to this heading">#</a></h2>
+<p>En aquest circuits és mé fàcil calcular i sumar vectorialment les intensitats de cada branca</p>
+<p>També apareix el fenèmen de la ressonància, amb la mateixa condició:</p>
+<p><span class="math notranslate nohighlight">\(\omega_R= \Large \frac{1}{\sqrt{LC}}\)</span></p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%html</span>
+ <span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcAWaAOZYDMYEE4xIAmBAdgDZyIEsQkFI6BTAWjDACgA3Ec5EIskZ9w5RowiZYeOlDkwEHAMYhkyNKMZqNg8VFjwwyPCdNnzILNFzq8yUkUR40EGHE4B3XvzBjweIk0oDi8wAKCsRyDIEMso3y11aI4AGziJP0jGXTlXWGwXBARkMjRINEpIZHJggCd-QISGgSE5RzhYsMCcrJbxWN6c7T667xGukYkOnhEwIg0RJIlLRiQ9BWVVJO2kuY1xA3djcxPTAWhHUhMEMArIrAr+N0hPMd3wpc6PjV7Pr1+NMNPmkAelwPNciAWG4iL4wKQKERHIQcMgsKRRhN3o0Idl4F8cT94riBsTAbsSfVZhCJntctMxlgEIEREQHJCGLJ1tBFCphmzAsMmYEDvAXsdTidwNB0VdSHNynwcFg1Pp3LFWeyJgLgqFwjrBuyYv8ojr+UbUmCDVFhZDofk0WjSHAiOi0KQ0FgajF6tqteFbXiOnrArbeoHSYxbULmaMRLaJoHwB0APbJsZaSB4DFEHlqkhtdNYDhp4RPVRZnN557kAsQEWWEsCMtyITZ85rWAF7rNxsAC3Ask4QA&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;800&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;600&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"> <iframe src="https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcAWaAOZYDMYEE4xIAmBAdgDZyIEsQkFI6BTAWjDACgA3Ec5EIskZ9w5RowiZYeOlDkwEHAMYhkyNKMZqNg8VFjwwyPCdNnzILNFzq8yUkUR40EGHE4B3XvzBjweIk0oDi8wAKCsRyDIEMso3y11aI4AGziJP0jGXTlXWGwXBARkMjRINEpIZHJggCd-QISGgSE5RzhYsMCcrJbxWN6c7T667xGukYkOnhEwIg0RJIlLRiQ9BWVVJO2kuY1xA3djcxPTAWhHUhMEMArIrAr+N0hPMd3wpc6PjV7Pr1+NMNPmkAelwPNciAWG4iL4wKQKERHIQcMgsKRRhN3o0Idl4F8cT94riBsTAbsSfVZhCJntctMxlgEIEREQHJCGLJ1tBFCphmzAsMmYEDvAXsdTidwNB0VdSHNynwcFg1Pp3LFWeyJgLgqFwjrBuyYv8ojr+UbUmCDVFhZDofk0WjSHAiOi0KQ0FgajF6tqteFbXiOnrArbeoHSYxbULmaMRLaJoHwB0APbJsZaSB4DFEHlqkhtdNYDhp4RPVRZnN557kAsQEWWEsCMtyITZ85rWAF7rNxsAC3Ask4QA" width="800" height="600"></iframe>
+</div></div>
+</div>
+<section id="pau-electrotecnia-2015-s2-3a-2-2">
+<h3>PAU ELECTROTÈCNIA 2015 S2 3A (2/2)<a class="headerlink" href="#pau-electrotecnia-2015-s2-3a-2-2" title="Permalink to this heading">#</a></h3>
+<p><img alt="" src="_images/PAUELEC2015S2P3A.png" /></p>
+<p>Ara ja podem treballar l’apartat <strong>c</strong> que teníem pendent.</p>
+<p>Com està en ressonància, <span class="math notranslate nohighlight">\(Q_L + Q_C = 0 \Rightarrow A_2 = Q/U\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Q</span><span class="o">=</span><span class="mf">245.28</span>
+<span class="n">U</span><span class="o">=</span><span class="mi">230</span>
+<span class="n">A2</span><span class="o">=</span><span class="n">Q</span><span class="o">/</span><span class="n">U</span>
+<span class="n">A2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0664347826086957
+</pre></div>
+</div>
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(A2=1,066 A\)</span></p>
+</section>
+<section id="pau-electrotecnia-2019-s4-p3a">
+<h3>PAU ELECTROTÈCNIA 2019 S4 P3A<a class="headerlink" href="#pau-electrotecnia-2019-s4-p3a" title="Permalink to this heading">#</a></h3>
+<p><img alt="" src="_images/PAUELEC2019S4P3A.png" /></p>
+<p><img alt="" src="_images/PAUELEC2019S4P3As.png" /></p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -500,7 +1294,42 @@ Disculpeu les molèsties.</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estudi-d-un-circuit-rc-serie">Estudi d’un circuit RC sèrie</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dades">Dades</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calcul-de-les-impedancies">Càlcul de les impedàncies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#factor-de-potencia">Factor de potència</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intensitat">Intensitat</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tensions">Tensions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#potencies">Potències</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#circuit-rl-serie">Circuit RL sèrie</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pau-electrotecnia-2015-s2-3a-1-2">PAU ELECTROTÈCNIA 2015 S2 3A (1/2)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#circuit-rlc-serie">Circuit RLC sèrie</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ressonancia">Ressonància</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pau-electrotecnia-2017-s1-p3b">PAU ELECTROTÈCNIA 2017 S1 P3B</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#circuits-ac-parallel">Circuits AC paral·lel</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pau-electrotecnia-2015-s2-3a-2-2">PAU ELECTROTÈCNIA 2015 S2 3A (2/2)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pau-electrotecnia-2019-s4-p3a">PAU ELECTROTÈCNIA 2019 S4 P3A</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

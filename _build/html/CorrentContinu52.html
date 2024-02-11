@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Corrent Continu &#8212; Tecnologia i Enginyeria</title>
+    <title>Teoremes de Thévenin i Norton &#8212; Tecnologia i Enginyeria</title>
   
   
   
@@ -63,12 +63,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'CorrentContinu01';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'CorrentContinu52';</script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Lleis bàsiques del circuit elèctric" href="CorrentContinu02.html" />
-    <link rel="prev" title="Recursos" href="Materials99.html" />
+    <link rel="next" title="Pràctica: Estudi d’una pila i d’una bombeta" href="CorrentContinu06.html" />
+    <link rel="prev" title="Pràctica: Llei d’Ohm. Efecte Joule" href="CorrentContinu05.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ca"/>
   </head>
@@ -211,14 +211,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Materials99.html">Recursos</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Corrent Continu</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="CorrentContinu01.html">Corrent Continu</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="CorrentContinu02.html">Lleis bàsiques del circuit elèctric</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CorrentContinu50.html">Aplicacions de les resistències</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CorrentContinu51.html">Les resistències comercials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CorrentContinu03.html">Associacions de resistències</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CorrentContinu04.html">Exercicis resolts 1/2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CorrentContinu05.html">Pràctica: Llei d’Ohm. Efecte Joule</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CorrentContinu52.html">Teoremes de Thévenin i Norton</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Teoremes de Thévenin i Norton</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CorrentContinu06.html">Pràctica: Estudi d’una pila i d’una bombeta</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CorrentContinu07.html">Lleis de Kirchoff</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CorrentContinu08.html">Exercicis resolts 2/2</a></li>
@@ -349,7 +349,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/CorrentContinu01.ipynb" target="_blank"
+      <li><a href="_sources/CorrentContinu52.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Baixeu el fitxer font"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -420,7 +420,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -431,11 +433,20 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Corrent Continu</h1>
+    <h1>Teoremes de Thévenin i Norton</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teorema-de-thevenin">Teorema de Thévenin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teorema-de-norton">Teorema de Norton</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -445,28 +456,31 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="corrent-continu">
-<h1>Corrent Continu<a class="headerlink" href="#corrent-continu" title="Permalink to this heading">#</a></h1>
-<p>A 1r de Batxillerat només treballarem amb Corrent Continu (CC, DC en anglès). De totes formes, les lleis que aplicarem seran vàlides per resistències connectades a Corrent Altern (CA, AC en anglès). De fet, la teoria de <a class="reference internal" href="CorrentAltern01.html"><span class="doc std std-doc">Corrent Altern</span></a>, que veurem a 2n de Batxillerat, és una generalització del concepte de <strong>resistència</strong> que s’anomena <strong>impedància</strong> i que utilitza nombres complexos per mantenir de forma generalitzada les lleis que veurem aquest curs.</p>
-<p>És important recordar la <strong>simbologia</strong> que ens permet representar els components als circuits. Nosaltres estem obligats a fer servir simbologia <strong>ISO</strong>, però és covenient coneixer també els símbols americans ja que molta documentació i programari els utilitza.</p>
-<p><strong>Piles i bateries</strong></p>
-<p>Pila <img alt="" src="_images/pila.png" /> Bateria  <img alt="" src="_images/bateria.png" /></p>
-<p>Recordeu que la línia més llarga indica el pol positiu (+)</p>
-<p><strong>Resistències</strong></p>
-<p>ISO <img alt="" src="_images/resistencia.png" /> ANSI <img alt="" src="_images/resistenciaANSI.png" /></p>
-<p><strong>Resistències variables</strong></p>
-<p>ISO <img alt="" src="_images/resvar.png" /> ANSI <img alt="" src="_images/resvarANSI.png" /></p>
-<p><strong>Potenciòmetres</strong></p>
-<p>ISO <img alt="" src="_images/pot.png" /> ANSI <img alt="" src="_images/potANSI.png" /></p>
-<p><strong>Condensadors</strong></p>
-<p><img alt="" src="_images/condensador.png" /></p>
-<p><strong>Bobines</strong></p>
-<p>ISO <img alt="" src="_images/bobina.png" /> ANSI <img alt="" src="_images/bobinaANSI.png" /></p>
-<p><strong>Diodes i leds</strong></p>
-<p>Diode <img alt="" src="_images/diode.png" /> Led <img alt="" src="_images/led.png" /></p>
-<p>El triangle indica el sentit en que deixa passar el corrent. La línia indica la connexió a (-) per que s’encengui el led.</p>
-<div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="teoremes-de-thevenin-i-norton">
+<h1>Teoremes de Thévenin i Norton<a class="headerlink" href="#teoremes-de-thevenin-i-norton" title="Permalink to this heading">#</a></h1>
+<div class="admonition-pagina-en-desenvolupament admonition">
+<p class="admonition-title">Pàgina en desenvolupament</p>
+<p>Encara estem treballant en aquest document.<br />
+Esperem oferir-vos properament el seu contingut.<br />
+Disculpeu les molèsties.</p>
 </div>
+<p>Aquest teoremes, a banda de permetre càlculs de citcuits, permeten modelitzar sistemes reals, per exemple una pila.</p>
+<section id="teorema-de-thevenin">
+<h2>Teorema de Thévenin<a class="headerlink" href="#teorema-de-thevenin" title="Permalink to this heading">#</a></h2>
+<blockquote>
+<div><p>Qualsevol combinació de fonts de voltatge fonts de corrent i resistències amb dos terminals és elèctricament equivalent a una única font de voltatge V i una única resistència R</p>
+</div></blockquote>
+<p>Veiem un exemple:</p>
+<p><a title="SteveZodiac, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via la Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Thevenin_demo.svg"><img width="800" alt="Thevenin demo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Thevenin_demo.svg/800px-Thevenin_demo.svg.png"></a></p>
+</section>
+<section id="teorema-de-norton">
+<h2>Teorema de Norton<a class="headerlink" href="#teorema-de-norton" title="Permalink to this heading">#</a></h2>
+<blockquote>
+<div><p>Qualsevol conjunt de fonts de voltatge i resistències amb dos terminals és elèctricament equivalent a una font de corrent elèctric I en paral·lel amb una única resistència R</p>
+</div></blockquote>
+<p>Com veieu complementa el teorema de Thévenin: podem representar aquests circuits com fonts de tensió o fonts d’intensitat.</p>
+<p><a title="Matthewbeckler, Public domain, via la Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Thevenin_norton_equivalents.svg"><img width="800" alt="Thevenin norton equivalents" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Thevenin_norton_equivalents.svg/640px-Thevenin_norton_equivalents.svg.png"></a></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -500,20 +514,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Materials99.html"
+       href="CorrentContinu05.html"
        title="pàgina anterior">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">Recursos</p>
+        <p class="prev-next-title">Pràctica: Llei d’Ohm. Efecte Joule</p>
       </div>
     </a>
     <a class="right-next"
-       href="CorrentContinu02.html"
+       href="CorrentContinu06.html"
        title="pàgina següent">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">següent</p>
-        <p class="prev-next-title">Lleis bàsiques del circuit elèctric</p>
+        <p class="prev-next-title">Pràctica: Estudi d’una pila i d’una bombeta</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -524,7 +538,21 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teorema-de-thevenin">Teorema de Thévenin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teorema-de-norton">Teorema de Norton</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
