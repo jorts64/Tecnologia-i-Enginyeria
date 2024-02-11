@@ -1,0 +1,830 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="ca" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Sòlids &#8212; Tecnologia i Enginyeria</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Materials02';</script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Índex" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
+    <link rel="next" title="Densitat dels metalls" href="Materials81.html" />
+    <link rel="prev" title="Materials" href="Materials01.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ca"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Salta al contingut principal</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Tecnologia i Enginyeria - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Tecnologia i Enginyeria - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Tecnologia i Enginyeria
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="Energia01.html">Energia. Treball. Potència</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Energia81.html">Xocs inelàstics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Energia82.html">Xocs elàstics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Energia83.html">Energia nuclear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Energia99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="ProdElec01.html">Producció d’energia elèctrica</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="ProdElec81.html">Cogeneració</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProdElec82.html">Reactors de fusió</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProdElec83.html">Centrals elèctriques a Catalunya</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProdElec99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Materials01.html">Materials</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Sòlids</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials81.html">Densitat dels metalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials03.html">Aliatges</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials82.html">Aliatges binaris: Llei de la palanca</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials60.html">Plàstics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials61.html">Termoplàstics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials62.html">Termoestables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials63.html">Elastòmers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials64.html">Conformació dels termoplàstics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials65.html">Reciclatge dels termoplàstics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials69.html">Compòsits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials83.html">Assaig de tracció</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials84.html">Assajos mecànics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials85.html">Comparació propietats dels metalls</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="Materials98.html">OpenSCAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="CorrentContinu01.html">Corrent Continu</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu02.html">Lleis bàsiques del circuit elèctric</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu50.html">Aplicacions de les resistències</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu51.html">Les resistències comercials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu03.html">Associacions de resistències</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu04.html">Exercicis resolts 1/2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu05.html">Pràctica: Llei d’Ohm. Efecte Joule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu52.html">Teoremes de Thévenin i Norton</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu06.html">Pràctica: Estudi d’una pila i d’una bombeta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu07.html">Lleis de Kirchoff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu08.html">Exercicis resolts 2/2</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Mecanica01.html">Mecànica</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica02.html">Dinàmica de les rotacions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica03.html">Màquines simples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica04.html">Mecanismes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica41.html">Disseny 2D: LibreCAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica42.html">Disseny 3D: OpenSCAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica43.html">Animacions de mecanismes 3D: FreeCAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica44.html">Disseny industrial: programari <em>onshape</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Termodinamica01.html">Termodinàmica.</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Termodinamica02.html">Primer principi. Transformacions termodinàmiques.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Termodinamica03.html">Màquines tèrmiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Termodinamica04.html">L’entropia.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Termodinamica99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="CorrentAltern01.html">Corrent Altern</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="CorrentAltern02.html">Tractament matemàtic del corrent altern. Nombres complexos. Fasors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentAltern03.html">Llei d’Ohm. Impedància</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentAltern04.html">Condensadors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentAltern05.html">La potència a AC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentAltern06.html">Circuits AC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentAltern99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="MaqElec01.html">Màquines elèctriques</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec02.html">Equacions fonamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec03.html">Motor de corrent continu d’imants permanents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec04.html">Motor de corrent continu d’excitació independent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec05.html">Motor de corrent continu d’excitació paral·lela</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec06.html">Motor de corrent continu d’excitació sèrie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec07.html">Motor de corrent continu d’excitació compound</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec08.html">Generadors elèctrics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec09.html">El generador trifàsic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec10.html">Motors de corrent altern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec11.html">Transformadors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MaqElec12.html">Motors pas a pas</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Control01.html">Automàtica i Control</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Control02.html">El transistor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control03.html">Projecte: Interruptor crepuscular</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control04.html">Àlgebra de Boole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control05.html">Aplicació de l’àlgebra de Boole al disseny de circuits electrònics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control06.html">Diagrames de contactes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control07.html">Amplificadors operacionals i Comparadors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control08.html">Circuits seqüencials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control09.html">Condicionament de la sortida</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control40.html">Eletrònica de potència. Tiristors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control10.html">Temporitzador 555</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control11.html">Relès</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control12.html">Electricitat industrial. Contactors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control13.html">PLCs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control14.html">GRAFCET</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control15.html">Modelització de sistemes. Diagrama de blocs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control16.html">Funció de transferència</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control17.html">Teoria de control. Control PID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control50.html">Circuits Pneumàtics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control99.html">Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="OficinaTecnica01.html">Oficina Tècnica</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Empresa01.html">Organització i Empresa</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Empresa02.html">Planificació del projecte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Empresa03.html">Pressupost del projecte</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RecursosTaller01.html">Recursos Taller</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Biblio.html">Bibliografia</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Descarregueu aquesta pàgina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Materials02.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Baixeu el fitxer font"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimeix a PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="clar/fosc" aria-label="clar/fosc" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Cerca" aria-label="Cerca" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Sòlids</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estructures-cristallines">Estructures cristal·lines</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aplicacio-als-metalls">Aplicació als metalls</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#el-diamant-i-el-grafit">El diamant i el grafit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estructura-de-bandes">Estructura de bandes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cristalls-ionics">Cristalls iònics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solids-amorfs">Sòlids amorfs</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="solids">
+<h1>Sòlids<a class="headerlink" href="#solids" title="Permalink to this heading">#</a></h1>
+<div class="admonition-pagina-en-desenvolupament admonition">
+<p class="admonition-title">Pàgina en desenvolupament</p>
+<p>Encara estem treballant en aquest document.<br />
+Esperem oferir-vos properament el seu contingut.<br />
+Disculpeu les molèsties.</p>
+</div>
+<p>La majoria de materials que selecciona un enginyer son sòlids, per això ens centrarem en aquest tipus de materials. Com heu vist trobarem sòlids amorfs i sòlids cristal·lins.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p>Vidre</p></th>
+<th class="text-center head"><p>Grafè</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p><a title="Silica.jpg: Jdrewitt, Public domain, via la Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Silica.svg"><img width="400" alt="Silica" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Silica.svg/256px-Silica.svg.png"></a></p></td>
+<td class="text-center"><p><a title="AlexanderAlUS, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Graphen.jpg"><img width="512" alt="Graphen" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Graphen.jpg/512px-Graphen.jpg"></a></p></td>
+</tr>
+</tbody>
+</table>
+<p>Fixeu-vos en l’estructura del vidre. No es repeteix periòdicament. Per molt que a la nostra vida quotidiana diem cristall per anomenar el vidre, el vidre és un sòlid amorf, no cristal·lí. Els sòlids amorfs es poden considerar com a líquids amb una viscositat altíssima. Prova d’això son les deformacions observables a vidres de finestres centenàries de masies i esglésies: s’aprecia òpticament un engrossiment a la part inferior del vidre, que actua com a lent, deformant les imatges.</p>
+<p>Quan el sòlid no és un únic cristall sinó un agregat de petits cristalls parlem de policristall. Aquests petits   cristalls s’anomenen cristal·lites o grans cristal·lins, que poden tenir mides d’entre 1 i 2 micres fins a uns quants mil·límetres, fins-i-tot uns quants metres.</p>
+<p><a title="Cristal_ou_amorphe.svg: Cdang
+Everything else: Sbyrnes321, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Crystalline_polycrystalline_amorphous2.svg"><img width="511" alt="Crystalline polycrystalline amorphous2" src="https://upload.wikimedia.org/wikipedia/commons/0/05/Crystalline_polycrystalline_amorphous2.svg"></a></p>
+<section id="estructures-cristallines">
+<h2>Estructures cristal·lines<a class="headerlink" href="#estructures-cristallines" title="Permalink to this heading">#</a></h2>
+<p>L’estudi d’aquestes estructures sempre ha fascinat als científics, ja que molts minerals presenten aquest tipus d’ordenació. El més sorprenent és que, donada la seva simetria, únicament existeixen 7 sistemes cristal·lins, que presenten  només 14 models de xarxes tridimensionals invariants sota translacions, anomenades xarxes de Bravais.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-left head"><p>Sistema cristal·lí</p></th>
+<th class="text-left head"><p>Eixos</p></th>
+<th class="text-left head"><p>Angles entre els eixos</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Cúbic</p></td>
+<td class="text-left"><p>a = b = c</p></td>
+<td class="text-left"><p>α = β = γ = 90°</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Tetragonal</p></td>
+<td class="text-left"><p>a = b ≠ c</p></td>
+<td class="text-left"><p>α = β = γ = 90°</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Ortoròmbic</p></td>
+<td class="text-left"><p>a ≠ b ≠ c ≠ a</p></td>
+<td class="text-left"><p>α = β = γ = 90°</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Hexagonal</p></td>
+<td class="text-left"><p>a = b ≠ c</p></td>
+<td class="text-left"><p>α = β = 90°; γ = 120º</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Trigonal (o romboèdric)</p></td>
+<td class="text-left"><p>a = b = c</p></td>
+<td class="text-left"><p>α = β = γ ≠ 90°</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Monoclínic</p></td>
+<td class="text-left"><p>a ≠ b ≠ c ≠ a</p></td>
+<td class="text-left"><p>α = γ = 90°; β ≠ 90°</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Triclínic</p></td>
+<td class="text-left"><p>a ≠ b ≠ c ≠ a</p></td>
+<td class="text-left"><p>α ≠ β ≠ γ (tots diferents de 90°)</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p>Cel·la cúbica simple</p></th>
+<th class="text-center head"><p>Cel·la cúbica centrada al cos (BCC)</p></th>
+<th class="text-center head"><p>Cel·la cúbica centrada a les cares (FCC)</p></th>
+<th class="text-center head"><p>Cel·la tetragonal simple</p></th>
+<th class="text-center head"><p>Cel·la tetragonal centrada en el cos</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p><a title="Vectorization:  Stannered, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Cubic.svg"><img width="109" alt="Cubic" src="https://upload.wikimedia.org/wikipedia/commons/5/55/Cubic.svg"></a></p></td>
+<td class="text-center"><p><a title="Original:  Daniel Mayer   and  DrBob at English Wikipedia Vector:  Stannered, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Cubic-body-centered.svg"><img width="109" alt="Cubic-body-centered" src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Cubic-body-centered.svg"></a></p></td>
+<td class="text-center"><p><a title="Original PNGs by Daniel Mayer and DrBob, traced in Inkscape by User:Stannered, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Cubic-face-centered.svg"><img width="109" alt="Cubic-face-centered" src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Cubic-face-centered.svg"></a></p></td>
+<td class="text-center"><p><a title="Vectorization:  Stannered, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Tetragonal.svg"><img width="108" alt="Tetragonal" src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Tetragonal.svg"></a></p></td>
+<td class="text-center"><p><a title="Vectorization:  Stannered, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Body-centered_tetragonal.svg"><img width="108" alt="Body-centered tetragonal" src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Body-centered_tetragonal.svg"></a></p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p>Cel·la hexagonal</p></th>
+<th class="text-center head"><p>Cel·la ortoròmbica simple</p></th>
+<th class="text-center head"><p>Cel·la ortoròmbica centrada al cos</p></th>
+<th class="text-center head"><p>Cel·la ortoròmbica centrada a les bases</p></th>
+<th class="text-center head"><p>Cel·la ortoròmbica centrada a les cares</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p><a title="Bor75, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Hexagonal_latticeFRONT.svg"><img width="160" alt="Hexagonal latticeFRONT" src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Hexagonal_latticeFRONT.svg"></a></p></td>
+<td class="text-center"><p><a title="Vectorization:  Stannered, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Orthorhombic.svg"><img width="108" alt="Orthorhombic" src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Orthorhombic.svg"></a></p></td>
+<td class="text-center"><p><a title="Vectorization:  Stannered, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Body-centered_orthorhombic.svg"><img width="108" alt="Body-centered orthorhombic" src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Body-centered_orthorhombic.svg"></a></p></td>
+<td class="text-center"><p><a title="Vectorization:  Stannered, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Base-centered_orthorhombic.svg"><img width="108" alt="Base-centered orthorhombic" src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Base-centered_orthorhombic.svg"></a></p></td>
+<td class="text-center"><p><a title="Vectorization:  Stannered, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Face-centered_orthorhombic.svg"><img width="108" alt="Face-centered orthorhombic" src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Face-centered_orthorhombic.svg"></a></p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p>Cel·la romboèdrica</p></th>
+<th class="text-center head"><p>Cel·la monoclínica</p></th>
+<th class="text-center head"><p>Cel·la monoclínica centrada a les bases</p></th>
+<th class="text-center head"><p>Cel·la triclínica</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p><a title="Vectorization:  Stannered, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Rhombohedral.svg"><img width="139" alt="Rhombohedral" src="https://upload.wikimedia.org/wikipedia/commons/0/03/Rhombohedral.svg"></a></p></td>
+<td class="text-center"><p><a title="Original PNGs by Daniel Mayer, traced in Inkscape by User:Stannered, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Monoclinic.svg"><img width="114" alt="Monoclinic" src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Monoclinic.svg"></a></p></td>
+<td class="text-center"><p><a title="Vectorization:  Stannered, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Base-centered_monoclinic.svg"><img width="114" alt="Base-centered monoclinic" src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Base-centered_monoclinic.svg"></a></p></td>
+<td class="text-center"><p><a title="Vectorization:  Stannered, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Triclinic.svg"><img width="129" alt="Triclinic" src="https://upload.wikimedia.org/wikipedia/commons/1/17/Triclinic.svg"></a></p></td>
+</tr>
+</tbody>
+</table>
+<p>Ens centrarem en les xarxes de Bravais cúbiques (simple, BCC i FCC), tetragonals (simple i centrada en el cos) i hexagonal (a la qual normalment ens referirem com hexagonal compacta o HCP), ja que són les més típiques que trobarem, especialment als metalls.
+Són moltes les propietats que podrem deduir de l’estructura cristal·lina als metalls, com per exemple la seva mal·leabilitat i ductilitat, ja que poden reorganitzar-se al lliscar els àtoms entre sí mantenint la cohesió entre ells.</p>
+<p>Cal ressaltar que un mateix compost pot presentar diferents estructures cristal·lines, en funció de paràmetres com ara la pressió o temperatura. Un exemple és el titani, que podem trobar amb ordenacions HCP i  BCC, o el ferro, que trobarem amb estructures BCC i FCC.</p>
+<p>Si un mateix compost es pot donar en diferents xarxes de Bravias implica la possibilitat d’un canvi de fase sense que es produeixi un canvi d’estat. Per exemple, el Fe β (estructura BCC) passa a Fe γ (estructura FCC) als 750 °C. Com veieu, tots dos són sòlids, però la temperatura es manté constant a 750 °C mentre es produeix el canvi de fase i tot el Fe β es reorganitza i es converteix en Fe γ. Com veieu, la natura és rica en sorpreses!</p>
+<p>Més sorprenent és que als 1400 °C el Fe γ presenta un nou canvi de fase, a Fe δ, tornant a presentar una estructura BCC però amb un paràmetre de xarxa a (distància entre cel·les) diferent al Fe β.</p>
+<p>Fixeu-vos que la cel·la hexagonal en realitat no és un hexàgon: aquest es forma amb 3 cel·les.</p>
+</section>
+<section id="aplicacio-als-metalls">
+<h2>Aplicació als metalls<a class="headerlink" href="#aplicacio-als-metalls" title="Permalink to this heading">#</a></h2>
+<p>Podem considerar l’estudi dels sòlids cristal·lins metàl·lics com un problema matemàtic d’empaquetament de boles sòlides. Aquest estudi és molt senzill a les estructures cúbiques.</p>
+<p>Primer anem a veure quants àtoms caben a la cel·la unitat (N), suposant cada àtom com una bola sòlida amb un radi igual al radi atòmic, i la mida del costat d’aquesta cel·la (paràmetre de xarxa a):</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p>CS</p></th>
+<th class="text-center head"><p>FCC</p></th>
+<th class="text-center head"><p>BCC</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p><a title="CCC_crystal_cell_(opaque).svg: *Cubique_centre_atomes_par_maille.svg: Cdang (original idea and SVG execution), Samuel Dupré (3D modelling with SolidWorks)derivative work: Daniele Pugliesi (talk)derivative work: Daniele Pugliesi, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Simple_cubic_crystal_cell_(opaque).svg"><img width="256" alt="Simple cubic crystal cell (opaque)" src="https://upload.wikimedia.org/wikipedia/commons/1/12/Simple_cubic_crystal_cell_%28opaque%29.svg"></a></p></td>
+<td class="text-center"><p><a title="Cdang, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Cubique_a_faces_centrees_atomes_par_maille.svg"><img width="150" alt="Cubique a faces centrees atomes par maille" src="https://upload.wikimedia.org/wikipedia/commons/9/96/Cubique_a_faces_centrees_atomes_par_maille.svg"></a></p></td>
+<td class="text-center"><p><a title="Cubique_centre_atomes_par_maille.svg: Cdang (original idea and SVG execution), Samuel Dupré (3D modelling with SolidWorks)derivative work: Daniele Pugliesi, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:CCC_crystal_cell_(opaque).svg"><img width="256" alt="CCC crystal cell (opaque)" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/CCC_crystal_cell_%28opaque%29.svg"></a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><span class="math notranslate nohighlight">\(\Large N=8\cdot \frac{1}{8}=1\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\Large N=8\cdot \frac{1}{8}+6\cdot \frac{1}{2}=4\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\Large N=8\cdot \frac{1}{8}+1\cdot 1=2\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><span class="math notranslate nohighlight">\(\Large a=2\cdot r\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\Large a=\frac{4}{\sqrt{2}}\cdot r\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\Large a=\frac{4}{\sqrt{3}}\cdot r\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Per tant en una cel·la de volum <span class="math notranslate nohighlight">\(a^3\)</span> tenim N àtoms. Com cada mol té <span class="math notranslate nohighlight">\(N_A\)</span> (nombre d’Avogadro) àtoms i pesa en grams <span class="math notranslate nohighlight">\(A\)</span> (massa atòmica) podem fer una estimació de la densitat:</p>
+<p><span class="math notranslate nohighlight">\(\rho = \Large \frac{N \cdot A}{a^3\cdot N_A}\)</span></p>
+<p>Molt interessant és l’anomenat factor d’empaquetament (<span class="math notranslate nohighlight">\(APF\)</span>), que ens indica com de plena està la cel·la:</p>
+<p><span class="math notranslate nohighlight">\(APF= \Large \frac{N \cdot V_{àtom}}{V_{cel·la}}\)</span></p>
+<p>Als metalls, el <span class="math notranslate nohighlight">\(APF\)</span> de les cel·les FCC és el més eficient possible (0,74). Les cel·les BCC tenen un <span class="math notranslate nohighlight">\(APF\)</span> de 0.68 i les cel·les CS de 0.52. Els metalls que només tenen un enllaç de tipus metàl·lic s’empaqueten amb la màxima eficiència. Els que tenen un enllaç mixt, com el ferro, poden tenir cel·les amb un empaquetament inferior. Cap metall comú utilitzat a enginyeria té l’estructura CS, encara que aquesta es troba en materials ceràmics.</p>
+<p>A l’estructura HCP, els metalls ideals tenen una relació <span class="math notranslate nohighlight">\(c/a = 1,633\)</span>que ens porta al mateix <span class="math notranslate nohighlight">\(APF\)</span> 0,74 de les cel·les FCC, per la qual cosa molts metalls adopten aquesta estructura. En aquesta xarxa el volum de la cel·la és <span class="math notranslate nohighlight">\(V=a^2\cdot c\cdot cos{30^o}\)</span>.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p>Xarxa</p></th>
+<th class="text-center head"><p></p></th>
+<th class="text-center head"><p>Paràmetres de xarxa</p></th>
+<th class="text-center head"><p>Àtoms per del·la</p></th>
+<th class="text-center head"><p>APF</p></th>
+<th class="text-center head"><p>Metalls típics</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>Cúbica simple</p></td>
+<td class="text-center"><p>CS</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(a=2\cdot r\)</span></p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0,52</p></td>
+<td class="text-center"><p>Cap</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Cúbica centrada en les cares</p></td>
+<td class="text-center"><p>FCC</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\Large a=\frac{4}{\sqrt{2}}\cdot r\)</span></p></td>
+<td class="text-center"><p>4</p></td>
+<td class="text-center"><p>0,74</p></td>
+<td class="text-center"><p>Fe, Cu, Al, Au, Ag, Pb, Ni, Pt</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Cúbica simple</p></td>
+<td class="text-center"><p>BCC</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\Large a=\frac{4}{\sqrt{3}}\cdot r\)</span></p></td>
+<td class="text-center"><p>2</p></td>
+<td class="text-center"><p>0,68</p></td>
+<td class="text-center"><p>Fe, Ti, W, Mo, Nb, Ta, K, Na, V, Cr, Zr</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Cúbica simple</p></td>
+<td class="text-center"><p>HCP</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(a=2\cdot r\)</span> <br> <span class="math notranslate nohighlight">\( c=1,633\cdot a\)</span></p></td>
+<td class="text-center"><p>2</p></td>
+<td class="text-center"><p>0,74</p></td>
+<td class="text-center"><p>Ti, Mg, Zn, Be, Co, Cd</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="el-diamant-i-el-grafit">
+<h2>El diamant i el grafit<a class="headerlink" href="#el-diamant-i-el-grafit" title="Permalink to this heading">#</a></h2>
+<p>No podríem trobar millor exemple de com l’organització cristal·lina d’un mateix element, en aquest cas el carboni, pot canviar radicalment les propietats del material. A una banda, el diamant, el material natural més dur  (10 a l’escala de Mohs), a l’altre, el grafit, amb una duresa tan baixa (entre 1 i 2 a la mateixa escala) que el fem servir als nostres llapis per escriure. Tots dos amb enllaç covalent. On és, doncs, la diferència?</p>
+<p><a title="Diamond_and_graphite.jpg: User:Itub
+derivative work: Materialscientist, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Diamond_and_graphite2.jpg"><img width="600" alt="Diamond and graphite2" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Diamond_and_graphite2.jpg"></a></p>
+<p>Al diamant trobem una estructura cúbica on les distàncies entre àtoms és sempre la mateixa, formant tetraedres. Tenint en compte el caràcter covalent de l’enllaç, aquesta és una estructura molt cohesionada, d’aquí la seva gran duresa i la seva condició d’aïllant elèctric.</p>
+<p>Al grafit, en canvi, trobem estructures planes hexagonals apilades però separades molt entre elles. Com veieu a la figura la cohesió a l’eix z és molt més feble que als altres eixos.</p>
+<p>A temperatura i pressions estàndard el carboni adopta la forma del grafit. Únicament amb grans pressions i temperatures adopta la forma de diamant. Per això és més fàcil trobar grafit que diamants. De fet el diamant és una fase metaestable del grafit, però amb una velocitat de conversió negligible a efectes pràctics. No patiu: si teniu un diamant no es convertirà en grafit en molt temps!</p>
+<p>Les capes del grafit poden lliscar entre elles, deixant empremtes al paper. Fins-i-tot no és difícil desplaçar els electrons que fan les unions verticals. D’aquí el caràcter conductor del grafit.</p>
+<p>Al grafit els àtoms de carboni presenten tres enllaços covalents en el pla xy amb un angle de 120° i una distància de 0,142 nm entre ells. La distància entre capes en la direcció z és de 0,342 nm, i les forces de cohesió, de tipus Van der Vaals, són molt més febles. Tot això fa que el grafit presenti unes propietats clarament anisòtropes. Elèctricament, per exemple, en les direccions xy es comporta gairebé com un metall, mentre que en la direcció z  ho fa com un semiconductor.</p>
+<p>Si aquesta riquesa de diversitat de propietats us sorprèn, espereu a veure altres formes al·lotròpiques del carboni descobertes als darrers anys, com ara el grafè, els nanotubs de carboni o els ful·lerens, que veurem més endavant.</p>
+</section>
+<section id="estructura-de-bandes">
+<h2>Estructura de bandes<a class="headerlink" href="#estructura-de-bandes" title="Permalink to this heading">#</a></h2>
+<p>Hem parlat de semiconductors i metalls. Que hi ha darrera d’aquests conceptes?</p>
+<p>El model atòmic estableix un conjunt de valors discrets per l’energia dels electrons d’un àtom. Però, que passa quan tenim de l’ordre de 10²³ àtoms iguals junts? A conseqüència del principi d’exclusió de Pauli, aquests valors energètics fan un splitting, es divideixen en milions de nivells d’energia diferents molt propers. Tant, que la línia que representa el nivell d’energia es converteix en una banda. El salt entre dos bandes s’anomena gap.</p>
+<p><img alt="" src="_images/Isolator-metal.svg" /></p>
+<p>A 0 K tots els electrons ocupen nivells d’energia inferior al nivell de Fermi. Segons on queda aquest nivell de Fermi respecte a les bandes d’energia i els seus gaps ens trobem amb diferents casos:</p>
+<ul class="simple">
+<li><p>Si el nivell de Fermi es troba en mig de les bandes d’energia ens trobem amb un metall, ja que els electrons poden fàcilment rebre energia.</p></li>
+<li><p>Si el nivell de Fermi es troba al mig d’un gap petit, l’energia tèrmica (mai som a 0 K) permet que electrons de la banda de valència (en color vermell) passin a la banda de conducció (en color violat), deixant un forat a la banda de valència. El forat es comporta com una carrega positiva. Ens trobem amb un semiconductor: a mes temperatura, més electrons passen a la banda de conducció i més forats es produeixen a la banda de valència. Amb l’increment de càrregues lliures d’agafar energia millora la conductivitat elèctrica. Just al contrari que en el metall. Als metalls conforme més electrons agafen energia menys nivells lliures tenim per agafar-ne de nova i la banda es satura, presentant un descens de la conductivitat amb la temperatura. L’energia de la llum produeix el mateix efecte de creació de parells electró-forat al semiconductor, essent la base de les cèl·lules fotovoltaiques.</p></li>
+<li><p>Si el nivell de Fermi es troba al mig d’un gap important entre les bandes de valència i conducció ens trobem amb un aïllant. L’energia tèrmica no és suficient er portar electrons de la banda de valència a la de conducció i no tenim càrregues que puguin agafar l’energia elèctrica disponible.</p></li>
+</ul>
+</section>
+<section id="cristalls-ionics">
+<h2>Cristalls iònics<a class="headerlink" href="#cristalls-ionics" title="Permalink to this heading">#</a></h2>
+<p>A un cristall iònic tenim anions i cations a diferents posicions de la cel·la unitat. Per exemple, un cristall de NaCl el podem considerar com dues xarxes FCC, una amb ions Cl- i la segona, desplaçada  a/2, d’ions Na+. Les forces de Coulomb entre els ions són de tal magnitud que el sòlid és molt dur. Però, a la vegada, és molt fràgil: és suficient un cop per desplaçar una capa sobre l’altre per un instant i, el que abans era atracció que donava cohesió a la xarxa esdevé repulsió que la fractura. Aquesta relació duresa/fragilitat serà una constant el l’estudi dels materials.</p>
+<p><a title="H. Hoffmeister at German Wikipedia, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:NaCl-Ionengitter.png"><img width="275" alt="NaCl-Ionengitter" src="https://upload.wikimedia.org/wikipedia/commons/2/2e/NaCl-Ionengitter.png"></a></p>
+</section>
+<section id="solids-amorfs">
+<h2>Sòlids amorfs<a class="headerlink" href="#solids-amorfs" title="Permalink to this heading">#</a></h2>
+<p>Els sòlids amorfs no tenen estructura cristal·lina.  Un exemple n’és el vidre.</p>
+<p>Tenen un ordre a curt abast: fixeu-vos en la figura com els triangles centrats en àtoms Si o els centrats amb àtoms O es repeteixen en tota l’estructura. Però no tenen ordre de llarg abast: no són cristalls.</p>
+<p><img alt="" src="_images/Silica.svg" /></p>
+<p>Aquesta manca d’ordenació els dona unes propietats electròniques i òptiques molt diverses, i diferents del mateix compost en forma cristal·lina. El vidre és transparent, la sorra no.</p>
+<p>Una altra conseqüència es que no tenen un punt de fusió definit, sinó un interval de temperatures.</p>
+<p>Quan escalfem el vidre, disminueix la seva viscositat (recordem que podem considerar que un amorf és un líquid extremadament viscós), s’estova i el podem deformar fàcilment, de forma que el podem conformar, fins-i-tot per bufat.</p>
+<p>Com les nanoestructures del vidre s’orienten a l’atzar, aquest material presenta propietats isòtropes.</p>
+<p>Especialment interessants són els metalls amorfs, també anomenats <em>vidres metàl·lics</em>. Com no tenen estructura de bandes, no són bons conductors de l’electricitat, malgrat els seus àtoms metàl·lics. Això és especialment interessant si presenten propietats ferromagnètiques, ja que permeten crear circuits magnètics absents de pèrdues per corrents de Foucault.</p>
+<p>Freqüentment els plàstics presenten una estructura amorfa, així com gels, capes primes i d’altres materials amb nanoestructures com el vidre.
+A la temperatura de transició vítria (<span class="math notranslate nohighlight">\(T_g\)</span>) els materials vítrics presenten una transició on comencen a estovar-se, disminuint la seva densitat, duresa i rigidesa.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "venvpy3"
+        },
+        kernelOptions: {
+            name: "venvpy3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'venvpy3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Materials01.html"
+       title="pàgina anterior">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title">Materials</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Materials81.html"
+       title="pàgina següent">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">següent</p>
+        <p class="prev-next-title">Densitat dels metalls</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estructures-cristallines">Estructures cristal·lines</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aplicacio-als-metalls">Aplicació als metalls</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#el-diamant-i-el-grafit">El diamant i el grafit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estructura-de-bandes">Estructura de bandes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cristalls-ionics">Cristalls iònics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solids-amorfs">Sòlids amorfs</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Per Jordi Orts
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>Editat amb Jupyter Lab <a href='https://jupyter.org/' target='_blank'><img src='https://docs.jupyter.org/en/latest/_static/jupyter.svg' width='95' height='50'></a> i maquetat amb Jupyter-book <a href='https://zenodo.org/records/4539666' target='_blank'><img src='https://zenodo.org/badge/DOI/10.5281/zenodo.2561065.svg'></a></p><p>Aquesta obra està sota una llicència de Creative Commons Reconeixement-No comercial-Compartir igual <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca' target='_blank'><img src='w3/by-nc-sa.png' width='117' height='41'></a></p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

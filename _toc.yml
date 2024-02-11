@@ -18,6 +18,13 @@ chapters:
   - file: ProdElec99
 - file: Materials01
   sections:
+  - file: Materials02
+  - file: Materials81
+  - file: Materials03
+  - file: Materials82
+  - file: Materials04
+  - file: Materials05
+  - file: Materials06
   - file: Materials60
   - file: Materials61
   - file: Materials62
@@ -25,8 +32,6 @@ chapters:
   - file: Materials64
   - file: Materials65
   - file: Materials69
-  - file: Materials81
-  - file: Materials82
   - file: Materials83
   - file: Materials84
   - file: Materials85

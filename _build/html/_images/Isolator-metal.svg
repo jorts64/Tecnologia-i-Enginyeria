@@ -1,0 +1,58 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" 
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg xmlns="http://www.w3.org/2000/svg" 
+ xmlns:xlink="http://www.w3.org/1999/xlink" 
+ width='720px' height='400px'>
+
+<title>Metals, semiconductors, och insulators</title>
+
+<g fill="red" stroke="black" stroke-width="2" >
+	<rect x='60' y='160' width='150' height='100'/>
+	<rect x='240' y='200' width='150' height='100' />
+	<rect x='420' y='240' width='150' height='100' />
+</g>
+
+<g fill="blue" fill-opacity="0.5" stroke="black" stroke-width="0">
+
+	<rect x='60' y='70' width='150' height='130' />
+	<rect x='240' y='70' width='150' height='110' />
+	<rect x='420' y='70' width='150' height='90' />
+</g>
+
+<g fill="none" stroke="black" stroke-width="2">
+	<path d="M 210,70 L 210,200 L 60,200 L 60,70" />
+	<path d="M 390,70 L 390,180 L 240,180 L 240,70" />
+	<path d="M 570,70 L 570,160 L 420,160 L 420,70" />
+</g>
+<polygon id="arrowhead" points="40 60, 60 60, 50 30" style="fill: black;" />
+
+<g fill="none" stroke="black" stroke-width="4">
+	<path d="M50 40 L50 360"/>
+	<path stroke-dasharray="10,6" d="M50 190 L570 190"/> 
+</g>
+
+<line x1='156' y1='44' x2='100' y2='180'  style='stroke:black; stroke-width:3' />
+
+<path d="M570 240 C600 240 580 202 598 202 C580 202 600 160 570 160" style="stroke:black; fill:none;" stroke-width='2' />
+
+
+<g style="font-family=sans-serif; font-size: 20pt; fill:black; text-anchor: middle;" >
+	<text x='135' y='380'>metall</text>
+	<text x='315' y='380'>semiconductor</text>
+	<text x='495' y='380'>aïllant</text>
+	<text x='495' y='280'>Banda de</text>
+	<text x='495' y='306'>valència</text>
+	<text x='495' y='110'>Banda de</text>
+	<text x='495' y='136'>conducció</text>
+
+	<text x='40' y='190' transform="rotate(270,40,190)">Energia de l'Electró</text>
+</g>
+<g style="font-family=sans-serif; font-size: 20pt; fill:black;" >
+	<text x='160' y='40'>solapament</text>
+	<text x='600' y='210'>gap</text>
+	<text x='300' y='216'>Nivell de Fermi</text>
+</g>	
+
+
+</svg>
