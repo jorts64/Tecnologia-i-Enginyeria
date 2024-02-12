@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Tecnologia i Enginyeria &#8212; Tecnologia i Enginyeria</title>
+    <title>Microcontroladors &#8212; Tecnologia i Enginyeria</title>
   
   
   
@@ -63,11 +63,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Control20';</script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Energia. Treball. Potència" href="Energia01.html" />
+    <link rel="next" title="Circuits Pneumàtics" href="Control50.html" />
+    <link rel="prev" title="Teoria de control. Control PID" href="Control17.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ca"/>
   </head>
@@ -151,7 +152,7 @@ const thebe_selector_output = ".output, .cell_output"
 
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -171,13 +172,13 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Tecnologia i Enginyeria
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="Energia01.html">Energia. Treball. Potència</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="Energia81.html">Xocs inelàstics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Energia82.html">Xocs elàstics</a></li>
@@ -269,7 +270,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="MaqElec12.html">Motors pas a pas</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Control01.html">Automàtica i Control</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Control01.html">Automàtica i Control</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Control02.html">El transistor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Control03.html">Projecte: Interruptor crepuscular</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Control04.html">Àlgebra de Boole</a></li>
@@ -287,7 +288,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Control15.html">Modelització de sistemes. Diagrama de blocs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Control16.html">Funció de transferència</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Control17.html">Teoria de control. Control PID</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Control20.html">Microcontroladors</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Microcontroladors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Control50.html">Circuits Pneumàtics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Control99.html">Recursos</a></li>
 </ul>
@@ -354,7 +355,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/intro.ipynb" target="_blank"
+      <li><a href="_sources/Control20.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Baixeu el fitxer font"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -425,7 +426,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -436,11 +439,34 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Tecnologia i Enginyeria</h1>
+    <h1>Microcontroladors</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attiny85">ATtiny85</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arquitectura-risc">Arquitectura RISC</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#registres-de-proposit-general">Registres de propòsit general</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#memoria-no-volatil">Memòria no volàtil</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#memoria-ram">Memòria RAM</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#temporitzador-comptador-de-8-bits-i-dos-canals-pwm">Temporitzador/comptador de 8 bits i dos canals PWM</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usi-interficie-serie-universal">USI: interfície sèrie universal</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spi">SPI</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i2c">I2C</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uart">UART</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adc">ADC</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#watchdog">Watchdog</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pins-i-o">Pins I/O</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oscillador-intern">Oscil·lador intern</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -450,26 +476,191 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="tecnologia-i-enginyeria">
-<h1>Tecnologia i Enginyeria<a class="headerlink" href="#tecnologia-i-enginyeria" title="Permalink to this heading">#</a></h1>
-<p><img alt="" src="_images/logo.png" /></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="microcontroladors">
+<h1>Microcontroladors<a class="headerlink" href="#microcontroladors" title="Permalink to this heading">#</a></h1>
 <div class="admonition-pagina-en-desenvolupament admonition">
 <p class="admonition-title">Pàgina en desenvolupament</p>
 <p>Encara estem treballant en aquest document.<br />
 Esperem oferir-vos properament el seu contingut.<br />
 Disculpeu les molèsties.</p>
 </div>
-<p>Al curs 1998/99 s’introdueix la Tecnologia Industrial com a matèria de modalitat al Batxillerat LOGSE a tot el territori català. D’això fa ja més de 25 anys.</p>
-<p>En aquest temps, he estat sempre professor de la matèria. Crec que puc dir que tinc la ma trencada en aquest tema. I sempre m’ha agradat compartir el que he après, tant amb alumnes com amb professors. De fet, molt del que he anat afegint a la meva motxilla de coneixements ha estat gràcies a ells, als meus alumnes de l’INS Príncep de Viana i als meus companys de professió, del meu departament a l’institut, del seminari permanent de Tecnologia, de l’AulaTEC, de l’APTC, del CESIRE, de la SCT … Una abraçada a tots ells.</p>
-<p>La LOGSE va ser molt criticada. Però un dels grans encerts d’aquesta llei va ser la introducció de la Tecnologia al currículum de Secundària. En aquest punt cal reconèixer la feina realitzada per en Jordi Font i Agustí, aleshores Inspector en Cap de Tecnologia; en Salvador Cardona Foix, Coordinador de les PAU de Tecnologia durant molts anys; en Josep Ramon Izquierdo Clemente, primer president de la malauradament desapareguda Associació del Professorat de Catalunya (APTC); en Roger Hoyos Garcia, que va ser el seu succesor en el càrrec; en Joan Busquets i Tendero i en Jordi Regalés i Barta, del CESIRE/AULATEC; n’Estalisnau Tomàs i Morera, que va ser president de la Societat Catalana de Tecnologia de l’Institut d’Estudis Catalans (SCT-IEC); na Núria Salán Ballesteros, presidenta de la SCT-IEC i impulsora de diferents iniciatives per la promoció de la dona en les carreres tècniques; en Toni Moreno Rey, ànima del ROBOLOT; na Roser Cussó Calabuig, Cap de l’Àrea de Cultura Digital; en Joan de Gràcia, ànima de la Linkat … Son tantes les persones que han anat moldejant el que és avui l’ensenyament de la Tecnologia a Catalunya que segur em deixo algunes, disculpeu.</p>
-<p>La Tecnologia Industrial va passar a anomenar-se Tecnologia i Enginyeria al curs 20202/23. Ha estat una lluita del professorat de Tecnologia de molts anys. Però la matèria, adaptada als canvis tecnològics d’aquest 25 anys, manté el seu esperit: acostar els estudis superiors de Tecnologia i Enginyeria als nois i noies que cursen el Batxillerat, donant-los les competències i cultura cientifico-tècnica per afrontar amb èxit els estudis superiors, ja siguin cicles de Formació Professional o graus d’Enginyeria o Ciències.</p>
-<p>Sí. També graus de Cieǹcies. L’any 2000 vaig ser convidat per la Societat Catalana de Física (SCF-IEC) per donar una ponència dintre del marc de les <em>XVI Trobades Científiques de la Mediterrània</em>. La matèria de Tecnologia Industrial era la gran desconeguda al món universitari. Jo volia comunicar com aquesta matèria dona una cultura cientíco-tècnica que permet a l’alumnat tenir una idea de base dels camps i conceptes de la Física. El meu suport gràfic eren tres transparències A4 a 3 columnes amb paraules claus del currículum de Tecnologia Industrial. Quan vaig acabar, en Jordi Ortín Rull, aleshores Cap d’Estudis de la Facultat de Física de la UB, va prendre la paraula i va dir, textualment: «Aquests són els alumnes que volem!». Malauradament, al curs 2023/24 la matèria de Tecnologia i Enginyeria no pondera a la part específica de les PAU pels graus de Física o Enginyeria Física. En aquest sentit hem tornat 25 any enrera.</p>
-<p>I és que Tecnologia i Enginyeria abarca moltes disciplines. És díficil dominar-les totes. Cap grau d’Enginyeria o Ciències et prepara en tot el seu abast. Repeteixo: cap.
-Per tant és tasca del professor formar-se, especialment en aquelles disciplines més llunyanes del grau que va cursar. I no només dels continguts, també dels mètodes pedagògics. En el meu cas han estat 25 anys de formació constant, 25 anys d’experiència. I la vull transmetre a tots vosaltres, alumnes i professors.</p>
-<p>Espero que gaudiu d’aquest llibre tant com jo he gaudit redactan-lo. Millor dir, en gaudeixo. Per què encara n’aprenc cosses i les penso aportar en noves revisions d’aquest llibre.</p>
-<p>Bona feina!</p>
-<div class="toctree-wrapper compound">
+<p>Segons la <a class="reference external" href="https://ca.wikipedia.org/wiki/Microcontrolador">Viquipèdia</a></p>
+<blockquote>
+<div><p>Un microcontrolador (abreujat µC, uC o MCU) és un petit ordinador en un sol circuit integrat especialitzat a controlar equips electrònics, que inclou una CPU (unitat central de processament), una petita quantitat de memòria, unitats d’E/S (Entrada/Sortida) i acostuma a portar una memòria FRAM, NOR flash o una ROM per guardar-hi el programa.</p>
+</div></blockquote>
+<p>Com veieu integra un microprocessador o CPU. Podem dir que un microcontrolador és com un petit ordinador en un xip.</p>
+<p>De vegades aquest microcontrolador es comercialitza en un mòdul que incorpora algun components auxiliars, com ara una memòria flash, una interfície USB/sèrie, una antena WiFi en PCB… És el cas del <em>ESP12F</em> del <em>Wemos D1 mini</em>, que porta un microcontrolador <a class="reference external" href="https://ca.wikipedia.org/wiki/ESP8266">ESP8266</a>. En aquest cas parlem d’un <a class="reference external" href="https://ca.wikipedia.org/wiki/SoC">SoC</a> (System-on-a-chip)</p>
+<section id="attiny85">
+<h2>ATtiny85<a class="headerlink" href="#attiny85" title="Permalink to this heading">#</a></h2>
+<p>Per veure els diferents components d’un microcontrolador he escolit el <a class="reference external" href="http://www-jorts.net/jupbook/pdf/ATtiny85.pdf">ATtiny85</a>, un modern i petit microcontrolador de 8 bits que es pot <a class="reference external" href="https://projecthub.arduino.cc/alaspuresujay/use-an-attiny85-with-arduino-ide-d847c5">programar</a> amb l”<em>Arduino IDE</em>.</p>
+<p><img alt="" src="_images/uC01.png" /></p>
+<p><strong>Característiques:</strong></p>
+<ul class="simple">
+<li><p>Arquitectura RISC: 120 instruccions, 32x8 registres de propòsit general.</p></li>
+<li><p>Memòries de programa i dades no volàtils: 8 KB memòria de programa flash (10 000 cicles w/E); 512 bytes EEPROM (100 000 cicles W/E).</p></li>
+<li><p>512 bytes SRAM</p></li>
+<li><p>Temporitzador/comptador de 8 bits i dos canals PWM</p></li>
+<li><p>Temporitzador/comptador d’alta velocitat i 2 canals PWM d’alta freqüència</p></li>
+<li><p>Interfície Sèrie Universal (USI)</p></li>
+<li><p>ADC de 10 bits, multiplexat a 4 canals</p></li>
+<li><p>Watchdog programable</p></li>
+<li><p>6 pins I/O programables</p></li>
+<li><p>Oscil·lador intern calibrat</p></li>
+</ul>
+<p>Aquest és el seu diagrama de blocs:</p>
+<p><img alt="" src="_images/uC02.png" /></p>
+<p>Anem a veure que vol dir tot això</p>
+</section>
+<section id="arquitectura-risc">
+<h2>Arquitectura RISC<a class="headerlink" href="#arquitectura-risc" title="Permalink to this heading">#</a></h2>
+<p>L’arquitectura computacional descriu l’estructura operacional fonamental del microprocessador. Tenim diferents tipus: <a class="reference external" href="https://ca.wikipedia.org/wiki/Arquitectura_Harvard">Harvard</a>, <a class="reference external" href="https://ca.wikipedia.org/wiki/Arquitectura_de_von_Neumann">von Neumann</a>, <a class="reference external" href="https://ca.wikipedia.org/wiki/CISC">CISC</a>, <a class="reference external" href="https://ca.wikipedia.org/wiki/RISC">RISC</a>…</p>
+<p>Un microcontrolador RISC reconeix un nombre reduït d’instruccions de codi màquina. Utilitzen menys transistors, són més barats, més ràpids i dissipen menys calor.</p>
+</section>
+<section id="registres-de-proposit-general">
+<h2>Registres de propòsit general<a class="headerlink" href="#registres-de-proposit-general" title="Permalink to this heading">#</a></h2>
+<p>Els GPRs (General Purpose Registers) poden guardar tant dades com adreces. L’Attiny85 en té 32 bytes, però podem accedir individualment a cada bit.</p>
+<p>Aquests registres es poden connectar amb l”<a class="reference external" href="https://ca.wikipedia.org/wiki/Unitat_aritmeticol%C3%B2gica">ALU</a> o <strong>Unitat Aritmètica Lògica</strong>.</p>
+<p>En el cas de l’ATtiny85 els darrers 6 GPRs estan agrupats en parelles (X, Y, Z) de 16 bits i permeten adreçar indirectament l’espai de dades.</p>
+<p>Altres registres tenen un ús específic, com el registre <em>SP</em> (Stack Pointer). Format per la parella <em>SPH</em> i <em>SPL</em> que gestionen la <a class="reference external" href="https://ca.wikipedia.org/wiki/Mem%C3%B2ria_en_pila_(estructura_de_dades)">pila</a> on s’emmagatzenen dades i adreces de retorn per <a class="reference external" href="https://ca.wikipedia.org/wiki/Interrupci%C3%B3">interrupcions</a> i subrutines.</p>
+<p>Un dels registres més importants d’un microcontrolador és el registre d’estat <em>SREG</em></p>
+<p><img alt="" src="_images/uC03.png" /></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p>bit</p></th>
+<th class="text-center head"><p></p></th>
+<th class="text-left head"><p>Nom</p></th>
+<th class="text-left head"><p>Funció</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>7</p></td>
+<td class="text-center"><p>I</p></td>
+<td class="text-left"><p>Global Interrupt Enable</p></td>
+<td class="text-left"><p>Habilita les interrupcions</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>6</p></td>
+<td class="text-center"><p>T</p></td>
+<td class="text-left"><p>Bit Copy Storage</p></td>
+<td class="text-left"><p>Memòria intermèdia en la còpia de bits</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td class="text-center"><p>H</p></td>
+<td class="text-left"><p>Half Carry Flag</p></td>
+<td class="text-left"><p>transport o prestat aritmètic a partir del nibble més baix</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-center"><p>S</p></td>
+<td class="text-left"><p>Sign Bit</p></td>
+<td class="text-left"><p>s’activa en determinades operacions</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-center"><p>V</p></td>
+<td class="text-left"><p>Two’s Complement Overflow Flag</p></td>
+<td class="text-left"><p>s’activa quan el resultat excedeix un byte</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-left"><p>Negative Flag</p></td>
+<td class="text-left"><p>indica un resultat negatiu</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-center"><p>Z</p></td>
+<td class="text-left"><p>Zero Flag</p></td>
+<td class="text-left"><p>s’activa quan l’operació dona zero</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>0</p></td>
+<td class="text-center"><p>C</p></td>
+<td class="text-left"><p>Carry Flag</p></td>
+<td class="text-left"><p>transport o prestat aritmètic</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="memoria-no-volatil">
+<h2>Memòria no volàtil<a class="headerlink" href="#memoria-no-volatil" title="Permalink to this heading">#</a></h2>
+<p>Típicament memòries EEPROM o flash EEPROM on es desa el programa i les dades. Es degraden en el procés d’escriptura i esborrat (W/E).</p>
+<p>Les memòries <a class="reference external" href="https://ca.wikipedia.org/wiki/Mem%C3%B2ria_flaix">flash</a> són més barates i grans, però es degraden més ràpidament. A més a més s’escriuen i esborren en blocs, en el cas de l’ATtiny de 64 bytes, incrementant aquest fenòmen.</p>
+</section>
+<section id="memoria-ram">
+<h2>Memòria RAM<a class="headerlink" href="#memoria-ram" title="Permalink to this heading">#</a></h2>
+<p>Els microcontroladors tenen una memòria RAM molt limitada.</p>
+<p>Les memòries <a class="reference external" href="https://ca.wikipedia.org/wiki/Mem%C3%B2ria_d%27acc%C3%A9s_aleatori">RAM</a> poden ser de dos tipus:</p>
+<ul class="simple">
+<li><p><strong>SRAM</strong>, <em>estàtiques</em> : manté el seu contingut inalterat mentre es mantingui alimentada elèctricament. Utilitzen biestables per emmagatzenar els bits.</p></li>
+<li><p><strong>DRAM</strong>, <em>dinàmiques</em>: cal refrecar el contingut de la memòria ja que es degrada amb el temps: típicament els bits s’emmagatzemen en condensadors, més barat. La complexitat d’aquest procés de refresc les descarta per als microcontroladors.</p></li>
+</ul>
+</section>
+<section id="temporitzador-comptador-de-8-bits-i-dos-canals-pwm">
+<h2>Temporitzador/comptador de 8 bits i dos canals PWM<a class="headerlink" href="#temporitzador-comptador-de-8-bits-i-dos-canals-pwm" title="Permalink to this heading">#</a></h2>
+<p><img alt="" src="_images/uC04.png" /></p>
+<p>L’Attiny té dos comptadors, que es poden decrementar o incrementar amb un senyal de rellotge.</p>
+<ul class="simple">
+<li><p>Si utilitzem com a rellotge el CLK del sistema, actuen com a temporitzadors. Així podem mesurar el temps transcorregut o generar un senyal PWM.</p></li>
+<li><p>Si utilitzem un senyal extern (pin T0) actuen com a comptadors.</p></li>
+</ul>
+<p>Com el rellotge del sistema és molt ràpid, tipicament s’utilitza un prescaler que divideix el CLK per 8, 64, 256 o 1024.</p>
+</section>
+<section id="usi-interficie-serie-universal">
+<h2>USI: interfície sèrie universal<a class="headerlink" href="#usi-interficie-serie-universal" title="Permalink to this heading">#</a></h2>
+<p>Permet comunicar el microcontrolador amb altres dispositius per enllaç sèrie. Tenim diferents configuracions:</p>
+<section id="spi">
+<h3>SPI<a class="headerlink" href="#spi" title="Permalink to this heading">#</a></h3>
+<p>El bus <a class="reference external" href="https://ca.wikipedia.org/wiki/Serial_Peripheral_Interface">SPI</a> utilitza tres pins: rellotge (USCK), entrada (DI) i sortida (DO). Es tracta d’una comunicació síncrona full-duplex, on les dades es llegeixen de DI en el flanc de pujada de USCK i s’escriuen a DO en el flanc de baixada.</p>
+<p><img alt="" src="_images/uC05.png" /></p>
+</section>
+<section id="i2c">
+<h3>I2C<a class="headerlink" href="#i2c" title="Permalink to this heading">#</a></h3>
+<p>Utilitza 2 pins: SCL (rellotge) i SDA (dades). Les connexions són de drenador obert amb pull-ups, permeten conectar diferents dispositius al mateix bus.</p>
+<p><img alt="" src="_images/uC06.png" /></p>
+<p>Els paquets <a class="reference external" href="https://ca.wikipedia.org/wiki/I%C2%B2C">I2C</a> s’inicien amb una capcelera que indica l’adreça del dispositiu a que va dirigit la transmissió. Com el darrer bit d’aquesta capcelera indica si la transmissió és de lectura o escriptura, podem comunicar-nos amb 128 dispositius pel mateix bus.</p>
+<p><img alt="" src="_images/uC07.png" /></p>
+</section>
+<section id="uart">
+<h3>UART<a class="headerlink" href="#uart" title="Permalink to this heading">#</a></h3>
+<p>Utilitza 2 pins configurables per la transmissió asíncrona, un per a cada sentit.</p>
+</section>
+</section>
+<section id="adc">
+<h2>ADC<a class="headerlink" href="#adc" title="Permalink to this heading">#</a></h2>
+<p>Un ADC o convertidor analògic-digital ens permet tenir un valor digital, en aquet cas en el rang 0-1023, proporcional a a tensió mesurada en un pin.</p>
+<p>Normalment els microcontroladors tenen només un bloc ADC, però poden mesurar diferents pins gràcies al multiplexat.</p>
+<p><img alt="" src="_images/uC08.png" /></p>
+<p>Per mesurar la tensió d’entrada s’utilitza un algorisme d’aproximacions succesives on la tensió d’entrada es compara amb el senyal generat per un DAC, conversor digital analògic. Un DAC és relativament fàcil d’implementar amb un operacional i unes resistències. Amb un comparador es detecta si el senyal d’entrada és superior o inferior al generat.</p>
+<p>Al simulador podeu veure una implementació d’un DAC de 4 bits (LSB a l’esquerra, MSB a la dreta) amb un convertidor d’escala R-2R</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%html</span>
+ <span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWEAWWB2AHAtaDMCEBOXE3DEANmRCQUhoFMBaMMAKDAvtwCZxlqvED2T16PemHjT4HLuDB8wAhXxFjhkmTLmTCSlWH3DRUTeG3S2Ac3AUTk+zwzkxNkISenPwl2cjuYGheksG+rlBsAO4o5EZ8VODGATHI5Oqxwgj2KZk82eDOWTnRhekFiummuZXFmuUlMRIN9Q6RMYnxlIIS7WVJBtRdNYbGyj1uTZBxxjwiA31zQ7PzvG4AMt0ga1v4fBoAZgCGADYAzgw0kZvj2723e-4gx+eXSAGbS3fiqwj7Zi8LlcAgAnO78HogDAaKRWMGsQaqKEwnTwsajPjQsyw2RgoRYhHIsx0XFIgnGLH0ElwNgAeRQnC2aXonXAbDxkGoLHsyEZ3OJVlsuE5EO2IqCOUiRzF1ESvPsiTi9BYWhk22gRkImAkkH0dEweGYhHVmrQ+jgGFwhEICAwYAQRosqPBWKYaSJVLhIDd5Fd7tuqtknGV-pUPra4kDllKTCEXX5wxjjPjjJ2AVsTESGUz1GcEQ+3tTvX5j0OpyB7zYACVC4o6tzxAUNKYeNAm-42zGhNnu02u2oCu78o0ZYX7MLqO7cvKxwyFdRQaOHiLKU7SSnxyL+eJ8MLAsYE2NJYuWEVbqffSjBYWz2HahL-Emin7L30uliJx6k3Xh97eyUgA&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;800&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;600&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</pre></div>
 </div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"> <iframe src="https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWEAWWB2AHAtaDMCEBOXE3DEANmRCQUhoFMBaMMAKDAvtwCZxlqvED2T16PemHjT4HLuDB8wAhXxFjhkmTLmTCSlWH3DRUTeG3S2Ac3AUTk+zwzkxNkISenPwl2cjuYGheksG+rlBsAO4o5EZ8VODGATHI5Oqxwgj2KZk82eDOWTnRhekFiummuZXFmuUlMRIN9Q6RMYnxlIIS7WVJBtRdNYbGyj1uTZBxxjwiA31zQ7PzvG4AMt0ga1v4fBoAZgCGADYAzgw0kZvj2723e-4gx+eXSAGbS3fiqwj7Zi8LlcAgAnO78HogDAaKRWMGsQaqKEwnTwsajPjQsyw2RgoRYhHIsx0XFIgnGLH0ElwNgAeRQnC2aXonXAbDxkGoLHsyEZ3OJVlsuE5EO2IqCOUiRzF1ESvPsiTi9BYWhk22gRkImAkkH0dEweGYhHVmrQ+jgGFwhEICAwYAQRosqPBWKYaSJVLhIDd5Fd7tuqtknGV-pUPra4kDllKTCEXX5wxjjPjjJ2AVsTESGUz1GcEQ+3tTvX5j0OpyB7zYACVC4o6tzxAUNKYeNAm-42zGhNnu02u2oCu78o0ZYX7MLqO7cvKxwyFdRQaOHiLKU7SSnxyL+eJ8MLAsYE2NJYuWEVbqffSjBYWz2HahL-Emin7L30uliJx6k3Xh97eyUgA" width="800" height="600"></iframe>
+</div></div>
+</div>
+</section>
+<section id="watchdog">
+<h2>Watchdog<a class="headerlink" href="#watchdog" title="Permalink to this heading">#</a></h2>
+<p>És un circuit temporitzador que provoca un reset del microcontrolador si es bloqueja degut a alguna condició de fallada, normalment un error en el codi.</p>
+<p><img alt="" src="_images/uC08.png" /></p>
+<p>Quan el programa s’executa normalment el comptador del watcdog es reseteja constantment, per exemple amb l’ordre <em>delay()</em>. Si no es reseteja el comptador arriba al valor màxim i fa un reset del microcontrlador. El microcontrolador torna a ser operatiu i surt del bloqueig.</p>
+</section>
+<section id="pins-i-o">
+<h2>Pins I/O<a class="headerlink" href="#pins-i-o" title="Permalink to this heading">#</a></h2>
+<p>Els pins d’entrada/sortida permeten llegir i escriure valors digitals. Normalment  es pot seleccionar la direcció d’entrada o sortida i moltes vegades tenen pull-ups programables.</p>
+<p><img alt="" src="_images/uC10.png" /></p>
+</section>
+<section id="oscillador-intern">
+<h2>Oscil·lador intern<a class="headerlink" href="#oscillador-intern" title="Permalink to this heading">#</a></h2>
+<p>Encara que la majoria de microcontroladors poden utilitzar un cristall extern com a referència per generar el rellotge del sistema, normalment s’utilitza un oscil·lador intern. No és tan precís, però deixa lliure els dos pins de l’oscil·lador intern per a altres connexions.</p>
+<p><img alt="" src="_images/uC11.png" /></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -502,12 +693,21 @@ Per tant és tasca del professor formar-se, especialment en aquelles disciplines
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Control17.html"
+       title="pàgina anterior">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title">Teoria de control. Control PID</p>
+      </div>
+    </a>
     <a class="right-next"
-       href="Energia01.html"
+       href="Control50.html"
        title="pàgina següent">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">següent</p>
-        <p class="prev-next-title">Energia. Treball. Potència</p>
+        <p class="prev-next-title">Circuits Pneumàtics</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -518,7 +718,35 @@ Per tant és tasca del professor formar-se, especialment en aquelles disciplines
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attiny85">ATtiny85</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arquitectura-risc">Arquitectura RISC</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#registres-de-proposit-general">Registres de propòsit general</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#memoria-no-volatil">Memòria no volàtil</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#memoria-ram">Memòria RAM</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#temporitzador-comptador-de-8-bits-i-dos-canals-pwm">Temporitzador/comptador de 8 bits i dos canals PWM</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usi-interficie-serie-universal">USI: interfície sèrie universal</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spi">SPI</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i2c">I2C</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uart">UART</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adc">ADC</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#watchdog">Watchdog</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pins-i-o">Pins I/O</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oscillador-intern">Oscil·lador intern</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
