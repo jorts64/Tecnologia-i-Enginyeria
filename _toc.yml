@@ -25,6 +25,12 @@ chapters:
   - file: Materials04
   - file: Materials05
   - file: Materials06
+  - file: Materials10
+  - file: Materials11
+  - file: Materials12
+  - file: Materials13
+  - file: Materials14
+  - file: Materials20
   - file: Materials60
   - file: Materials61
   - file: Materials62
@@ -32,8 +38,6 @@ chapters:
   - file: Materials64
   - file: Materials65
   - file: Materials69
-  - file: Materials83
-  - file: Materials84
   - file: Materials85
   - file: Materials98
   - file: Materials99
