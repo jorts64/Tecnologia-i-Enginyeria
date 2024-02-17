@@ -30,7 +30,12 @@ chapters:
   - file: Materials12
   - file: Materials13
   - file: Materials14
+  - file: Materials15
+  - file: Materials16
   - file: Materials20
+  - file: Materials21
+  - file: Materials22
+  - file: Materials85
   - file: Materials60
   - file: Materials61
   - file: Materials62
@@ -38,7 +43,6 @@ chapters:
   - file: Materials64
   - file: Materials65
   - file: Materials69
-  - file: Materials85
   - file: Materials98
   - file: Materials99
 - file: CorrentContinu01

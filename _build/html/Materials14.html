@@ -69,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Materials tecnològics" href="Materials20.html" />
+    <link rel="next" title="Propietats magnètiques" href="Materials15.html" />
     <link rel="prev" title="Propietats tèrmiques" href="Materials13.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ca"/>
@@ -208,7 +208,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Materials12.html">Altres assajos mecànics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials13.html">Propietats tèrmiques</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Propietats elèctriques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Materials20.html">Materials tecnològics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials15.html">Propietats magnètiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials16.html">Assajos no destructius</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials20.html">Materials tecnològics. Metal·lúrgia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials21.html">Ferro, acer i fosa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials22.html">Altres metalls</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials60.html">Plàstics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials61.html">Termoplàstics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials62.html">Termoestables</a></li>
@@ -457,6 +461,11 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resistivitat">Resistivitat</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#superconductivitat">Superconductivitat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#piezoelectricitat">Piezoelectricitat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#piroelectricitat">Piroelectricitat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#efecte-seebeck">Efecte Seebeck</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#efecte-peltier">Efecte Peltier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potencial-de-contacte">Potencial de contacte</a></li>
 </ul>
             </nav>
         </div>
@@ -568,6 +577,178 @@ Aquesta resistivitat no és constant: depèn de la temperatura:</p>
 <p><a title="CC BY-SA 2.5. Created by Alison Chaiken via Wikimedia" href="https://commons.wikimedia.org/w/index.php?curid=485071"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Cvandrhovst.png"></a></p>
 <p>La recerca en aquest  materials és clau: sense resistivitat es poden aconseguir electroimants potents, amb aplicació a la medicina, transport, reactors de fusió nuclear…</p>
 </section>
+<section id="piezoelectricitat">
+<h2>Piezoelectricitat<a class="headerlink" href="#piezoelectricitat" title="Permalink to this heading">#</a></h2>
+<p>Aquest efecte apareix en alguns materials que, en exercir pressió sobre ell, generen una diferència de potencial. Aquesta pot ser petita, com succeeix als micròfons dels mòbils i ordinador, o molt gran, com les tensions responsables de les guspires als encenedors piezoelèctrics.</p>
+<p><a title="MikeRun, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Piezoelectricity.svg"><img width="251" alt="Piezoelectricity" src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Piezoelectricity.svg"></a></p>
+<p><a title="Lionel Allorge, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Allume_gaz.jpg"><img width="512" alt="Allume gaz" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Allume_gaz.jpg/512px-Allume_gaz.jpg"></a></p>
+<p>També podem trobar l’efecte invers: aplicant una tensió sobre el material aquest es deforma. És el cas dels brunzidors piezoelèctrics i d’alguns actuadors, com els utilitzats als microscopis d’efecte tunel.</p>
+<p><a title="I, Gophi, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:2007-07-24_Piezoelectric_buzzer.jpg"><img width="512" alt="2007-07-24 Piezoelectric buzzer" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/2007-07-24_Piezoelectric_buzzer.jpg/512px-2007-07-24_Piezoelectric_buzzer.jpg"></a></p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;fHp95e-CwWQ&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="400"
+            height="300"
+            src="https://www.youtube.com/embed/fHp95e-CwWQ"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;VbTUsluY2xU&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="400"
+            height="300"
+            src="https://www.youtube.com/embed/VbTUsluY2xU"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
+</section>
+<section id="piroelectricitat">
+<h2>Piroelectricitat<a class="headerlink" href="#piroelectricitat" title="Permalink to this heading">#</a></h2>
+<p>Quan cares oposades d’alguns cristalls asimètrics s’exposen a la calor en forma de radiació infraroja, generen una petita càrrega elèctrica que es mesurable.</p>
+<p><a title="EBatlleP, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Pyroelectric_material.svg"><img width="512" alt="Pyroelectric material" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Pyroelectric_material.svg/512px-Pyroelectric_material.svg.png"></a></p>
+<p>D’aquesta forma podem mesurar la temperatura d’un cos per la radiació infraroja que emet, sense contacte, a distància. Especialment útil per mesurar temperatures de forns o de persones en temps de pandèmia o per detectar la presència de persones  en sistemes d’alarmes o automatització de llums de passadissos i serveis (sensors PIR).</p>
+<p><img alt="" src="_images/sensorPIR.jpg" /></p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;qwaTJoY78OE&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="400"
+            height="300"
+            src="https://www.youtube.com/embed/qwaTJoY78OE"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
+</section>
+<section id="efecte-seebeck">
+<h2>Efecte Seebeck<a class="headerlink" href="#efecte-seebeck" title="Permalink to this heading">#</a></h2>
+<p>Aquest fenomen consisteix en la generació d’una diferència de potencial  per efecte d’un gradient tèrmic. Aquest efecte es pot utilitzar per mesurar temperatures o per produir electricitat.</p>
+<p>Un termoparell  està constituït per dos fils de metalls diferents (A, B) soldats entre sí. Cada unió es col·loca a temperatura diferent (<span class="math notranslate nohighlight">\(T_1\)</span>, $T_2) i es mesura la diferència de potencial generada, que es proporcional a la diferència de les dues temperatures:</p>
+<p><span class="math notranslate nohighlight">\(U=(S_A-S_B) \ \Delta T\)</span></p>
+<p><a title="Seebeck_effect_circuit.png: Omegatron
+derivative work: Malyszkz, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Seebeck_effect_circuit.svg"><img width="256" alt="Seebeck effect circuit" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Seebeck_effect_circuit.svg/256px-Seebeck_effect_circuit.svg.png"></a></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p>Tipus</p></th>
+<th class="text-left head"><p>Materials</p></th>
+<th class="text-center head"><p><span class="math notranslate nohighlight">\(S_A-S_B\)</span> (μV/°C)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>J</p></td>
+<td class="text-left"><p>Fe-Constantà</p></td>
+<td class="text-center"><p>50</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>K</p></td>
+<td class="text-left"><p>Cromel-Alumel</p></td>
+<td class="text-center"><p>41</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>N</p></td>
+<td class="text-left"><p>Nicrosil-Nisil</p></td>
+<td class="text-center"><p>39</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>E</p></td>
+<td class="text-left"><p>Cromel-Constantà</p></td>
+<td class="text-center"><p>68</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="efecte-peltier">
+<h2>Efecte Peltier<a class="headerlink" href="#efecte-peltier" title="Permalink to this heading">#</a></h2>
+<p>És l’efecte contrari al Seebeck: un corrent elèctric genera un flux de calor entre els termoparells, actuant com a bomba de calor:</p>
+<p><span class="math notranslate nohighlight">\(\dot{Q}=p \ I\)</span></p>
+<p>Si bé podríem fer servir  els mateixos aliatges que hem vist a l’efecte Seebeck,  s’han aconseguit elements Peltier molt eficients i econòmics utilitzant semiconductors de bismut telurat. Com el dopatge d’aquests semiconductors és fa malbé a la temperatura de fusió del Sn60Pb40 s’utilitza indi per soldar els elements, que té una temperatura de fusió més baixa.</p>
+<p>Aquests mòduls Peltier també són molt eficients amb l’efecte Seebeck, per la qual cosa també s’utilitzen com a termopiles.</p>
+<p><a title="The original uploader was David Berardan at French Wikipedia., CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Sch%C3%A9ma_module_thermo%C3%A9lectrique_s%C3%A9rie_et_parall%C3%A8le.png"><img width="512" alt="Schéma module thermoélectrique série et parallèle" src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Sch%C3%A9ma_module_thermo%C3%A9lectrique_s%C3%A9rie_et_parall%C3%A8le.png"></a></p>
+<p><img alt="" src="_images/Peltier12705.jpg" /></p>
+</section>
+<section id="potencial-de-contacte">
+<h2>Potencial de contacte<a class="headerlink" href="#potencial-de-contacte" title="Permalink to this heading">#</a></h2>
+<p>Quan dos metalls diferents es posen en contacte elèctric els electrons fluiran des del metall amb un nivell Fermi més alt fins al metall amb el nivell Fermi inferior, fins igualar els nivells. El fet que els nivells de Fermi siguin iguals, no vol dir que els potencials elèctrics siguin iguals. El potencial elèctric de cada material està controlat per la seva funció de treball Φ, de manera que els metalls diferents poden mostrar una diferència de potencial elèctric fins i tot en equilibri termodinàmic.</p>
+<p><img alt="" src="_images/WorkFunctionAuAl.svg" /></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p>Metall</p></th>
+<th class="text-center head"><p>Φ (eV)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>Ag</p></td>
+<td class="text-center"><p>4,7</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>K</p></td>
+<td class="text-center"><p>2,1</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Au</p></td>
+<td class="text-center"><p>4,8</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Mn</p></td>
+<td class="text-center"><p>3,8</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Ca</p></td>
+<td class="text-center"><p>3,2</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Na</p></td>
+<td class="text-center"><p>2,3</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>Cu</p></td>
+<td class="text-center"><p>4,1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Ni</p></td>
+<td class="text-center"><p>5,2</p></td>
+</tr>
+</tbody>
+</table>
+<p>Aquest és el principi de funcionament de les piles. I per aquest motiu hem de vigilar quan posem en contacte dos metalls diferents, ja que poden generar problemes com la corrosió: monedes, pírcings, unions cargolades …</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -610,11 +791,11 @@ Aquesta resistivitat no és constant: depèn de la temperatura:</p>
       </div>
     </a>
     <a class="right-next"
-       href="Materials20.html"
+       href="Materials15.html"
        title="pàgina següent">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">següent</p>
-        <p class="prev-next-title">Materials tecnològics</p>
+        <p class="prev-next-title">Propietats magnètiques</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -636,6 +817,11 @@ Aquesta resistivitat no és constant: depèn de la temperatura:</p>
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resistivitat">Resistivitat</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#superconductivitat">Superconductivitat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#piezoelectricitat">Piezoelectricitat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#piroelectricitat">Piroelectricitat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#efecte-seebeck">Efecte Seebeck</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#efecte-peltier">Efecte Peltier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potencial-de-contacte">Potencial de contacte</a></li>
 </ul>
   </nav></div>
 
