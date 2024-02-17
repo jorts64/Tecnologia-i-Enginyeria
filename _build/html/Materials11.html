@@ -69,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Plàstics" href="Materials60.html" />
+    <link rel="next" title="Altres assajos mecànics" href="Materials12.html" />
     <link rel="prev" title="Propietats dels materials" href="Materials10.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ca"/>
@@ -205,6 +205,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Materials06.html">Nanotecnologia</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials10.html">Propietats dels materials</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Propietats mecàniques. Assaig de tracció.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials12.html">Altres assajos mecànics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials13.html">Propietats tèrmiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials14.html">Propietats elèctriques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials20.html">Materials tecnològics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials60.html">Plàstics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials61.html">Termoplàstics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials62.html">Termoestables</a></li>
@@ -212,7 +216,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Materials64.html">Conformació dels termoplàstics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials65.html">Reciclatge dels termoplàstics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials69.html">Compòsits</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Materials84.html">Assajos mecànics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials85.html">Comparació propietats dels metalls</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="Materials98.html">OpenSCAD</a></li>
@@ -478,7 +481,7 @@ Disculpeu les molèsties.</p>
 </div>
 <p>Com respon un material a un determinat esforç? Que succeeix si l’apliquem de forma sobtada? I si l’apliquem moltíssimes vegades?</p>
 <p>Per repondre a aquestes preguntes els enginyers fan assatjos mecànics per caracteritzar els materials.</p>
-<p>En aquesta imatge <span id="id1">[<a class="reference internal" href="Biblio.html#id2" title="Roser Cussó; Josep Dalmau; Anna Macià; Artur Coll; Rosanna Fernández. Forces i estructures. apliquem la tecnologia 3r d'eso. Alexandria), 2020. URL: https://alexandria.xtec.cat/course/view.php?id=798.">Fer20</a>]</span> podem recordar els tipuis d’esforços a ques pot estar sotmés un material:</p>
+<p>En aquesta imatge <span id="id1">[<a class="reference internal" href="Biblio.html#id4" title="Roser Cussó; Josep Dalmau; Anna Macià; Artur Coll; Rosanna Fernández. Forces i estructures. apliquem la tecnologia 3r d'eso. Alexandria, 2020. URL: https://alexandria.xtec.cat/course/view.php?id=798.">Fer20</a>]</span> podem recordar els tipuis d’esforços a ques pot estar sotmés un material:</p>
 <p><img alt="" src="_images/esforsos.png" /></p>
 <section id="assajos-mecanics">
 <h2>Assajos mecànics<a class="headerlink" href="#assajos-mecanics" title="Permalink to this heading">#</a></h2>
@@ -498,11 +501,11 @@ Disculpeu les molèsties.</p>
 <p>Si l’esforç supera el <em>límit elàstic</em> ens trobarem a la <strong>zona plàstica</strong>, on ja no es cumpleix la llei de Hooke i la deformació és permanent. Si continuem aplicant esforç a aquesta zona arribarem a un màxim, després d’ell ens costarà menys esforç deformar el material fins arribar a la tensió de ruptura on el material es trenca.</p>
 <p>A aquest assaig obtenim una corba esforç/deformació. L’àrea sota aquesta corba mesura la <strong>tenacitat</strong> del material.</p>
 <p>Podem fer una estimació experimental del mòdul elàstic amb <span class="math notranslate nohighlight">\(\Large \frac{\Delta \sigma}{\Delta \varepsilon}\)</span></p>
-<p><a title="CC BY-SA 3.0 via wikimedia" href="https://commons.wikimedia.org/w/index.php?curid=647577" target="_blank"><img src="img/Materials/Stress_v_strain_Aluminum_2.png"></a></p>
+<p><a title="CC BY-SA 3.0 via wikimedia" href="https://commons.wikimedia.org/w/index.php?curid=647577" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Stress_v_strain_Aluminum_2.png"></a></p>
 <p>Després de la zona elàstica apareix la zona plàstica, amb un valor màxim de l’esforç (1) que s’anomena <strong>resistència a la tracció</strong> (<span class="math notranslate nohighlight">\(R_m\)</span>).</p>
 <p>Si continuem aplicant esforç la mostra arriba al punt de fractura (4). L’allargament corresponent (caldrà restar la part elàstica amb una paral·lela a
 la línia elàstica) ens dona una mesura de la ductilitat del material.</p>
-<p>Com experimentalment potser difícil determinar el limit elàstic (3), per conveni <span id="id2">[<a class="reference internal" href="Biblio.html#id3" title="James F. Shackelford. Introducción a la Ciencia de Materiales para ingenieros. Prentice Hall, 1998. ISBN 84-8322-047-4.">Sha98</a>]</span> s’agafa com a límit elàstic experimental (2) el punt de tall de la corba amb una paral·lela a la línia elàstica amb una deformació del 0,2 % (5).</p>
+<p>Com experimentalment potser difícil determinar el limit elàstic (3), per conveni <span id="id2">[<a class="reference internal" href="Biblio.html#id5" title="James F. Shackelford. Introducción a la Ciencia de Materiales para ingenieros. Prentice Hall, 1998. ISBN 84-8322-047-4.">Sha98</a>]</span> s’agafa com a límit elàstic experimental (2) el punt de tall de la corba amb una paral·lela a la línia elàstica amb una deformació del 0,2 % (5).</p>
 <p>Típicament els valors de <span class="math notranslate nohighlight">\(\sigma\)</span> són de l’ordre del MPa (N/mm²) mentre que les valor del mòdul de Young acostumen a ser de l’ordre del GPa.</p>
 <p>Els diagrames de tracció dels materials fràgils i dúctils són molt diferents, com podeu observar a la figura.</p>
 <p><a title="Nicoguaro, CC BY 4.0 &lt;https://creativecommons.org/licenses/by/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Stress_strain_comparison_brittle_ductile.svg"><img width="400" alt="Stress strain comparison brittle ductile" src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Stress_strain_comparison_brittle_ductile.svg"></a></p>
@@ -793,11 +796,11 @@ la línia elàstica) ens dona una mesura de la ductilitat del material.</p>
       </div>
     </a>
     <a class="right-next"
-       href="Materials60.html"
+       href="Materials12.html"
        title="pàgina següent">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">següent</p>
-        <p class="prev-next-title">Plàstics</p>
+        <p class="prev-next-title">Altres assajos mecànics</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
