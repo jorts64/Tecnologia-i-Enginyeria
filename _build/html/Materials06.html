@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Plàstics" href="Materials60.html" />
+    <link rel="next" title="Propietats dels materials" href="Materials10.html" />
     <link rel="prev" title="Cristalls líquids" href="Materials05.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ca"/>
@@ -201,6 +201,18 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Materials04.html">Polímers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials05.html">Cristalls líquids</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Nanotecnologia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials10.html">Propietats dels materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials11.html">Propietats mecàniques. Assaig de tracció.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials12.html">Altres assajos mecànics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials13.html">Propietats tèrmiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials14.html">Propietats elèctriques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials15.html">Propietats magnètiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials16.html">Assajos no destructius</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials20.html">Materials tecnològics. Metal·lúrgia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials21.html">Ferro, acer i fosa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials22.html">Altres metalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials85.html">Comparació propietats dels metalls</a></li>
+
 <li class="toctree-l2"><a class="reference internal" href="Materials60.html">Plàstics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials61.html">Termoplàstics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials62.html">Termoestables</a></li>
@@ -208,11 +220,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Materials64.html">Conformació dels termoplàstics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials65.html">Reciclatge dels termoplàstics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials69.html">Compòsits</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Materials83.html">Assaig de tracció</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Materials84.html">Assajos mecànics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Materials85.html">Comparació propietats dels metalls</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="Materials98.html">OpenSCAD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials99.html">Recursos</a></li>
 </ul>
 </li>
@@ -233,6 +240,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Mecanica02.html">Dinàmica de les rotacions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mecanica03.html">Màquines simples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mecanica04.html">Mecanismes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica40.html">CAD/CAM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mecanica41.html">Disseny 2D: LibreCAD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mecanica42.html">Disseny 3D: OpenSCAD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mecanica43.html">Animacions de mecanismes 3D: FreeCAD</a></li>
@@ -288,6 +296,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Control15.html">Modelització de sistemes. Diagrama de blocs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Control16.html">Funció de transferència</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Control17.html">Teoria de control. Control PID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control20.html">Microcontroladors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Control50.html">Circuits Pneumàtics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Control99.html">Recursos</a></li>
 </ul>
@@ -488,6 +497,31 @@ Disculpeu les molèsties.</p>
         ></iframe>
         </div></div>
 </div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;cig_TPfVL2Y&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="400"
+            height="300"
+            src="https://www.youtube.com/embed/cig_TPfVL2Y"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -530,11 +564,11 @@ Disculpeu les molèsties.</p>
       </div>
     </a>
     <a class="right-next"
-       href="Materials60.html"
+       href="Materials10.html"
        title="pàgina següent">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">següent</p>
-        <p class="prev-next-title">Plàstics</p>
+        <p class="prev-next-title">Propietats dels materials</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

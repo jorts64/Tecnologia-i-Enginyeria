@@ -69,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Materials tecnològics" href="Materials20.html" />
+    <link rel="next" title="Propietats elèctriques" href="Materials14.html" />
     <link rel="prev" title="Altres assajos mecànics" href="Materials12.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ca"/>
@@ -207,7 +207,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Materials11.html">Propietats mecàniques. Assaig de tracció.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials12.html">Altres assajos mecànics</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Propietats tèrmiques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Materials20.html">Materials tecnològics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials14.html">Propietats elèctriques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials15.html">Propietats magnètiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials16.html">Assajos no destructius</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials20.html">Materials tecnològics. Metal·lúrgia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials21.html">Ferro, acer i fosa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials22.html">Altres metalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials85.html">Comparació propietats dels metalls</a></li>
+
 <li class="toctree-l2"><a class="reference internal" href="Materials60.html">Plàstics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials61.html">Termoplàstics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials62.html">Termoestables</a></li>
@@ -215,9 +222,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Materials64.html">Conformació dels termoplàstics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials65.html">Reciclatge dels termoplàstics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials69.html">Compòsits</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Materials85.html">Comparació propietats dels metalls</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="Materials98.html">OpenSCAD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials99.html">Recursos</a></li>
 </ul>
 </li>
@@ -238,6 +242,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Mecanica02.html">Dinàmica de les rotacions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mecanica03.html">Màquines simples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mecanica04.html">Mecanismes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica40.html">CAD/CAM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mecanica41.html">Disseny 2D: LibreCAD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mecanica42.html">Disseny 3D: OpenSCAD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mecanica43.html">Animacions de mecanismes 3D: FreeCAD</a></li>
@@ -455,8 +460,20 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calor-latent-calor-especifica">Calor latent. Calor específica.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conductibilitat-termica">Conductibilitat tèrmica</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dilatacio-termica">Dilatació tèrmica</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conductibilitat-termica">Conductibilitat tèrmica</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples">Exemples</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pau-2001-s4-3b">PAU 2001 S4 3B</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dilatacio-termica">Dilatació tèrmica</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Exemples</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pau-2000-s6-4a">PAU 2000 S6 4A</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -494,6 +511,14 @@ Disculpeu les molèsties.</p>
 <p>on <span class="math notranslate nohighlight">\(\lambda\)</span> és la conductibilitat tèrmica del material.</p>
 <p>Cal destacar que les interfícies sòlid/gas tenen resistències tèrmiques molt elevades. El poliestirè té <span class="math notranslate nohighlight">\(\lambda = 0,13 \ W  \ m^{-1} °C^{-1}\)</span>, però el poliestirè expandit té <span class="math notranslate nohighlight">\(\lambda = 0,037 \ W \ m^{-1} °C^{-1}\)</span> .</p>
 <p>A la pràctica es fa una analogia amb la llei d’Ohm per fer càlculs d’aïllament tèrmic amb diferents superfícies, materials i gruixos. <span class="math notranslate nohighlight">\(\Delta T\)</span> seria l’equivalent a la tensió, <span class="math notranslate nohighlight">\(\large { (\lambda \frac{S}{e})}^{-1}\)</span> a la resistència i <span class="math notranslate nohighlight">\(\dot{Q}\)</span> a la intensitat. D’aquesta manera podem utilitzar les mateixes expressions d’associacions de resistències (sèrie, paral·lel, mixt) en aquestes càlculs.</p>
+<section id="exemples">
+<h3>Exemples<a class="headerlink" href="#exemples" title="Permalink to this heading">#</a></h3>
+<section id="pau-2001-s4-3b">
+<h4>PAU 2001 S4 3B<a class="headerlink" href="#pau-2001-s4-3b" title="Permalink to this heading">#</a></h4>
+<p><img alt="" src="_images/PAU2001S43B.png" />
+<img alt="" src="_images/PAU2001S43Bs.png" /></p>
+</section>
+</section>
 </section>
 <section id="dilatacio-termica">
 <h2>Dilatació tèrmica<a class="headerlink" href="#dilatacio-termica" title="Permalink to this heading">#</a></h2>
@@ -515,6 +540,14 @@ Disculpeu les molèsties.</p>
 <p><img alt="" src="_images/Termostato.jpg" /></p>
 <p>Els relés tèrmics, sistemes de protecció contra sobrecàrregues febles i perllongades pels motors elèctrics, també utilitzen bimetalls en el seu funcionament.</p>
 <p><img alt="" src="_images/Motorschutzrelais.jpg" /></p>
+<section id="id2">
+<h3>Exemples<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<section id="pau-2000-s6-4a">
+<h4>PAU 2000 S6 4A<a class="headerlink" href="#pau-2000-s6-4a" title="Permalink to this heading">#</a></h4>
+<p><img alt="" src="_images/PAU2000S64A.png" />
+<img alt="" src="_images/PAU2000S64As.png" /></p>
+</section>
+</section>
 </section>
 </section>
 
@@ -558,11 +591,11 @@ Disculpeu les molèsties.</p>
       </div>
     </a>
     <a class="right-next"
-       href="Materials20.html"
+       href="Materials14.html"
        title="pàgina següent">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">següent</p>
-        <p class="prev-next-title">Materials tecnològics</p>
+        <p class="prev-next-title">Propietats elèctriques</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -583,8 +616,20 @@ Disculpeu les molèsties.</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calor-latent-calor-especifica">Calor latent. Calor específica.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conductibilitat-termica">Conductibilitat tèrmica</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dilatacio-termica">Dilatació tèrmica</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conductibilitat-termica">Conductibilitat tèrmica</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples">Exemples</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pau-2001-s4-3b">PAU 2001 S4 3B</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dilatacio-termica">Dilatació tèrmica</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Exemples</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pau-2000-s6-4a">PAU 2000 S6 4A</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

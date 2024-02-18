@@ -222,7 +222,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Materials64.html">Conformació dels termoplàstics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials65.html">Reciclatge dels termoplàstics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials69.html">Compòsits</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Materials98.html">OpenSCAD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials99.html">Recursos</a></li>
 </ul>
 </li>
@@ -243,6 +242,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Mecanica02.html">Dinàmica de les rotacions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mecanica03.html">Màquines simples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mecanica04.html">Mecanismes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica40.html">CAD/CAM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mecanica41.html">Disseny 2D: LibreCAD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mecanica42.html">Disseny 3D: OpenSCAD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mecanica43.html">Animacions de mecanismes 3D: FreeCAD</a></li>
@@ -479,12 +479,24 @@ document.write(`
 Esperem oferir-vos properament el seu contingut.<br />
 Disculpeu les molèsties.</p>
 </div>
-<p>Per ara podeu consultar el meu llibre en PDF <a class="reference external" href="http://www.jorts.net/ebooks/TI1-3_Materials.pdf">Llibre CC Tecnologia Industrial I. Materials</a></p>
 <p>Un enginyer ha d’escollir els materials que fa servir segons els requisits del seu ús. Les propietats d’aquests materials depenen de la seva estructura interna. Conèixer aquesta estructura és fonamental per entendre les propietats i per aconseguir nous materials amb un conjunt de propietats. Actualment la ciència i enginyeria de materials és una de les disciplines amb més interès, recolzada per les universitats més prestigioses.</p>
 <section id="organitzacio-atomica">
 <h2>Organització atòmica<a class="headerlink" href="#organitzacio-atomica" title="Permalink to this heading">#</a></h2>
 <p>Com heu estudiat a 3r d’ESO, els àtoms poden interaccionar mitjançant diferents tipus d’enllaços: iònic, covalent, metàl·lic … El tipus d’enllaç dependrà de l’estructura atòmica dels elements constituents. Un bon coneixement de la <a class="reference external" href="https://ptable.com/?lang=ca">taula periòdica</a> és important.
-Aquests enllaços permeten organitzar la matèria en molècules, sòlids cristal·lins … Moltes propietats es poden derivar d’aquesta organització. Per exemple, ja vau veure a 3r d’ESO que els cristalls iònics son durs i fràgils, amb un punt de fusió alt, aïllants però conductors quan es fonen …</p>
+Aquests enllaços permeten organitzar la matèria en molècules, sòlids cristal·lins …</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p>Densitat/nombre atòmic</p></th>
+<th class="text-center head"><p>Radi atòmic/nombre atòmic</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p><img alt="" src="_images/TPdensitat.png" /></p></td>
+<td class="text-center"><p><img alt="" src="_images/TPradi.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<p>Moltes propietats es poden derivar d’aquesta organització. Per exemple, ja vau veure a 3r d’ESO que els cristalls iònics son durs i fràgils, amb un punt de fusió alt, aïllants però conductors quan es fonen …</p>
 <p>Segons l’ordre aconseguit poden classificar el compost:</p>
 <ul class="simple">
 <li><p>Sense ordre</p>

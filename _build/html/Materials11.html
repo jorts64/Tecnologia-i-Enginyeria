@@ -208,7 +208,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Materials12.html">Altres assajos mecànics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials13.html">Propietats tèrmiques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials14.html">Propietats elèctriques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Materials20.html">Materials tecnològics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials15.html">Propietats magnètiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials16.html">Assajos no destructius</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials20.html">Materials tecnològics. Metal·lúrgia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials21.html">Ferro, acer i fosa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials22.html">Altres metalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials85.html">Comparació propietats dels metalls</a></li>
+
 <li class="toctree-l2"><a class="reference internal" href="Materials60.html">Plàstics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials61.html">Termoplàstics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials62.html">Termoestables</a></li>
@@ -216,9 +222,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Materials64.html">Conformació dels termoplàstics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials65.html">Reciclatge dels termoplàstics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials69.html">Compòsits</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Materials85.html">Comparació propietats dels metalls</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="Materials98.html">OpenSCAD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials99.html">Recursos</a></li>
 </ul>
 </li>
@@ -239,6 +242,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Mecanica02.html">Dinàmica de les rotacions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mecanica03.html">Màquines simples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mecanica04.html">Mecanismes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica40.html">CAD/CAM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mecanica41.html">Disseny 2D: LibreCAD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mecanica42.html">Disseny 3D: OpenSCAD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mecanica43.html">Animacions de mecanismes 3D: FreeCAD</a></li>
@@ -458,6 +462,12 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assajos-mecanics">Assajos mecànics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assaig-de-traccio">Assaig de tracció</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-d-analisi-d-u-diagrama-de-traccio">Exemple d’anàlisi d’u diagrama de tracció</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples">Exemples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pau-2011-s4-q-4">PAU 2011 S4 Q 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pau-2008-s4-3a">PAU 2008 S4 3A</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pau-2004-s5-3b">PAU 2004 S5 3B</a></li>
 </ul>
 </li>
 </ul>
@@ -754,6 +764,40 @@ la línia elàstica) ens dona una mesura de la ductilitat del material.</p>
 <p>Podeu comprobar fàcilment que la deformació plàstica és d’un 19,36 %</p>
 </section>
 </section>
+<section id="exemples">
+<h2>Exemples<a class="headerlink" href="#exemples" title="Permalink to this heading">#</a></h2>
+<section id="pau-2011-s4-q-4">
+<h3>PAU 2011 S4 Q 4<a class="headerlink" href="#pau-2011-s4-q-4" title="Permalink to this heading">#</a></h3>
+<p><img alt="" src="_images/PAU2011S4Q4.png" /></p>
+<p><span class="math notranslate nohighlight">\(\sigma=F/s \Rightarrow s=F/\sigma\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sigma</span><span class="o">=</span><span class="mi">890</span>
+<span class="n">F</span><span class="o">=</span><span class="mi">17000</span>
+<span class="n">s</span><span class="o">=</span><span class="n">F</span><span class="o">/</span><span class="n">sigma</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>19.10112359550562
+</pre></div>
+</div>
+</div>
+</div>
+<p>resposta <strong>c)</strong></p>
+</section>
+<section id="pau-2008-s4-3a">
+<h3>PAU 2008 S4 3A<a class="headerlink" href="#pau-2008-s4-3a" title="Permalink to this heading">#</a></h3>
+<p><img alt="" src="_images/PAU2008S43A.png" />
+<img alt="" src="_images/PAU2008S43As.png" /></p>
+</section>
+<section id="pau-2004-s5-3b">
+<h3>PAU 2004 S5 3B<a class="headerlink" href="#pau-2004-s5-3b" title="Permalink to this heading">#</a></h3>
+<p><img alt="" src="_images/PAU2004S53B.png" />
+<img alt="" src="_images/PAU2004S53Bs.png" /></p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -823,6 +867,12 @@ la línia elàstica) ens dona una mesura de la ductilitat del material.</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assajos-mecanics">Assajos mecànics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assaig-de-traccio">Assaig de tracció</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-d-analisi-d-u-diagrama-de-traccio">Exemple d’anàlisi d’u diagrama de tracció</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples">Exemples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pau-2011-s4-q-4">PAU 2011 S4 Q 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pau-2008-s4-3a">PAU 2008 S4 3A</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pau-2004-s5-3b">PAU 2004 S5 3B</a></li>
 </ul>
 </li>
 </ul>

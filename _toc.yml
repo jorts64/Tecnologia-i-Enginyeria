@@ -43,7 +43,6 @@ chapters:
   - file: Materials64
   - file: Materials65
   - file: Materials69
-  - file: Materials98
   - file: Materials99
 - file: CorrentContinu01
   sections:
@@ -62,6 +61,7 @@ chapters:
   - file: Mecanica02
   - file: Mecanica03
   - file: Mecanica04
+  - file: Mecanica40  
   - file: Mecanica41
   - file: Mecanica42
   - file: Mecanica43
