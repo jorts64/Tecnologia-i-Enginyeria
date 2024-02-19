@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Amplificadors operacionals i Comparadors &#8212; Tecnologia i Enginyeria</title>
+    <title>Pràctica operacionals &#8212; Tecnologia i Enginyeria</title>
   
   
   
@@ -65,12 +65,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Control07';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Control70';</script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Pràctica operacionals" href="Control70.html" />
-    <link rel="prev" title="Diagrames de contactes" href="Control06.html" />
+    <link rel="next" title="Circuits seqüencials" href="Control08.html" />
+    <link rel="prev" title="Amplificadors operacionals i Comparadors" href="Control07.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ca"/>
   </head>
@@ -286,8 +286,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Control04.html">Àlgebra de Boole</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Control05.html">Aplicació de l’àlgebra de Boole al disseny de circuits electrònics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Control06.html">Diagrames de contactes</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Amplificadors operacionals i Comparadors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Control70.html">Pràctica operacionals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control07.html">Amplificadors operacionals i Comparadors</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Pràctica operacionals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Control08.html">Circuits seqüencials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Control09.html">Condicionament de la sortida</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Control40.html">Eletrònica de potència. Tiristors</a></li>
@@ -366,7 +366,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/Control07.ipynb" target="_blank"
+      <li><a href="_sources/Control70.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Baixeu el fitxer font"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -450,7 +450,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Amplificadors operacionals i Comparadors</h1>
+    <h1>Pràctica operacionals</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -460,16 +460,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#l-amplificador-operacional">L’amplificador operacional</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplicacions-dels-amplificadors-operacionals">Aplicacions dels amplificadors operacionals</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#productes-comercials">Productes comercials</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparadors">Comparadors</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Productes comercials</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-d-aplicacio">Exemple d’aplicació</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparacio-del-laboratori">Preparació del laboratori</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment-seguidor-de-tensio-mesura-del-gap-d-un-led">Experiment: Seguidor de tensió. Mesura del gap d’un LED</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment-amplificador-no-inversor">Experiment: amplificador no inversor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment-amplificador-sumador">Experiment: Amplificador sumador</a></li>
 </ul>
             </nav>
         </div>
@@ -481,284 +475,199 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="amplificadors-operacionals-i-comparadors">
-<h1>Amplificadors operacionals i Comparadors<a class="headerlink" href="#amplificadors-operacionals-i-comparadors" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="practica-operacionals">
+<h1>Pràctica operacionals<a class="headerlink" href="#practica-operacionals" title="Permalink to this heading">#</a></h1>
 <div class="admonition-pagina-en-desenvolupament admonition">
 <p class="admonition-title">Pàgina en desenvolupament</p>
 <p>Encara estem treballant en aquest document.<br />
 Esperem oferir-vos properament el seu contingut.<br />
 Disculpeu les molèsties.</p>
 </div>
-<p>Aquests dispositius electrònics, que podem trobar com a circuits integrats, donen una sortida en funció de la diferencia de dos tensions d’entrada. Es diferencien en que l”<a class="reference external" href="https://ca.wikipedia.org/wiki/Amplificador_operacional">amplificador operacional</a> dona una resposta analògica proporcional a la diferència de tensió de les entrades i el  <a class="reference external" href="https://ca.wikipedia.org/wiki/Comparador">comparador</a> dona una sortida digital <span id="id1">[<a class="reference internal" href="Biblio.html#id24" title="Howard Malmstadt. Electronics and instrumentation for scientists. Internet Archive, 1981. URL: https://archive.org/embed/electronicsinstr0000malm.">Mal81</a>]</span>. Tots dos comparteixen el mateix símbol:</p>
-<p><img alt="" src="_images/ampOp01.png" /></p>
-<section id="l-amplificador-operacional">
-<h2>L’amplificador operacional<a class="headerlink" href="#l-amplificador-operacional" title="Permalink to this heading">#</a></h2>
-<p>El seu nom fa referència als <a class="reference external" href="https://ca.wikipedia.org/wiki/Computador_anal%C3%B2gic">computadors analògics</a>, on es feien servir molt.</p>
-<p>Aquest dispositiu dona una sortida <span class="math notranslate nohighlight">\(V_{out} = A (V_+ - V_-)\)</span>, on <span class="math notranslate nohighlight">\(A\)</span> és el guany en llaç obert.</p>
-<p>Un amplificador operacional <strong>ideal</strong> té, entre altres, aquestes característiques:</p>
-<aside class="sidebar">
-<p class="sidebar-title">Regles d’or</p>
-<p>Totes les característiques dels amplifiadors operacionals es poden resumir en aquestes dues regles d’or:</p>
-<p>Primera: A qualsevol malla la sortida farà el necessari per a que la diferència de voltatges a l’entrada sigui 0</p>
-<p>Segona: El corrent a les entrades és 0</p>
-</aside>
+<section id="preparacio-del-laboratori">
+<h2>Preparació del laboratori<a class="headerlink" href="#preparacio-del-laboratori" title="Permalink to this heading">#</a></h2>
+<p>Treballarem amb aquest material:</p>
 <ul class="simple">
-<li><p>Guany infinit en llaç obert <span class="math notranslate nohighlight">\(A = \infty\)</span></p></li>
-<li><p>Impedància d’entrada infinita <span class="math notranslate nohighlight">\(Z_{in} = \infty\)</span> i, per tant, el corrent elèctric d’entrada és zero.</p></li>
-<li><p>Impedància de sortida zero <span class="math notranslate nohighlight">\(Z_{out} = 0\)</span></p></li>
+<li><p><em>breadboard</em></p></li>
+<li><p>arduino nano</p></li>
+<li><p>LM324</p></li>
+<li><p>2 potenciòmetres de <span class="math notranslate nohighlight">\(10k\Omega\)</span></p></li>
+<li><p>Leds 5mm colors vermell, groc, verd, blau</p></li>
+<li><p>Resistència <span class="math notranslate nohighlight">\(220\Omega\)</span></p></li>
+<li><p>2 x Resistència <span class="math notranslate nohighlight">\(10k\Omega\)</span></p></li>
+<li><p>Resistència <span class="math notranslate nohighlight">\(4,7k\Omega\)</span></p></li>
+<li><p>alguns cables de connexió, 2 amb connectors M-M Dupont.</p></li>
 </ul>
-<p>Així, una de les aplicacions típiques d’aquest dispositiu és el seguidor de tensió:</p>
-<p><img alt="" src="_images/Op-Amp_Unity-Gain_Buffer.svg" /></p>
-<div class="math notranslate nohighlight">
-\[V_{out} = A (V_{in} - V_{out})\]</div>
-<div class="math notranslate nohighlight">
-\[V_{out} = A V_{in} - A V_{out}\]</div>
-<div class="math notranslate nohighlight">
-\[V_{out} + A V_{out} = A V_{in} \]</div>
-<div class="math notranslate nohighlight">
-\[(A + 1) V_{out} = A V_{in} \]</div>
-<div class="math notranslate nohighlight">
-\[V_{out} = \frac{A}{(A + 1)} V_{in} \]</div>
-<div class="math notranslate nohighlight">
-\[\lim_{A\to\infty} \frac{A}{A+1} = 1\]</div>
-<div class="math notranslate nohighlight">
-\[V_{out} = V_{in} \]</div>
-<p>Tenim el mateix voltatge, però sense treure corrent a l’entrada (<span class="math notranslate nohighlight">\(Z_{in} = \infty\)</span>) i podem donar qualsevol corrent a la sortida (<span class="math notranslate nohighlight">\(Z_{out} = 0\)</span>). Això és especialment útil amb els sensors, on la mesura es podria falsejar sin agafem massa corrent del sensor.</p>
-<p>En la pràctica, els amplificadors operacionals <strong>reals</strong> tenen unes característiques raonables:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(A \gt 100000\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(Z_{in} \sim G\Omega\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(Z_{out} \sim 100\ \Omega\)</span> però l’efecte Miller fa que baixi <span class="math notranslate nohighlight">\(Z_{out} \sim m\Omega\)</span> quan està realimentat <span id="id2">[<a class="reference internal" href="Biblio.html#id23" title="José María Drake Moyano. Instrumentación electrónica de comunicaciones (5º curso ingeniería de telecomunicación). tema ii: modelo del amplificador operacional real. Universidad de Cantabria, 2005. URL: https://www.ctr.unican.es/asignaturas/instrumentacion_5_it/iec_2.pdf.">Moy05</a>]</span>.</p></li>
-</ul>
-<p>Els amplificadors operacionals són dispositius sofisticats. Aquí teniu l’esquema intern del <a class="reference external" href="http://www.jorts.net/jupbook/pdf/ua741.pdf">741</a>, dissenyat al 1968 i que avui en dia encara es comercialitza:</p>
-<p><a title="Daniel Braun, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:OpAmpTransistorLevel_Colored_Labeled.svg"><img width="800" alt="OpAmpTransistorLevel Colored Labeled" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/OpAmpTransistorLevel_Colored_Labeled.svg/512px-OpAmpTransistorLevel_Colored_Labeled.svg.png"></a></p>
-<section id="aplicacions-dels-amplificadors-operacionals">
-<h3>Aplicacions dels amplificadors operacionals<a class="headerlink" href="#aplicacions-dels-amplificadors-operacionals" title="Permalink to this heading">#</a></h3>
-<p>Pràcticament podem fer qualsevol operació matemàtica amb aquests dispositius:</p>
+<p><img alt="" src="_images/labOpAmp.jpg" /></p>
+<p>Les connexions que veieu són fixes. Utilitzem cables curts i optimitzem la disposició:</p>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="text-left head"><p>Aplicació</p></th>
-<th class="text-center head"><p>Esquema</p></th>
-<th class="text-center head"><p>Sortida</p></th>
+<tr class="row-odd"><th class="text-center head"><p>pos1</p></th>
+<th class="text-center head"><p>pos2</p></th>
+<th class="text-left head"><p>Funció</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-left"><p>Amplificador diferencial</p></td>
-<td class="text-center"><p><img alt="" src="_images/Op-Amp_Differential_Amplifier.svg" /></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(\begin{array}{c} V_{out} = V_2 - V_1 \\ \frac{R_1}{R_f} = \frac{R_2}{R_g} \end{array} \)</span></p></td>
+<tr class="row-even"><td class="text-center"><p>j12</p></td>
+<td class="text-center"><p>(-)</p></td>
+<td class="text-left"><p>l’Arduino nano dona GND al carril blau superior</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>Amplificador inversor</p></td>
-<td class="text-center"><p><img alt="" src="_images/Op-Amp_Inverting_Amplifier.svg" /></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(V_{out} = - V_{in} \frac{ R_{f}}{R_{in} }\)</span></p></td>
+<tr class="row-odd"><td class="text-center"><p>a14</p></td>
+<td class="text-center"><p>(-)</p></td>
+<td class="text-left"><p>l’Arduino nano dona GND al carril blau inferior</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p>amplificador no inversor</p></td>
-<td class="text-center"><p><img alt="" src="_images/Op-Amp_Non-Inverting_Amplifier.svg" /></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(V_{out} = V_{in} \left( 1 + \frac{ R_2 }{ R_1 } \right)\)</span></p></td>
+<tr class="row-even"><td class="text-center"><p>a12</p></td>
+<td class="text-center"><p>(+)</p></td>
+<td class="text-left"><p>l’Arduino nano dona +5V al carril vermell inferior</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>Seguidor de tensió</p></td>
-<td class="text-center"><p><img alt="" src="_images/Op-Amp_Unity-Gain_Buffer.svg" /></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(V_{out} = V_{in}\)</span></p></td>
+<tr class="row-odd"><td class="text-center"><p>(+)</p></td>
+<td class="text-center"><p>(+)</p></td>
+<td class="text-left"><p>l’Arduino nano dona +5V al carril vermell superior</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p>Amplificador sumador</p></td>
-<td class="text-center"><p><img alt="" src="_images/Op-Amp_Summing_Amplifier.svg" /></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(V_{out} = -R_{f} \left( \frac{V_1}{R_1} + \frac{V_2}{R_2} + \cdots + \frac{V_n}{R_n} \right) \)</span></p></td>
+<tr class="row-even"><td class="text-center"><p>j21</p></td>
+<td class="text-center"><p>(-)</p></td>
+<td class="text-left"><p>LM324 agafa GND del carril blau superior</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>Integrador inversor</p></td>
-<td class="text-center"><p><img alt="" src="_images/Op-Amp_Integrating_Amplifier.svg" /></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(V_{out}(t_1) = V_{out}(t_0) - \frac{1}{RC} \int_{t_0}^{t_1} V_{in}(t) \,dt\)</span></p></td>
+<tr class="row-odd"><td class="text-center"><p>c21</p></td>
+<td class="text-center"><p>(+)</p></td>
+<td class="text-left"><p>LM324 agafa +5V del carril vermell inferior</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p>Derivador inversor</p></td>
-<td class="text-center"><p><img alt="" src="_images/Op-Amp_Differentiating_Amplifier.svg" /></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(V_{out} = -RC \frac{dV_{in}}{dt}\)</span></p></td>
+<tr class="row-even"><td class="text-center"><p>j28</p></td>
+<td class="text-center"><p>(-)</p></td>
+<td class="text-left"><p>POT1 agafa GND del carril blau superior</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>Logaritme</p></td>
-<td class="text-center"><p><img alt="" src="_images/Op-Amp_Logarithmic_Amplifier.svg" /></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(\begin{array}{c} V_\text{out} = -V_{T} \ln \left(\frac{V_{in}}{I_{S} R}\right) \\ I_S = \text{corrent de saturació}  \\ V_T = \text{voltatge tèrmic} \end{array} \)</span></p></td>
+<tr class="row-odd"><td class="text-center"><p>j30</p></td>
+<td class="text-center"><p>(+)</p></td>
+<td class="text-left"><p>POT1 agafa +5V del carril blau superior</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p>Exponencial</p></td>
-<td class="text-center"><p><img alt="" src="_images/Op-Amp_Exponential_Amplifier.svg" /></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(\begin{array}{c} V_{out} = -R I_{S} e^{\frac{V_{in}}{V_{T}}}  \\ I_S = \text{corrent de saturació}  \\ V_T = \text{voltatge tèrmic} \end{array} \)</span></p></td>
+<tr class="row-even"><td class="text-center"><p>a28</p></td>
+<td class="text-center"><p>(-)</p></td>
+<td class="text-left"><p>POT2 agafa GND del carril blau inferior</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>a30</p></td>
+<td class="text-center"><p>(+)</p></td>
+<td class="text-left"><p>POT2 agafa +5V del carril vermell inferior</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>b11</p></td>
+<td class="text-center"><p>i29</p></td>
+<td class="text-left"><p>senyal POT1 a canal A7 Arduino nano</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>a10</p></td>
+<td class="text-center"><p>a29</p></td>
+<td class="text-left"><p>senyal POT2 a canal A6 Arduino nano</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>a9</p></td>
+<td class="text-center"><p>a29</p></td>
+<td class="text-left"><p>sortida OpAmp1 a canal A5 Arduino nano</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>a8</p></td>
+<td class="text-center"><p>i29</p></td>
+<td class="text-left"><p>sortida OpAmp2 a canal A4 Arduino nano</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>a7</p></td>
+<td class="text-center"><p>i29</p></td>
+<td class="text-left"><p>sortida OpAmp3 a canal A3 Arduino nano</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>a6</p></td>
+<td class="text-center"><p>i29</p></td>
+<td class="text-left"><p>sortida OpAmp4 a canal A2 Arduino nano</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>a5</p></td>
+<td class="text-center"><p>i29</p></td>
+<td class="text-left"><p>canal A1 Arduino nano a GND. Cable amb connector, canviarem la connexió més endavant</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>a4</p></td>
+<td class="text-center"><p>i29</p></td>
+<td class="text-left"><p>canal A0 Arduino nano a GND. Cable amb connector, canviarem la connexió més endavant</p></td>
 </tr>
 </tbody>
 </table>
+<p><strong>Aquestes connexions no es modificaran en tota la pràctica. Únicament mourem les connexions GND de A0 i A1 per mesurar. La resta de connexions no es toquen</strong></p>
+<p>A l’Arduino nano carreguem el següent codi, i obrim el plotter sèrie a 115200 bauds. Tindrem una visualització en temps real del voltages citats.</p>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">sensorValue</span><span class="p">;</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// the loop routine runs over and over again forever:</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">sensorValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">A7</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">sensorValue</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;,&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">        </span><span class="c1">// delay in between reads for stability</span>
+<span class="w">  </span><span class="n">sensorValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">A6</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">sensorValue</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;,&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">        </span><span class="c1">// delay in between reads for stability</span>
+<span class="w">  </span><span class="n">sensorValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">A5</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">sensorValue</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;,&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">        </span><span class="c1">// delay in between reads for stability</span>
+<span class="w">  </span><span class="n">sensorValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">A4</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">sensorValue</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;,&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">        </span><span class="c1">// delay in between reads for stability</span>
+<span class="w">  </span><span class="n">sensorValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">A3</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">sensorValue</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;,&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">        </span><span class="c1">// delay in between reads for stability</span>
+<span class="w">  </span><span class="n">sensorValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">A2</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">sensorValue</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;,&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">        </span><span class="c1">// delay in between reads for stability</span>
+<span class="w">  </span><span class="n">sensorValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">A1</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">sensorValue</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;,&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">        </span><span class="c1">// delay in between reads for stability</span>
+<span class="w">  </span><span class="n">sensorValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">A0</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">sensorValue</span><span class="p">);</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">        </span><span class="c1">// delay in between reads for stability  </span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><img alt="" src="_images/labOpAmp01.png" /></p>
+<p><strong>També podeu accedir a les dades numèriques amb el monitor sèrie de l’Arduino</strong></p>
+<p><img alt="" src="_images/lm324.png" /></p>
 </section>
-<section id="productes-comercials">
-<h3>Productes comercials<a class="headerlink" href="#productes-comercials" title="Permalink to this heading">#</a></h3>
-<p>El 741 encara es comercialitza, però en aquest anys han aparegut amplificadors operacionals més optimitzats, la majoria d’ells sense necessitat de ajustar l’offset. Un circuit integrat molt utilitzat és el <a class="reference external" href="http://www.jorts.net/jupbook/pdf/LM324.pdf">LM324</a>, que porta 4 amplificadors operacionals en el mateix xip, i el <a class="reference external" href="http://www.jorts.net/jupbook/pdf/LM358.pdf">LM358</a> que en porta 2:</p>
-<p><img alt="" src="_images/lm324.png" />
-<img alt="" src="_images/LM358.jpg" /></p>
+<section id="experiment-seguidor-de-tensio-mesura-del-gap-d-un-led">
+<h2>Experiment: Seguidor de tensió. Mesura del gap d’un LED<a class="headerlink" href="#experiment-seguidor-de-tensio-mesura-del-gap-d-un-led" title="Permalink to this heading">#</a></h2>
+<p>Configurarem OpAmp1 com un seguidor de tensió de POT1:</p>
+<p><img alt="" src="_images/Op-Amp_Unity-Gain_Buffer.svg" /></p>
+<ul class="simple">
+<li><p>cable entre j29 i j22</p></li>
+<li><p>cable entre j23 i j24</p></li>
+</ul>
+<p><strong>Comprovem que al variar POT1 tant A7 com A5 es mouen junts. Per valors molt alts de POT1 les linies es separen, A5 queda per sota de A7. És la tensió màxima que pot donar el OpAmp. Feu una estimació d’aquesta tensió màxima (1023=&gt;5V)</strong></p>
+<p>Connectem un LED vermell amb una resistència de <span class="math notranslate nohighlight">\(220\Omega\)</span> en sèrie. Mesurem la tensió que cau al LED (<em>gap</em>).</p>
+<ul class="simple">
+<li><p>LED vermell entre j17 i (-)</p></li>
+<li><p>R <span class="math notranslate nohighlight">\(220\Omega\)</span> entre i17 i i24</p></li>
+<li><p>Desconnectem l’extrem del cable de A0 de GND a h17</p></li>
+</ul>
+<p><strong>Comprovem que al variar POT1 tant A7, A5 com A0 es mouen junts. Per a u cert valor de POT1 el LED s’encén i les linies es separen, A0 queda per sota de A7 i A5. És el gap del LED. Feu una estimació d’aquest gap. Compareu amb altres colors de LED</strong></p>
 </section>
+<section id="experiment-amplificador-no-inversor">
+<h2>Experiment: amplificador no inversor<a class="headerlink" href="#experiment-amplificador-no-inversor" title="Permalink to this heading">#</a></h2>
+<p><img alt="" src="_images/Op-Amp_Non-Inverting_Amplifier.svg" /></p>
+<p><span class="math notranslate nohighlight">\(V_{out} = V_{in} \left( 1 + \frac{ R_2 }{ R_1 } \right)\)</span></p>
+<p>Treiem el LED, la resistència i el cable entre j23 i j24. Tornem a connectar l’extrem del cable de A0 a (-)</p>
+<ul class="simple">
+<li><p>Resistència <span class="math notranslate nohighlight">\(10k\Omega\)</span> entre i23 i i24</p></li>
+<li><p>Resistència <span class="math notranslate nohighlight">\(10k\Omega\)</span> entre j23 i (-)</p></li>
+</ul>
+<p><strong>Comprovem que al variar POT1 A5 marca un valor doble de A7. Canviem la resistència entre j23 i (-) per una de <span class="math notranslate nohighlight">\(4,7k\Omega\)</span>. Comenteu el resultat</strong></p>
 </section>
-<section id="comparadors">
-<h2>Comparadors<a class="headerlink" href="#comparadors" title="Permalink to this heading">#</a></h2>
-<p>Aquest dispositius donen una sortida digitals segons el signe de la diferència d’entrades:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}V_{o} = 
-\begin{cases} 
- V_{cc},  &amp; \text{if }V_+ &gt; V_-, \\
- 0,  &amp; \text{if }V_+ &lt; V_-.
-\end{cases}\end{split}\]</div>
-<p>S’utilitzen molt amb sensors, on la senyal del sensor es compara amb un valor de consigna, donant una sortida digital. Per exemple la serie KY- de mòduls per arduino utilitza molt el comparador LM393 (porta 2 comparadors al mateix integrat), com és el cas d’aquest mòdul sensor de so KY-038:</p>
-<p><img alt="" src="_images/KY-038.jpg" /> <img alt="" src="_images/KY-038Sch.jpg" /></p>
-<section id="id3">
-<h3>Productes comercials<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
-<p>Un circuit integrat molt utilitzat és el <a class="reference external" href="http://www.jorts.net/jupbook/pdf/LM393.pdf">LM393</a>, que portaq 2 comparadors en el mateix xip:</p>
-<p><img alt="" src="_images/lm393.gif" /></p>
-</section>
-</section>
-<section id="exemple-d-aplicacio">
-<h2>Exemple d’aplicació<a class="headerlink" href="#exemple-d-aplicacio" title="Permalink to this heading">#</a></h2>
-<p>En aquets vídeos podeu veure una explicació detallada del <a class="reference external" href="https://www.icstation.com/product_document/Download/12479_installation_instructions.pdf">disseny</a> d’una font d’alimentació regulable amb OpAmps:</p>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
-<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;KRcTn3lqnUw&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</details>
-<div class="cell_output docutils container">
-<div class="output text_html">
-        <iframe
-            width="400"
-            height="300"
-            src="https://www.youtube.com/embed/KRcTn3lqnUw"
-            frameborder="0"
-            allowfullscreen
-            
-        ></iframe>
-        </div></div>
-</div>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
-<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;ndDZVUKL30E&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</details>
-<div class="cell_output docutils container">
-<div class="output text_html">
-        <iframe
-            width="400"
-            height="300"
-            src="https://www.youtube.com/embed/ndDZVUKL30E"
-            frameborder="0"
-            allowfullscreen
-            
-        ></iframe>
-        </div></div>
-</div>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
-<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;Kui4HRGizUw&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</details>
-<div class="cell_output docutils container">
-<div class="output text_html">
-        <iframe
-            width="400"
-            height="300"
-            src="https://www.youtube.com/embed/Kui4HRGizUw"
-            frameborder="0"
-            allowfullscreen
-            
-        ></iframe>
-        </div></div>
-</div>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
-<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;TV_MktcFAd8&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</details>
-<div class="cell_output docutils container">
-<div class="output text_html">
-        <iframe
-            width="400"
-            height="300"
-            src="https://www.youtube.com/embed/TV_MktcFAd8"
-            frameborder="0"
-            allowfullscreen
-            
-        ></iframe>
-        </div></div>
-</div>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
-<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;0cbqbb9PmRY&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</details>
-<div class="cell_output docutils container">
-<div class="output text_html">
-        <iframe
-            width="400"
-            height="300"
-            src="https://www.youtube.com/embed/0cbqbb9PmRY"
-            frameborder="0"
-            allowfullscreen
-            
-        ></iframe>
-        </div></div>
-</div>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
-<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;1CY2dr5Qbjw&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</details>
-<div class="cell_output docutils container">
-<div class="output text_html">
-        <iframe
-            width="400"
-            height="300"
-            src="https://www.youtube.com/embed/1CY2dr5Qbjw"
-            frameborder="0"
-            allowfullscreen
-            
-        ></iframe>
-        </div></div>
-</div>
+<section id="experiment-amplificador-sumador">
+<h2>Experiment: Amplificador sumador<a class="headerlink" href="#experiment-amplificador-sumador" title="Permalink to this heading">#</a></h2>
+<p><img alt="" src="_images/Op-Amp_Summing_Amplifier.svg" /></p>
+<p><span class="math notranslate nohighlight">\(V_{out} = -R_{f} \left( \frac{V_1}{R_1} + \frac{V_2}{R_2} + \cdots + \frac{V_n}{R_n} \right) \)</span></p>
+<p>Treiem les dues resistències de l’experiment anterior.
+Treiem el cable entre cable entre j29 i j22</p>
+<ul class="simple">
+<li><p>Resistència <span class="math notranslate nohighlight">\(4.7k\Omega\)</span> entre j29 i h23</p></li>
+<li><p>Resistència <span class="math notranslate nohighlight">\(10k\Omega\)</span> entre b29 i g23</p></li>
+<li><p>Resistència <span class="math notranslate nohighlight">\(10k\Omega\)</span> entre j23 i j24</p></li>
+<li><p>Cable entre j22 i (-)</p></li>
+</ul>
+<p><strong>Comproveu que la sortida és una mitjana ponderada de le dues entrades. Feu una estimació experimental del pes de cada entrada.</strong></p>
 </section>
 </section>
 
@@ -793,20 +702,20 @@ Disculpeu les molèsties.</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Control06.html"
+       href="Control07.html"
        title="pàgina anterior">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">Diagrames de contactes</p>
+        <p class="prev-next-title">Amplificadors operacionals i Comparadors</p>
       </div>
     </a>
     <a class="right-next"
-       href="Control70.html"
+       href="Control08.html"
        title="pàgina següent">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">següent</p>
-        <p class="prev-next-title">Pràctica operacionals</p>
+        <p class="prev-next-title">Circuits seqüencials</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -826,16 +735,10 @@ Disculpeu les molèsties.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#l-amplificador-operacional">L’amplificador operacional</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplicacions-dels-amplificadors-operacionals">Aplicacions dels amplificadors operacionals</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#productes-comercials">Productes comercials</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparadors">Comparadors</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Productes comercials</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-d-aplicacio">Exemple d’aplicació</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparacio-del-laboratori">Preparació del laboratori</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment-seguidor-de-tensio-mesura-del-gap-d-un-led">Experiment: Seguidor de tensió. Mesura del gap d’un LED</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment-amplificador-no-inversor">Experiment: amplificador no inversor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#experiment-amplificador-sumador">Experiment: Amplificador sumador</a></li>
 </ul>
   </nav></div>
 
