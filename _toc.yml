@@ -12,6 +12,7 @@ chapters:
   - file: Energia99
 - file: ProdElec01
   sections:
+  - file: ProdElec02
   - file: ProdElec81
   - file: ProdElec82
   - file: ProdElec83
