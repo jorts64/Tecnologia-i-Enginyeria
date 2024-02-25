@@ -188,8 +188,9 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Producció d’energia elèctrica</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="ProdElec02.html">Fonts d’energia convencionals. Centrals hidràuliques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ProdElec81.html">Cogeneració</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ProdElec82.html">Reactors de fusió</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProdElec03.html">Centrals tèrmiques.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProdElec04.html">Centrals nuclears</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProdElec05.html">Fonts d’energia alternatives.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ProdElec83.html">Centrals elèctriques a Catalunya</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ProdElec99.html">Recursos</a></li>
 </ul>
@@ -436,7 +437,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -452,6 +455,16 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#l-energia-una-necessitat-humana">L’energia, una necessitat humana</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#un-model-sostenible">Un model sostenible?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cap-a-un-mon-sostenible-la-necessaria-transicio-energetica">Cap a un mon sostenible: la necessària transició energètica</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -470,6 +483,85 @@ Esperem oferir-vos properament el seu contingut.<br />
 Disculpeu les molèsties.</p>
 </div>
 <p>Per ara podeu consultar el meu llibre en PDF <a class="reference external" href="http://www.jorts.net/ebooks/TI1-2_Centrals.pdf">Llibre CC Tecnologia Industrial I. Producció d’energia elèctrica</a></p>
+<section id="l-energia-una-necessitat-humana">
+<h2>L’energia, una necessitat humana<a class="headerlink" href="#l-energia-una-necessitat-humana" title="Permalink to this heading">#</a></h2>
+<p>En Joan Vila, al seu formidable article <em>El consum d’energia de la civilització</em> <span id="id1">[<a class="reference internal" href="Biblio.html#id4" title="Joan Vila. El consum d'energia de la civilització). Diari de Girona, 2013. 2013-08-18. URL: https://www.diaridegirona.cat/opinio/2013/08/18/consum-d-energia-civilitzacio-49301650.html.">Vil13</a>]</span> fa una reflexió molt interessant:</p>
+<blockquote>
+<div><p>Aquests dies he pogut llegir el llibre «La mesura de la civilització» de Ian Morris, que estudia els guanys que ha fet la civilització humana a través de l’observació del consum d’energia, de l’augment de població de les ciutats, de la potència de guerra i de la capacitat d’informació. De tots aquests paràmetres el més significatiu és l’estudi del consum d’energia, que indica exactament com l’evolució humana millora incorporant més consum energètic.</p>
+</div></blockquote>
+<p>Tal vegada veurem millor les dades que cita a l’article si les representem gràficament:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">14000</span><span class="p">,</span> <span class="o">-</span><span class="mi">10000</span><span class="p">,</span> <span class="o">-</span><span class="mi">8000</span><span class="p">,</span> <span class="o">-</span><span class="mi">6000</span><span class="p">,</span> <span class="o">-</span><span class="mi">4000</span><span class="p">,</span> <span class="o">-</span><span class="mi">3000</span><span class="p">,</span> <span class="o">-</span><span class="mi">1000</span><span class="p">,</span>     <span class="mi">1</span><span class="p">,</span>   <span class="mi">900</span><span class="p">,</span>  <span class="mi">1500</span><span class="p">,</span>  <span class="mi">1600</span><span class="p">,</span>  <span class="mi">1700</span><span class="p">,</span>  <span class="mi">1800</span><span class="p">,</span>  <span class="mi">1900</span><span class="p">,</span>   <span class="mi">2000</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span>  <span class="mi">4000</span><span class="p">,</span>   <span class="mi">5500</span><span class="p">,</span>  <span class="mi">6500</span><span class="p">,</span>  <span class="mi">8000</span><span class="p">,</span> <span class="mi">11000</span><span class="p">,</span> <span class="mi">12000</span><span class="p">,</span> <span class="mi">17000</span><span class="p">,</span> <span class="mi">31000</span><span class="p">,</span> <span class="mi">25000</span><span class="p">,</span> <span class="mi">27000</span><span class="p">,</span> <span class="mi">29000</span><span class="p">,</span> <span class="mi">32000</span><span class="p">,</span> <span class="mi">38000</span><span class="p">,</span> <span class="mi">92000</span><span class="p">,</span> <span class="mi">230000</span><span class="p">]</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;any (era cristiana)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Consum energètic (kcal)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Evolució del consum energètic&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/d9d99fab7d20930743846a6fc5eb00e230536b5166300c7aec3992a8f1c0a702.png" src="_images/d9d99fab7d20930743846a6fc5eb00e230536b5166300c7aec3992a8f1c0a702.png" />
+</div>
+</div>
+<p>Fixeu-vos en el creixement exponencial de la demanda d’energia.</p>
+<p>Al mateix article es fa una relació directa entre el consum energètic i l’esperança de vida al llarg de la Història.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mf">2.7</span><span class="p">),</span> <span class="n">layout</span><span class="o">=</span><span class="s1">&#39;constrained&#39;</span><span class="p">)</span>
+<span class="n">edv</span> <span class="o">=</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">80</span><span class="p">]</span>
+<span class="n">categories</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;prehistòria&#39;</span><span class="p">,</span> <span class="s1">&#39;preindustrial&#39;</span><span class="p">,</span> <span class="s1">&#39;moderna&#39;</span><span class="p">]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">categories</span><span class="p">,</span> <span class="n">edv</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Esperança de via (anys)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Evolució de l</span><span class="se">\&#39;</span><span class="s1">esperança de vida&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="_images/081fe1f93a88796c09a26c5df4fbfcef8eedb1cce99647f10e7ceac7754cb8ed.png" src="_images/081fe1f93a88796c09a26c5df4fbfcef8eedb1cce99647f10e7ceac7754cb8ed.png" />
+</div>
+</div>
+</section>
+<section id="un-model-sostenible">
+<h2>Un model sostenible?<a class="headerlink" href="#un-model-sostenible" title="Permalink to this heading">#</a></h2>
+<p>La població mundial creix ràpidament, els països en vies de desenvolupament demanden més energia amb la seva industrialització, els combustibles fòssils s’esgoten…</p>
+<p>Si analitzem el flux mundial d’energia amb un diagrama de Sankey, on l’amplada de les fletxes son proporcionals al valor del flux, podem ràpidament treure’n algunes conclusions:</p>
+<p><img alt="" src="_images/ENERGY_2011_WORLD.png" /></p>
+<ul class="simple">
+<li><p>Les energies convencionals encara dominen el món. Els combustibles fòssils (gas natural, carbó i petroli) representen el gruix de l’energia consumida.</p></li>
+<li><p>Aquest predomini de l’energia fòssil és absolut a la seva utilització pel transport, on el petroli representa el 95 % de l’energia consumida</p></li>
+<li><p>Les pèrdues energètiques a nivell global són inacceptables. És perd molta més energia de la que s’aprofita, produint l’escalfament global del planeta.</p></li>
+<li><p>A la conversió elèctrica es perd un 62 % de l’energia. Podem dir que per cada kWh d’electricitat que aconseguim escalfem el planeta en el doble d’aquesta quantitat.</p></li>
+</ul>
+<p>Com veieu vivim un model energètic no sostenible. O el canviem o no ens en sortirem.</p>
+<p>Tractant-se d’un diagrama mundial un pot pensar que la culpa és d’altres països. Veiem en detall diagrames per a Espanya i USA. En el darrer cas les xifres són més modernes, no per això millors, i sense esperança de canvi en els propers anys donada la política energètica de l’actual administració:</p>
+<p><img alt="" src="_images/ENERGY_2011_SPAIN.png" /> <img alt="" src="_images/Energy_US_2019.png" /></p>
+</section>
+<section id="cap-a-un-mon-sostenible-la-necessaria-transicio-energetica">
+<h2>Cap a un mon sostenible: la necessària transició energètica<a class="headerlink" href="#cap-a-un-mon-sostenible-la-necessaria-transicio-energetica" title="Permalink to this heading">#</a></h2>
+<p>Cal, per tant, una transició en el model energètic cap a un desenvolupament sostenible. Podem millorar molt en els següents camps:</p>
+<ul class="simple">
+<li><p>Transició en el model de transport, desenvolupant vehicles elèctrics o que utilitzin biocombustibles, desplaçant el consum del petroli en aquest camp. El consum i turisme de proximitat, així com el teletreball, poden ser de gran ajut.</p></li>
+<li><p>Millorar el rendiment de les centrals elèctriques, potenciant l’ús d’energies netes com ara la minihidràulica, l’eòlica i fotovoltaica i substituint les centrals tèrmiques convencionals per centrals de cogeneració que utilitzin combustibles renovables, com ara la biomassa. Tancament de les centrals nuclears.  Evitar pèrdues en el transport de l’energia elèctrica.</p></li>
+<li><p>Per garantir el subministrament elèctric i donada la variabilitat de les energies solars i eòlica, cal desenvolupar sistemes d’emmagatzemament d’energia, locals i a la xarxa, utilitzant bateries, centrals hidroelèctriques reversibles, depòsits d’hidrogen i, fins-i-tot, la construcció d’illes artificials generadores/emmagatzemadores d’energia.</p></li>
+<li><p>Fer un millor ús de l’energia, amb habitatges i aparells més eficients i conscienciant als consumidors dels hàbits que afavoreixen un consum responsable. Recordem que l’energia més ecològica és aquella que no es consumeix.</p></li>
+</ul>
+<p>En aquesta línia és molt recomanable el material didàctic <a class="reference external" href="https://agora.xtec.cat/cesire/general/les-energies-renovables-lalternativa-al-col%C2%B7lapse-de-les-energies-fossils/"><em>Les energies renovables. L’alternativa al col·lapse de les energies fòssils</em></a></p>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -529,7 +621,22 @@ Disculpeu les molèsties.</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#l-energia-una-necessitat-humana">L’energia, una necessitat humana</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#un-model-sostenible">Un model sostenible?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cap-a-un-mon-sostenible-la-necessaria-transicio-energetica">Cap a un mon sostenible: la necessària transició energètica</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
