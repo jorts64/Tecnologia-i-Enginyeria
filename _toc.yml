@@ -6,9 +6,16 @@ root: intro
 chapters:
 - file: Energia01
   sections:
-  - file: Energia81
-  - file: Energia82
-  - file: Energia83
+  - file: Energia02
+  - file: Energia03
+  - file: Energia04
+  - file: Energia05
+  - file: Energia06
+  - file: Energia07
+  - file: Energia08
+  - file: Energia09
+  - file: Energia10
+  - file: Energia11
   - file: Energia99
 - file: ProdElec01
   sections:

@@ -63,11 +63,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Energia01';</script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Xocs inelàstics" href="Energia81.html" />
+    <link rel="next" title="Formes d’energia. Transformacions energètiques" href="Energia02.html" />
     <link rel="prev" title="Tecnologia i Enginyeria" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ca"/>
@@ -180,28 +182,55 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Energia. Treball. Potència</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="Energia81.html">Xocs inelàstics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Energia82.html">Xocs elàstics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Energia83.html">Energia nuclear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Energia02.html">Formes d’energia. Transformacions energètiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Energia03.html">Energia cinètica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Energia04.html">Energia Potencial. Energia mecànica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Energia05.html">Energia pneumàtica, hidràulica i oleohidràulica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Energia06.html">Energia elèctrica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Energia07.html">Energia tèrmica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Energia08.html">Energia química</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Energia09.html">Energia nuclear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Energia10.html">Energia radiant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Energia11.html">Energia sonora</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Energia99.html">Recursos</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="ProdElec01.html">Producció d’energia elèctrica</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="ProdElec81.html">Cogeneració</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ProdElec82.html">Reactors de fusió</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProdElec02.html">Fonts d’energia convencionals. Centrals hidràuliques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProdElec03.html">Centrals tèrmiques.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProdElec04.html">Centrals nuclears</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProdElec05.html">Fonts d’energia alternatives.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ProdElec83.html">Centrals elèctriques a Catalunya</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ProdElec99.html">Recursos</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="Materials01.html">Materials</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="Materials60.html">Plàstics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials02.html">Sòlids</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials81.html">Densitat dels metalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials03.html">Aliatges</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials82.html">Aliatges binaris: Llei de la palanca</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Materials83.html">Assaig de tracció</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Materials84.html">Assajos mecànics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials04.html">Polímers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials05.html">Cristalls líquids</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials06.html">Nanotecnologia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials10.html">Propietats dels materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials11.html">Propietats mecàniques. Assaig de tracció.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials12.html">Altres assajos mecànics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials13.html">Propietats tèrmiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials14.html">Propietats elèctriques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials15.html">Propietats magnètiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials16.html">Assajos no destructius</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials20.html">Materials tecnològics. Metal·lúrgia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials21.html">Ferro, acer i fosa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials22.html">Altres metalls</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials85.html">Comparació propietats dels metalls</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="Materials98.html">OpenSCAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials60.html">Plàstics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials61.html">Termoplàstics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials62.html">Termoestables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials63.html">Elastòmers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials64.html">Conformació dels termoplàstics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials65.html">Reciclatge dels termoplàstics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Materials69.html">Compòsits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Materials99.html">Recursos</a></li>
 </ul>
 </li>
@@ -212,6 +241,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="CorrentContinu03.html">Associacions de resistències</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CorrentContinu04.html">Exercicis resolts 1/2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CorrentContinu05.html">Pràctica: Llei d’Ohm. Efecte Joule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentContinu52.html">Teoremes de Thévenin i Norton</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CorrentContinu06.html">Pràctica: Estudi d’una pila i d’una bombeta</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CorrentContinu07.html">Lleis de Kirchoff</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CorrentContinu08.html">Exercicis resolts 2/2</a></li>
@@ -221,6 +251,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Mecanica02.html">Dinàmica de les rotacions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mecanica03.html">Màquines simples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mecanica04.html">Mecanismes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mecanica40.html">CAD/CAM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mecanica41.html">Disseny 2D: LibreCAD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mecanica42.html">Disseny 3D: OpenSCAD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mecanica43.html">Animacions de mecanismes 3D: FreeCAD</a></li>
@@ -228,7 +259,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Mecanica99.html">Recursos</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Termodinamica01.html">Termodinàmica</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Termodinamica01.html">Termodinàmica.</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Termodinamica02.html">Primer principi. Transformacions termodinàmiques.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Termodinamica03.html">Màquines tèrmiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Termodinamica04.html">L’entropia.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Termodinamica99.html">Recursos</a></li>
 </ul>
 </li>
@@ -237,7 +271,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="CorrentAltern03.html">Llei d’Ohm. Impedància</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CorrentAltern04.html">Condensadors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CorrentAltern05.html">La potència a AC</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CorrentAltern06.html">Circuits sèrie AC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CorrentAltern06.html">Circuits AC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CorrentAltern99.html">Recursos</a></li>
 </ul>
 </li>
@@ -262,6 +296,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Control05.html">Aplicació de l’àlgebra de Boole al disseny de circuits electrònics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Control06.html">Diagrames de contactes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Control07.html">Amplificadors operacionals i Comparadors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control70.html">Pràctica operacionals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Control08.html">Circuits seqüencials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Control09.html">Condicionament de la sortida</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Control40.html">Eletrònica de potència. Tiristors</a></li>
@@ -273,6 +308,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Control15.html">Modelització de sistemes. Diagrama de blocs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Control16.html">Funció de transferència</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Control17.html">Teoria de control. Control PID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Control20.html">Microcontroladors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Control50.html">Circuits Pneumàtics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Control99.html">Recursos</a></li>
 </ul>
@@ -410,7 +446,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -426,6 +464,28 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#l-energia">L’energia</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energia-per-moure-el-mon">Energia per moure el món</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energia-per-mesurar">Energia per mesurar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energia-per-transmetre-informacio">Energia per transmetre informació</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definicio-d-energia">Definició d’energia</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#treball">Treball</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potencia">Potència</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple">Exemple</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#factors-de-conversio">Factors de conversió</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rendiment">Rendiment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#xifres-significatives">Xifres significatives</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -444,6 +504,123 @@ Esperem oferir-vos properament el seu contingut.<br />
 Disculpeu les molèsties.</p>
 </div>
 <p>Per ara podeu consultar el meu llibre en PDF <a class="reference external" href="http://www.jorts.net/ebooks/TI1-1_Energia.pdf">Llibre CC Tecnologia Industrial I. Energia. Treball. Potència.</a></p>
+<section id="l-energia">
+<h2>L’energia<a class="headerlink" href="#l-energia" title="Permalink to this heading">#</a></h2>
+<p>Avui en dia ningú posa en dubte la importància de l’energia, una de les necessitats humanes que intenta satisfer la tecnologia. Les fonts d’energia convencional (combustibles fòssils, hidràulica, nuclear) s’esgoten, estan saturades o tenen greus problemes mediambientals (Txernòbil, Fukojima). Un camp on cal investigar, cada vegada més, per poder satisfer l’increment continu de la demanda mundial i optimitzar la seva despesa, i on cada dia es necessitem més tècnics i millor preparats.</p>
+<section id="energia-per-moure-el-mon">
+<h3>Energia per moure el món<a class="headerlink" href="#energia-per-moure-el-mon" title="Permalink to this heading">#</a></h3>
+<p>A la teva llar consumeixes energia elèctrica per fer funcionar els electrodomèstics, el gas (energia química) per escalfar el menjar i l’aigua. Els cotxes gasten benzina o gasoil (energia química) Metro, ascensor, llums, calefacció, semàfors, mòbils, màquines… tots gasten energia. Sense energia res funcionaria.</p>
+</section>
+<section id="energia-per-mesurar">
+<h3>Energia per mesurar<a class="headerlink" href="#energia-per-mesurar" title="Permalink to this heading">#</a></h3>
+<p>Malgrat avui en dia està prohibida la seva venda, suposo que coneixeràs els termòmetres de mercuri. Ens permeten mesurar la temperatura, ja sigui del nostre cos o de l’ambient. Quan s’escalfa el mercuri, degut a l’energia tèrmica del cos a mesurar, aquest modifica la seva energia interna i es dilata sobre una escala graduada.</p>
+<p>Amb els termòmetres digitals, l’energia tèrmica es transforma en energia elèctrica que un microcontrolador interpreta i visualitza en una pantalla LCD.</p>
+</section>
+<section id="energia-per-transmetre-informacio">
+<h3>Energia per transmetre informació<a class="headerlink" href="#energia-per-transmetre-informacio" title="Permalink to this heading">#</a></h3>
+<p>Si llegeixes aquest llibre en un tablet o notebook la imatge que veus i que interpretes com a lletres (informació) prové de la llum (energia radiant) que emet la pantalla mitjançant uns petits LEDs que s’encenen gràcies a l’energia elèctrica generada per la bateria (energia química), segons una informació emmagatzemada elèctricament en una memòria de silici segons una informació rebuda via WiFi (energia radiant) quan vas descarregar el fitxer del llibre, fitxer que ha viatjat per fibra òptica en forma de llum modulada des del meu servidor a USA.</p>
+</section>
+</section>
+<section id="definicio-d-energia">
+<h2>Definició d’energia<a class="headerlink" href="#definicio-d-energia" title="Permalink to this heading">#</a></h2>
+<p>A l’ESO es diu que l’energia és allò que es capaç de fer funcionar les coses. No podem dir que aquesta sigui una definició molt elegant. Però és que definir energia no és fàcil. Podeu fer una ullada a l’entrada corresponent a la <a class="reference external" href="https://ca.wikipedia.org/wiki/Energia">Viquipèdia</a>.</p>
+<p>Molts llibres de text defineixen l’energia com la la capacitat d’un cos de fer un treball. Malauradament, a continuació molts defineixen el treball com la variació d’energia, creant un cercle viciós. D’altres defineixen el treball com el producte de força per desplaçament, limitant el seu estudi al camp de la mecànica i les seves aplicacions i implicacions.</p>
+<p>Estem d’acord que sense energia res funciona, ni tan sols el nostres cossos i ments. També estem d’acord en que els treball és la variació d’energia. Però necessitem una definició clara i universal del concepte energia.
+La definició del concepte físic d’energia més amplia i potent és dir que energia és allò que es conserva. Aquesta és la seva veritable definició, herència de la <em>Ursache</em> de Mayer, que té una història molt interessant <span id="id1">[<a class="reference internal" href="Biblio.html#id17" title="M. Guillen. Cinco ecuaciones que cambiaron el mundo: El poder y la oculta belleza de las matemáticas. Debolsillo, 2023. ISBN 9786073836326. URL: https://archive.org/details/cincoecuacionesq0000guil.">Gui23</a>]</span>.</p>
+<p>De fet, estem utilitzant el principi de conservació de l’energia (l’energia ni es crea ni es destrueix, només es transforma) per definir-la. Però és així com Einstein va deduir l’equivalència massa-energia al seu article al 1905 <span id="id2">[<a class="reference internal" href="Biblio.html#id3" title="Albert Einstein. Ist die trägheit eines körpers von seinem energieinhalt abhängig? Annalen der Physik, pages 639-641, 1905. URL: https://www.microsiervos.com/archivo/ciencia/einstein-explica-emc2.html.">Ein05</a>]</span>: com trobava un terme que depenia de la massa igual a una variació d’energia que no es podia explicar, calia concloure que la massa és una forma d’energia. Ell va tenir el valor de dir-lo i publicar-lo:</p>
+<p><span class="math notranslate nohighlight">\(E=mc^2\)</span></p>
+<p>Representem l’energia per la lletra E. La unitat d’energia és el joule (pronunciat /ˈdʒaʊl/, no oblidem l’origen anglès del físic James Prescott Joule) i la representem per la lletra J.</p>
+</section>
+<section id="treball">
+<h2>Treball<a class="headerlink" href="#treball" title="Permalink to this heading">#</a></h2>
+<aside class="sidebar">
+<p class="sidebar-title">Símbols:</p>
+<p><span class="math notranslate nohighlight">\(\equiv\)</span> per definició</p>
+<p><span class="math notranslate nohighlight">\(\Delta\)</span> increment de</p>
+</aside>
+<p>Ja hem dit que l’energia es transforma. El treball es defineix com la variació d’energia associada a aquesta transformació, per tant la seva unitat és també el joule, i es representa amb la lletra W (de l’anglès <em>work</em>, treball):</p>
+<p><span class="math notranslate nohighlight">\(W \equiv \Delta E\)</span></p>
+</section>
+<section id="potencia">
+<h2>Potència<a class="headerlink" href="#potencia" title="Permalink to this heading">#</a></h2>
+<p>Definim la potència com el quocient entre el treball desenvolupat i el temps al llarg del qual s’ha realitzat aquest treball:</p>
+<p><span class="math notranslate nohighlight">\(P \equiv \Large \frac{W}{t}\)</span></p>
+<p>Representem la potència per la lletra P. La potència es mesura en watts (W):</p>
+<p><span class="math notranslate nohighlight">\(1W \equiv \Large \frac{1J}{1s}\)</span></p>
+<section id="exemple">
+<h3>Exemple<a class="headerlink" href="#exemple" title="Permalink to this heading">#</a></h3>
+<aside class="sidebar">
+<p class="sidebar-title">Símbols:</p>
+<p><span class="math notranslate nohighlight">\(\simeq\)</span> aproximadament igual a</p>
+<div class="admonition warning">
+<p class="admonition-title">Avís</p>
+<p>Recorda que el separador decimal a Espanya és la coma, no el punt. 2.016 MJ seria incorrecte!!</p>
+</div>
+</aside>
+<p><em>Una estufa elèctrica de potència 800 W està encesa 7 minuts cada hora. Calcula l’energia dissipada en forma de calor després de 6 hores.</em></p>
+<p><span class="math notranslate nohighlight">\(P \equiv \Large \frac{W}{t} \Rightarrow W = P \cdot t\)</span></p>
+<p><span class="math notranslate nohighlight">\(t=\frac{7min}{1h}\cdot 6h \cdot  \frac{60s}{1min} = 2520s\)</span></p>
+<p><span class="math notranslate nohighlight">\(W = P \cdot t = 800 W \cdot 2520 s = 2016000J = 2,016MJ\)</span></p>
+<p><span class="math notranslate nohighlight">\(W \simeq 2,02MJ\)</span></p>
+</section>
+</section>
+<section id="factors-de-conversio">
+<h2>Factors de conversió<a class="headerlink" href="#factors-de-conversio" title="Permalink to this heading">#</a></h2>
+<p>A l’exemple anterior hem fet servir fraccions del tipus</p>
+<p><span class="math notranslate nohighlight">\(\frac{7min}{1h}\)</span>, <span class="math notranslate nohighlight">\(\frac{60s}{1min}\)</span></p>
+<p>que expressen raonaments del tipus</p>
+<ul class="simple">
+<li><p>de cada hora de funcionament, l’estufa està 7 minuts activa (engegada)</p></li>
+<li><p>cada minut té 60 segons</p></li>
+</ul>
+<p>En el primer cas, es tracta d’una informació pròpia del problema.  No seria correcte pensar que l’estufa ha estat gastant les 6 h que ha estat funcionant. Només 7 minuts de cada hora l’estufa converteix (i gasta) energia elèctrica en calor. Per això introduïm aquest factor corrector.</p>
+<p>En el segon cas, es tracta d’una relació universal ( 1 min ≡ 60 s), que hem introduït per obtenir el resultat en unitats del sistema internacional (volem expressar el resultat final em joules, i 1 J = 1 W · 1 s). Tal vegada seria més clar si escrivim</p>
+<p><span class="math notranslate nohighlight">\(t=\frac{7 \cancel{min} activa}{1 \cancel{h funcionament}}\cdot 6 \cancel{h funcionament} \cdot  \frac{60s}{1 \cancel{min}} = 2520s \ activa\)</span></p>
+<p>que és una expressió mes detallada però laboriosa d’escriure.</p>
+<p>De fet, hem utilitzat altres factors de conversió sense adonar-nos:</p>
+<ul class="simple">
+<li><p>1 J és  1 W · 1 s</p></li>
+<li><p>1 MJ són 1000000 J</p></li>
+</ul>
+<p>així que de forma detallada</p>
+<p><span class="math notranslate nohighlight">\(W = P \cdot t = 800 W \cdot 2520 s = 2016000 \cancel{W} \cancel{s} \cdot \frac{1J}{\cancel{W}\cancel{s}} = 2016000\cancel{J} \cdot \frac{1 MJ}{1000000\cancel{J}} = 2,016MJ\)</span></p>
+<p>Els factors de conversió són una eina potentíssima en la resolució de problemes. Molts problemes d’aquest curs (i dels que surten a les PAU de tecnologia industrial) es resolen amb aquest mètode.</p>
+</section>
+<section id="rendiment">
+<h2>Rendiment<a class="headerlink" href="#rendiment" title="Permalink to this heading">#</a></h2>
+<p>Malauradament, quan transformem una forma d’energia en altre sempre tenim pèrdues en forma de calor. No és només una qüestió tècnica (fregaments als mecanismes, fuites …). Es tracta d’una impossibilitat física que estudiarem a Tecnologia i Enginyeria II i que respon al segon principi de la Termodinàmica (si no voleu esperar tant us recomano l’excel·lent llibre Física de lo imposible <span id="id3">[<a class="reference internal" href="Biblio.html#id16" title="M. Kaku and J.G. Sanz. Física de lo imposible: ¿Podremos ser invisibles, viajar en el tiempo y teletransportarnos? DEBATE. DEBATE, 2010. ISBN 9788483069431. URL: https://archive.org/details/fisicadeloimposi0000kaku.">KS10</a>]</span>, pot ser una bona lectura per a aquestes vacances de Nadal).</p>
+<p>Definim el rendiment d’una màquina o sistema com el quocient entre l’energia útil <span class="math notranslate nohighlight">\(E_u\)</span> que obtenim i l’energia que consumeix <span class="math notranslate nohighlight">\(E_c\)</span>. El rendiment es simbolitza amb la lletra qrega eta minúscula <span class="math notranslate nohighlight">\(\eta\)</span>:</p>
+<p><img alt="" src="_images/rendiment.png" /></p>
+<p>Podem expressar el rendiment com el quocient de les respectives potències, només cal dividir numerador i denominador pel temps. Com es tracta d’un quocient entre valors de la mateixa magnitud (ja sigui entre energies o entre potències) el resultat serà adimensional (no porta unitats). Això si, aquest valor serà sempre inferior a 1, i només serà igual a 1 en el cas ideal d’un sistema sense pèrdues. Per això és habitual donar el rendiment en %.</p>
+<p><span class="math notranslate nohighlight">\(\Large \eta \equiv \frac{E_u}{E_c} = \frac{E_u/t}{E_c/t} = \frac{P_u}{P_c} \le 1 \)</span></p>
+</section>
+<section id="xifres-significatives">
+<h2>Xifres significatives<a class="headerlink" href="#xifres-significatives" title="Permalink to this heading">#</a></h2>
+<p>A l’exemple anterior hem aproximat el valor 1/3 per 0,33. Com les dades tenen dues xifres significatives (33 W, 99 W) sembla coherent donar el resultat amb el mateix nombre de xifres significatives (0,33, 33%).</p>
+<p>Seria completament incorrecte donar totes les xifres que dona la calculadora en fer les operacions (1/3 = 0,3333333333) o, el que es pitjor, donar infinites xifres (1/3 = <span class="math notranslate nohighlight">\(0,\hat{3}\)</span>). No podem donar resultats més precisos que les dades que ens donen. És un error conceptual greu penalitzat severament en les proves de les PAU.</p>
+<p>No hem de confondre el nombre de xifres significatives amb el nombre de decimals. Els nombres següents tenen tots les mateixes xifres significatives (3):</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p></p></th>
+<th class="text-center head"><p></p></th>
+<th class="text-center head"><p></p></th>
+<th class="text-center head"><p></p></th>
+<th class="text-center head"><p></p></th>
+<th class="text-center head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p><span class="math notranslate nohighlight">\(124·10^4\)</span></p></td>
+<td class="text-center"><p>0,356</p></td>
+<td class="text-center"><p>7,81</p></td>
+<td class="text-center"><p>90,3</p></td>
+<td class="text-center"><p>333</p></td>
+<td class="text-center"><p>0,000000458</p></td>
+</tr>
+</tbody>
+</table>
+<p>Moltes calculadores permeten activar el format enginyeril, que dona el resultat amb un exponent múltiple de 3 i amb les xifres significatives fixades. Això permet obtenir el resultat correcte fàcilment i posar el múltiple o submúltiple adequat (45,79 MJ, 236,2 kW, 9,024 ms …)</p>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -488,11 +665,11 @@ Disculpeu les molèsties.</p>
       </div>
     </a>
     <a class="right-next"
-       href="Energia81.html"
+       href="Energia02.html"
        title="pàgina següent">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">següent</p>
-        <p class="prev-next-title">Xocs inelàstics</p>
+        <p class="prev-next-title">Formes d’energia. Transformacions energètiques</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -503,7 +680,34 @@ Disculpeu les molèsties.</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#l-energia">L’energia</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energia-per-moure-el-mon">Energia per moure el món</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energia-per-mesurar">Energia per mesurar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energia-per-transmetre-informacio">Energia per transmetre informació</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definicio-d-energia">Definició d’energia</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#treball">Treball</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potencia">Potència</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple">Exemple</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#factors-de-conversio">Factors de conversió</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rendiment">Rendiment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#xifres-significatives">Xifres significatives</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
